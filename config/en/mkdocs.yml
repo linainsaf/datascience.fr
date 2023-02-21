@@ -1,0 +1,27 @@
+site_name: Data Science
+docs_dir: '../../docs/en'
+site_dir: '../../generated/en'                      # Where to put the English HTML files
+site_url: https://datascience_careerera.com/
+
+theme:
+  name: material
+  language: en                          # The build's language
+
+
+plugins:
+  - search:                                         
+      lang: en                                      # Set language for search
+
+nav: 
+  - Home: 'index.md'
+  - 'Python Programming':
+    - 'Introduction to Python Programming': 'intro.md'
+    - 'Setting up a Development Environment': 'env.md'
+    - 'Basic Python Concepts': 'basic.md'
+    - 'Object Oriented Programming in Python': 'oop.md'
+    - 'File Input/Output (I/O) Operations': 'io.md'
+    - 'Python with Data Science tools': 
+      - 'Numpy: Understanding & working with Numpy': 'numpy.md'
+      - 'Pandas: Understanding & working with Pandas': 'pd.md'
+      - 'Matplotlib: Understanding & working with Matplotlib' : 'plt.md'
+      - 'Seaborn: Understanding & working with Seaborn' : 'sns.md'
