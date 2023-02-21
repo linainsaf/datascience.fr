@@ -17,6 +17,6 @@ theme:
   name: material
 
 nav: 
-  - Home : 'numpy.md'
+  - Home : 'index.md'
   - 'Introduction à la Data Science': 'intro.md'
   - 'Apprentissage automatique (a.k.a Machine Learning)': 'ml.md'
