@@ -1,0 +1,692 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://datascience_careerera.fr/ml/">
+      
+      
+        <link rel="prev" href="../intro/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Apprentissage automatique (a.k.a Machine Learning) - Data Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#on-fait-quoi-avec" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apprentissage automatique (a.k.a Machine Learning)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Data Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        Introduction à la Data Science
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Apprentissage automatique (a.k.a Machine Learning)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Apprentissage automatique (a.k.a Machine Learning)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-fait-quoi-avec" class="md-nav__link">
+    On fait quoi avec ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-de-m-l" class="md-nav__link">
+    Types de M L:
+  </a>
+  
+    <nav class="md-nav" aria-label="Types de M L:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lapprentissage-supervise" class="md-nav__link">
+    L'apprentissage supervisé :
+  </a>
+  
+    <nav class="md-nav" aria-label="L'apprentissage supervisé :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regression-lineaire" class="md-nav__link">
+    Régression linéaire  :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-logistique" class="md-nav__link">
+    Régression logistique :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arbre-de-decision" class="md-nav__link">
+    Arbre de décision :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foret-darbres-decisionnels" class="md-nav__link">
+    Forêt d'arbres décisionnels :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-machines-a-vecteurs-de-support-svm" class="md-nav__link">
+    Les Machines à Vecteurs de Support (SVM):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lapprentissage-non-supervise" class="md-nav__link">
+    L'apprentissage non supervisé :
+  </a>
+  
+    <nav class="md-nav" aria-label="L'apprentissage non supervisé :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    K-means clustering :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-en-composantes-principales-pca" class="md-nav__link">
+    Analyse en composantes principales (PCA):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction-de-dimension-avec-t-sne" class="md-nav__link">
+    Réduction de dimension avec t-SNE:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-fait-quoi-avec" class="md-nav__link">
+    On fait quoi avec ?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-de-m-l" class="md-nav__link">
+    Types de M L:
+  </a>
+  
+    <nav class="md-nav" aria-label="Types de M L:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lapprentissage-supervise" class="md-nav__link">
+    L'apprentissage supervisé :
+  </a>
+  
+    <nav class="md-nav" aria-label="L'apprentissage supervisé :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regression-lineaire" class="md-nav__link">
+    Régression linéaire  :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regression-logistique" class="md-nav__link">
+    Régression logistique :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arbre-de-decision" class="md-nav__link">
+    Arbre de décision :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foret-darbres-decisionnels" class="md-nav__link">
+    Forêt d'arbres décisionnels :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-machines-a-vecteurs-de-support-svm" class="md-nav__link">
+    Les Machines à Vecteurs de Support (SVM):
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lapprentissage-non-supervise" class="md-nav__link">
+    L'apprentissage non supervisé :
+  </a>
+  
+    <nav class="md-nav" aria-label="L'apprentissage non supervisé :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-means-clustering" class="md-nav__link">
+    K-means clustering :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyse-en-composantes-principales-pca" class="md-nav__link">
+    Analyse en composantes principales (PCA):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduction-de-dimension-avec-t-sne" class="md-nav__link">
+    Réduction de dimension avec t-SNE:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Apprentissage automatique (a.k.a Machine Learning)</h1>
+
+<h2 id="on-fait-quoi-avec">On fait quoi avec ?</h2>
+<p>Le machine learning peut être utilisé pour différentes tâches, selon le type de données que vous avez et le problème que vous essayez de résoudre. Voici un aperçu de quelques-unes des tâches les plus courantes :</p>
+<ul>
+<li>
+<p><strong>Régression</strong> : la régression consiste à prédire une valeur numérique en fonction d'un ou plusieurs paramètres. Par exemple, vous pouvez utiliser la régression pour prédire le prix d'une maison en fonction de son emplacement, de sa taille et de ses caractéristiques. </p>
+</li>
+<li>
+<p><strong>Classification</strong> : la classification consiste à prédire une étiquette discrète en fonction d'un ensemble de caractéristiques. Par exemple, vous pouvez utiliser la classification pour prédire si un email est du spam ou non, en fonction de son contenu et de ses caractéristiques.</p>
+</li>
+<li>
+<p><strong>Clustering</strong> : le clustering consiste à regrouper des points de données similaires dans des groupes, sans étiquettes de classe prédéfinies. Par exemple, vous pouvez utiliser le clustering pour regrouper les clients de votre boutique en fonction de leurs habitudes d'achat.</p>
+</li>
+<li>
+<p><strong>Réduction de dimension</strong> : la réduction de dimension consiste à réduire la complexité des données en réduisant le nombre de variables ou de caractéristiques. Par exemple, vous pouvez utiliser la réduction de dimension pour visualiser des données à haute dimension en deux ou trois dimensions.</p>
+</li>
+</ul>
+<h2 id="types-de-m-l">Types de M L:</h2>
+<p>Il existe deux types principaux :</p>
+<h3 id="lapprentissage-supervise">L'apprentissage supervisé :</h3>
+<p>Dans ce type d'apprentissage, le modèle apprend à prédire une sortie à partir d'une entrée, en utilisant un ensemble de données d'apprentissage qui contient des exemples d'entrées et de sorties connues. Le modèle ajuste ensuite ses paramètres pour minimiser l'erreur de prédiction. </p>
+<p><br /></p>
+<p>Voici quelques modèles de machine learning supervisés :</p>
+<h4 id="regression-lineaire">Régression linéaire  :</h4>
+<p>La régression linéaire est une méthode de prédiction qui permet de modéliser la relation entre une variable cible continue et une ou plusieurs variables prédictives continues ou catégorielles. Le but de la régression linéaire est de trouver la meilleure droite (ou hyperplan en dimension supérieure) qui représente la relation entre les variables. </p>
+<p><br /></p>
+<p>Le modèle peut être utilisé pour la prédiction ou pour comprendre la relation entre les variables. Par exemple, dans le cas de la prédiction de prix de vente d'une maison, les variables prédictives pourraient être la superficie, le nombre de chambres, la localisation, etc.</p>
+<p><br /></p>
+<p>Exemple de code :</p>
+<pre><code>from sklearn.linear_model import LinearRegression
+
+# Création d'un modèle de régression linéaire
+regression_model = LinearRegression()
+
+# Entraînement du modèle sur les données d'entraînement
+regression_model.fit(X_train, y_train)
+
+# Prédiction des valeurs pour les données de test
+y_pred = regression_model.predict(X_test)
+</code></pre>
+<h4 id="regression-logistique">Régression logistique :</h4>
+<p>La régression logistique est une méthode de classification qui permet de prédire la probabilité qu'une observation appartienne à une classe particulière (binaire ou multi-classes). La sortie est une probabilité, donc la valeur prédite est toujours comprise entre 0 et 1. </p>
+<p><br /></p>
+<p>Le modèle estime la probabilité de l'appartenance à chaque classe en fonction des variables prédictives. Le modèle est souvent utilisé pour la classification de clients potentiels, de mails comme spam ou non, etc.</p>
+<p><br /></p>
+<p>Exemple de code :</p>
+<pre><code>from sklearn.linear_model import LogisticRegression
+
+# Création d'un modèle de régression logistique
+logistic_model = LogisticRegression()
+
+# Entraînement du modèle sur les données d'entraînement
+logistic_model.fit(X_train, y_train)
+
+# Prédiction des classes pour les données de test
+y_pred = logistic_model.predict(X_test)
+</code></pre>
+<h4 id="arbre-de-decision">Arbre de décision :</h4>
+<p><br /></p>
+<p>Les arbres de décision sont une méthode de classification et de régression qui permettent de créer un modèle à partir des données en formes d'arbre. Les noeuds internes de l'arbre représentent une condition sur les variables prédictives, les feuilles de l'arbre représentent les prédictions de la variable cible. Le modèle est facilement interprétable et permet de comprendre comment les variables sont utilisées pour la prédiction.</p>
+<p><br /></p>
+<p>Exemple de code :</p>
+<pre><code>from sklearn.tree import DecisionTreeClassifier
+
+# Création d'un modèle d'arbre de décision
+tree_model = DecisionTreeClassifier()
+
+# Entraînement du modèle sur les données d'entraînement
+tree_model.fit(X_train, y_train)
+
+# Prédiction des classes pour les données de test
+y_pred = tree_model.predict(X_test)
+</code></pre>
+<h4 id="foret-darbres-decisionnels">Forêt d'arbres décisionnels :</h4>
+<p>Les forêts d'arbres décisionnels sont une méthode de classification et de régression qui combine les résultats de plusieurs arbres de décision. Chaque arbre dans la forêt est entraîné sur un échantillon aléatoire des données d'entraînement. Le modèle agrège les prédictions des différents arbres pour donner une prédiction finale. Les forêts d'arbres décisionnels sont souvent plus précises que les arbres de décision.</p>
+<p><br /></p>
+<p>Voici un exemple de code utilisant Scikit-learn pour entraîner un modèle de forêt aléatoire pour la classification :</p>
+<pre><code>from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_features=4, random_state=0)
+clf = RandomForestClassifier(max_depth=2, random_state=0)
+clf.fit(X, y)
+</code></pre>
+<h4 id="les-machines-a-vecteurs-de-support-svm">Les Machines à Vecteurs de Support (SVM):</h4>
+<p><br /></p>
+<p>Les SVM sont un algorithme d'apprentissage supervisé utilisé pour la classification et la régression. Les SVM trouvent une frontière de décision qui maximise la marge entre les deux classes. Cette frontière de décision est appelée un hyperplan. Les SVM peuvent être utilisées pour des tâches de classification avec deux classes ou plus.</p>
+<p><br /></p>
+<p>Les SVM ont une grande précision et sont populaires dans les tâches de classification. Ils peuvent également être utilisés pour la régression.</p>
+<p><br /></p>
+<p>Voici un exemple de code utilisant Scikit-learn pour entraîner un modèle SVM pour la classification :</p>
+<pre><code>from sklearn import svm
+from sklearn.datasets import make_classification
+
+X, y = make_classification(n_features=4, random_state=0)
+clf = svm.SVC(kernel='linear', C=1, random_state=0)
+clf.fit(X, y)
+</code></pre>
+<h3 id="lapprentissage-non-supervise">L'apprentissage non supervisé :</h3>
+<p>Les modèles non supervisés sont des algorithmes de machine learning qui n'ont pas besoin de données étiquetées pour fonctionner. Ils sont utilisés pour explorer les données et trouver des structures cachées, des modèles et des corrélations. Voici quelques exemples de modèles non supervisés:</p>
+<h4 id="k-means-clustering">K-means clustering :</h4>
+<p>Le K-means clustering est une technique de partitionnement de données qui permet de diviser un ensemble de données en K groupes distincts (clusters). Chaque point de données est affecté à un cluster en fonction de sa proximité avec le centre de ce cluster.</p>
+<p><br /></p>
+<p>Voici un exemple de code en Python pour appliquer le K-means clustering :</p>
+<pre><code>from sklearn.cluster import KMeans
+import numpy as np
+
+# Générer des données aléatoires
+X = np.random.rand(100, 2)
+
+# Instancier le modèle de clustering
+kmeans = KMeans(n_clusters=3)
+
+# Fitter le modèle aux données
+kmeans.fit(X)
+
+# Prédire les clusters pour de nouvelles données
+labels = kmeans.predict(X)
+</code></pre>
+<h4 id="analyse-en-composantes-principales-pca">Analyse en composantes principales (PCA):</h4>
+<p><br /></p>
+<p>L'analyse en composantes principales est une méthode de réduction de dimension qui permet de projeter des données à haute dimension sur un espace de dimension inférieure tout en conservant autant que possible les informations contenues dans les données originales.</p>
+<p><br /></p>
+<p>Voici un exemple de code en Python pour appliquer l'analyse en composantes principales :</p>
+<pre><code>from sklearn.decomposition import PCA
+import numpy as np
+
+# Générer des données aléatoires
+X = np.random.rand(100, 10)
+
+# Instancier le modèle de PCA
+pca = PCA(n_components=3)
+
+# Fitter le modèle aux données
+pca.fit(X)
+
+# Transformer les données pour obtenir les nouvelles dimensions
+X_pca = pca.transform(X)
+</code></pre>
+<h4 id="reduction-de-dimension-avec-t-sne">Réduction de dimension avec t-SNE:</h4>
+<p><br /></p>
+<p>t-SNE est une méthode de réduction de dimension qui permet de projeter des données à haute dimension sur un espace de dimension inférieure en conservant autant que possible les relations de proximité entre les données.</p>
+<p><br /></p>
+<p>Voici un exemple de code en Python pour appliquer la réduction de dimension avec t-SNE :</p>
+<pre><code>from sklearn.manifold import TSNE
+import numpy as np
+
+# Générer des données aléatoires
+X = np.random.rand(100, 10)
+
+# Instancier le modèle de t-SNE
+tsne = TSNE(n_components=2)
+
+# Fitter le modèle aux données
+X_tsne = tsne.fit_transform(X)
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
