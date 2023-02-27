@@ -1,0 +1,608 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://datascience_careerera.fr/dltypes/">
+      
+      
+        <link rel="prev" href="../dl/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Les différents types de réseaux de neurones - Data Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-reseaux-de-neurones-denses-fully-connected-layers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Les différents types de réseaux de neurones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Data Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction à la Data Science
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Apprentissage automatique (a.k.a Machine Learning)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apprentissage automatique (a.k.a Machine Learning)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Apprentissage automatique (a.k.a Machine Learning)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml/" class="md-nav__link">
+        Les taches et modéles de ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eval/" class="md-nav__link">
+        Evaluation des modéles de Classification et de Regression
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Le Deep Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Le Deep Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Le Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dl/" class="md-nav__link">
+        Introduction au Deep Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Les différents types de réseaux de neurones
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Les différents types de réseaux de neurones
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-denses-fully-connected-layers" class="md-nav__link">
+    Les réseaux de neurones denses (Fully Connected Layers)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-convolutifs-convolutional-neural-networks" class="md-nav__link">
+    Les réseaux de neurones convolutifs (Convolutional Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-recurrents-recurrent-neural-networks" class="md-nav__link">
+    Les réseaux de neurones récurrents (Recurrent Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-de-memoire-a-court-terme-long-short-term-memory-networks" class="md-nav__link">
+    Les réseaux de neurones de mémoire à court terme (Long Short-Term Memory Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-auto-encodeurs-autoencoder-neural-networks" class="md-nav__link">
+    Les réseaux de neurones auto-encodeurs (Autoencoder Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-generatifs-generative-neural-networks" class="md-nav__link">
+    Les réseaux de neurones génératifs (Generative Neural Networks)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-denses-fully-connected-layers" class="md-nav__link">
+    Les réseaux de neurones denses (Fully Connected Layers)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-convolutifs-convolutional-neural-networks" class="md-nav__link">
+    Les réseaux de neurones convolutifs (Convolutional Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-recurrents-recurrent-neural-networks" class="md-nav__link">
+    Les réseaux de neurones récurrents (Recurrent Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-de-memoire-a-court-terme-long-short-term-memory-networks" class="md-nav__link">
+    Les réseaux de neurones de mémoire à court terme (Long Short-Term Memory Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-auto-encodeurs-autoencoder-neural-networks" class="md-nav__link">
+    Les réseaux de neurones auto-encodeurs (Autoencoder Neural Networks)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-reseaux-de-neurones-generatifs-generative-neural-networks" class="md-nav__link">
+    Les réseaux de neurones génératifs (Generative Neural Networks)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Les différents types de réseaux de neurones</h1>
+
+<p>Il existe différents types de réseaux de neurones, chacune ayant sa propre fonction et sa propre méthode de traitement des données d'entrée. Voici un aperçu de quelques types courants de couches de neurones :</p>
+<h3 id="les-reseaux-de-neurones-denses-fully-connected-layers">Les réseaux de neurones denses (Fully Connected Layers)</h3>
+<p>Un réseau de neurones dense, également appelé réseau de neurones à couches entièrement connectées, est un type de réseau de neurones où chaque neurone dans une couche est connecté à tous les neurones de la couche précédente et de la couche suivante. Cela signifie que chaque neurone de la couche actuelle prend en compte toutes les activations de la couche précédente et renvoie une activation qui est propagée à tous les neurones de la couche suivante.</p>
+<p><br /></p>
+<p><img alt="Screenshot" src="../img/dense.png" /></p>
+<p><br /></p>
+<p>La sortie d'une couche dense est calculée comme suit :</p>
+<div class="arithmatex">\[y_j = f\left(\sum_{i=1}^n w_{ji}x_i + b_j\right)\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\(y_j\)</span> est la sortie du <span class="arithmatex">\(j\)</span>-ème neurone de la couche dense.</li>
+<li><span class="arithmatex">\(x_i\)</span> est l'activation du <span class="arithmatex">\(i\)</span>-ème neurone de la couche précédente.</li>
+<li><span class="arithmatex">\(w_{ji}\)</span> est le poids de la connexion entre le <span class="arithmatex">\(i\)</span>-ème neurone de la couche précédente et le <span class="arithmatex">\(j\)</span>-ème neurone de la couche dense.</li>
+<li><span class="arithmatex">\(b_j\)</span> est le biais (un paramètre supplémentaire) du <span class="arithmatex">\(j\)</span>-ème neurone de la couche dense.</li>
+<li><span class="arithmatex">\(f\)</span> est la fonction d'activation appliquée à la somme pondérée des entrées.</li>
+<li>La fonction d'activation <span class="arithmatex">\(f\)</span> peut être choisie en fonction du problème à résoudre.</li>
+</ul>
+<h3 id="les-reseaux-de-neurones-convolutifs-convolutional-neural-networks">Les réseaux de neurones convolutifs (Convolutional Neural Networks)</h3>
+<p>Les réseaux de neurones convolutifs (Convolutional Neural Networks ou CNNs) sont un type de réseau de neurones spécialement conçus pour le traitement des images. Ils ont été introduits pour la première fois par Yann LeCun et ses collègues en 1998 pour la reconnaissance de caractères manuscrits.</p>
+<p><br /></p>
+<p>Les CNNs sont basés sur des filtres de convolution, qui sont des matrices de poids qui sont appliquées à des régions de l'image. Les filtres de convolution permettent d'extraire des caractéristiques visuelles à différentes échelles. Par exemple, un filtre de convolution peut être conçu pour détecter les bords dans une image, tandis qu'un autre filtre peut être conçu pour détecter les coins.</p>
+<p><br /></p>
+<p>Un réseau de neurones convolutif se compose de plusieurs couches. La première couche est la couche d'entrée, qui contient l'image brute. Les couches suivantes sont des couches de convolution, qui appliquent des filtres de convolution à l'image. Chaque filtre de convolution produit une carte de caractéristiques, qui est une image qui met en évidence les caractéristiques spécifiques détectées par le filtre. Les cartes de caractéristiques sont ensuite passées à une fonction d'activation, qui introduit une non-linéarité dans le modèle.</p>
+<p><br /></p>
+<p>Après les couches de convolution, il y a généralement des couches de regroupement (pooling layers), qui réduisent la dimensionnalité de l'image en prenant le maximum, la moyenne ou la somme de petites régions de l'image. Les couches de regroupement permettent de réduire le temps de calcul et de rendre le modèle plus robuste aux variations mineures dans l'image.</p>
+<p><br /></p>
+<p>Après les couches de regroupement, il y a généralement des couches entièrement connectées (Fully Connected Layers), qui sont similaires aux couches de neurones denses des réseaux de neurones classiques. Les couches entièrement connectées prennent les cartes de caractéristiques en entrée et les transforment en une représentation de sortie qui est utilisée pour la classification ou la régression.</p>
+<p><br /></p>
+<p>Les CNNs sont entraînés à l'aide d'un algorithme d'optimisation, tel que la descente de gradient stochastique (Stochastic Gradient Descent), pour minimiser une fonction de perte (loss function) qui mesure la différence entre la sortie prédite et la sortie réelle. Pendant l'entraînement, les poids des filtres de convolution et des couches entièrement connectées sont ajustés pour minimiser la fonction de perte.</p>
+<p><br /></p>
+<p><img alt="Screenshot" src="../img/cnn.png" /></p>
+<p><br /></p>
+<p>L'équation pour la sortie d'une couche de convolution:</p>
+<div class="arithmatex">\[y(i,j,k) = \text{activation}\left(\sum_{l=1}^{p}\sum_{m=1}^{q}\sum_{n=1}^{r} w(m,n,l,k) x(i+m-1,j+n-1,l)\right)\]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\(y(i,j,k)\)</span> est la sortie du <span class="arithmatex">\(k\)</span>-ème filtre à la position <span class="arithmatex">\((i,j)\)</span> dans la carte de caractéristiques de sortie.</li>
+<li><span class="arithmatex">\(\text{activation}\)</span> est la fonction d'activation appliquée élément par élément à la somme des entrées pondérées.</li>
+<li><span class="arithmatex">\(w(m,n,l,k)\)</span> est le poids du <span class="arithmatex">\(k\)</span>-ème filtre à la position <span class="arithmatex">\((m,n)\)</span> dans le <span class="arithmatex">\(l\)</span>-ème canal d'entrée.</li>
+<li><span class="arithmatex">\(x(i+m-1,j+n-1,l)\)</span> est l'activation d'entrée à la position <span class="arithmatex">\((i+m-1,j+n-1)\)</span> dans le <span class="arithmatex">\(l\)</span>-ème canal d'entrée.</li>
+<li><span class="arithmatex">\(p,q,r\)</span> sont les dimensions du filtre.</li>
+</ul>
+<h3 id="les-reseaux-de-neurones-recurrents-recurrent-neural-networks">Les réseaux de neurones récurrents (Recurrent Neural Networks)</h3>
+<p>Un réseau de neurones récurrents (RNN) est un type de réseau de neurones qui est capable de traiter des séquences de données en utilisant la rétroaction (feedback) des sorties précédentes comme entrée pour les calculs futurs. Contrairement aux réseaux de neurones classiques, les RNN ont des connexions de neurones cycliques, ce qui leur permet de stocker une mémoire interne de l'information traitée jusqu'à présent.</p>
+<p><br /></p>
+<p>Un RNN peut être représenté comme une séquence de cellules, où chaque cellule est une copie du même réseau de neurones. Chaque cellule prend en entrée les données de la séquence et l'état caché de la cellule précédente. L'état caché est une représentation vectorielle de la mémoire interne de la cellule, qui est mise à jour à chaque étape de la séquence.</p>
+<p><br /></p>
+<p>La sortie de chaque cellule est renvoyée à la cellule suivante et est également utilisée pour la prédiction finale. La prédiction finale est donc basée sur l'ensemble des sorties de toutes les cellules de la séquence.</p>
+<p><br /></p>
+<p><img alt="Screenshot" src="../img/rnn.png" /></p>
+<p><br /></p>
+<p>La sortie d'une cellule RNN est calculée comme suit :</p>
+<div class="arithmatex">\[ h_t = f(W_{xh}x_t + W_{hh}h_{t-1} + b_h) \]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\(h_t\)</span> est l'état caché de la cellule à l'étape <span class="arithmatex">\(t\)</span>.</li>
+<li><span class="arithmatex">\(x_t\)</span> est l'entrée à l'étape <span class="arithmatex">\(t\)</span>.</li>
+<li><span class="arithmatex">\(W_{xh}\)</span> est la matrice de poids pour les connexions entre les entrées et l'état caché.</li>
+<li><span class="arithmatex">\(W_{hh}\)</span> est la matrice de poids pour les connexions entre l'état caché de l'étape précédente et l'état caché actuel.</li>
+<li><span class="arithmatex">\(b_h\)</span> est le biais ajouté à l'état caché.</li>
+<li><span class="arithmatex">\(f\)</span> est la fonction d'activation appliquée à la somme pondérée des entrées.</li>
+</ul>
+<p>La sortie de la cellule peut également être utilisée pour prédire la prochaine valeur de la séquence :</p>
+<div class="arithmatex">\[ y_t = g(W_{hy}h_t + b_y) \]</div>
+<p>où :</p>
+<ul>
+<li><span class="arithmatex">\(y_t\)</span> est la prédiction de la valeur de la séquence à l'étape <span class="arithmatex">\(t\)</span>.</li>
+<li><span class="arithmatex">\(W_{hy}\)</span> est la matrice de poids pour les connexions entre l'état caché et la prédiction.</li>
+<li><span class="arithmatex">\(b_y\)</span> est le biais ajouté à la prédiction.</li>
+<li><span class="arithmatex">\(g\)</span> est la fonction d'activation appliquée à la somme pondérée des entrées.</li>
+</ul>
+<p>Les RNN sont largement utilisés pour la modélisation de séquences, notamment pour la reconnaissance de la parole, la traduction automatique et la génération de texte.</p>
+<h3 id="les-reseaux-de-neurones-de-memoire-a-court-terme-long-short-term-memory-networks">Les réseaux de neurones de mémoire à court terme (Long Short-Term Memory Networks)</h3>
+<p>Ce sont des réseaux de neurones récurrents améliorés qui permettent de traiter des séquences de données plus longues. Les réseaux de neurones de mémoire à court terme utilisent des unités de mémoire qui leur permettent de retenir l'information importante sur une longue période de temps, et sont utilisés pour la génération de texte, la prédiction de la prochaine valeur dans une série temporelle, etc.</p>
+<h3 id="les-reseaux-de-neurones-auto-encodeurs-autoencoder-neural-networks">Les réseaux de neurones auto-encodeurs (Autoencoder Neural Networks)</h3>
+<p>Ce sont des réseaux de neurones qui apprennent à reconstruire une entrée à partir d'une représentation latente, en comprimant l'information dans une couche cachée de neurones. Les réseaux de neurones auto-encodeurs sont utilisés pour la compression de données, la détection d'anomalies, etc.</p>
+<h3 id="les-reseaux-de-neurones-generatifs-generative-neural-networks">Les réseaux de neurones génératifs (Generative Neural Networks)</h3>
+<p>Ce sont des réseaux de neurones qui apprennent à générer de nouvelles données à partir d'un ensemble de données d'entraînement. Les réseaux de neurones génératifs sont utilisés pour la génération de texte, d'images, de musique, etc.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
