@@ -8,8 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/numpy/">
+        <link rel="canonical" href="https://datascience_careerera.fr/api/">
       
+      
+        <link rel="prev" href="../dltypes/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -17,7 +19,7 @@
     
     
       
-        <title>NumPy - Data Science</title>
+        <title>API (Application Programmable Interface) - Data Science</title>
       
     
     
@@ -65,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#numpy" class="md-skip">
+        <a href="#api-application-programming-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NumPy
+              API (Application Programmable Interface)
             
           </span>
         </div>
@@ -323,11 +325,75 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API (Application Programmable Interface)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         API (Application Programmable Interface)
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-application-programming-interface" class="md-nav__link">
+    API (Application Programming Interface)
+  </a>
+  
+    <nav class="md-nav" aria-label="API (Application Programming Interface)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cest-quoi" class="md-nav__link">
+    C'est quoi ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-api-restful" class="md-nav__link">
+    Les API RESTful
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -349,8 +415,48 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-application-programming-interface" class="md-nav__link">
+    API (Application Programming Interface)
+  </a>
+  
+    <nav class="md-nav" aria-label="API (Application Programming Interface)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cest-quoi" class="md-nav__link">
+    C'est quoi ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-api-restful" class="md-nav__link">
+    Les API RESTful
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    Flask
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -366,53 +472,108 @@
 
 
 
-<h1 id="numpy">NumPy</h1>
-<p>NumPy est l'abréviation de Numerical Python. C'est une bibliothèque/package Python utilisée pour travailler avec des tableaux qui contiennent des classes, des fonctions, des variables, une grande bibliothèque de fonctions mathématiques, etc. pour travailler avec des calculs scientifiques. Il peut être utilisé pour créer un tableau "n" dimensionnel où "n" est un entier quelconque.</p>
-<p>Pourquoi NumPy ?
-En Python, nous avons des listes qui servent de tableaux, mais elles sont lentes. NumPy vise à fournir un objet de tableau qui est jusqu'à 50 fois plus rapide qu'une liste Python traditionnelle.</p>
+  <h1>API (Application Programmable Interface)</h1>
+
+<h2 id="api-application-programming-interface">API (Application Programming Interface)</h2>
+<h3 id="cest-quoi">C'est quoi ?</h3>
+<p>API (Application Programmable Interface) est un ensemble de fonctions permettant d'utiliser les services d’une application. Une API est peut être distribué localement dans un programme informatique (accessible uniquement par un algorithme), ou au contraire peut avoir vocation a être utilisée par un plus grand nombre d'acteurs.</p>
 <p><br /></p>
-<p>L'objet de tableau dans NumPy s'appelle ndarray, il fournit de nombreuses fonctions de soutien qui rendent le travail avec ndarray très facile. Les tableaux sont très fréquemment utilisés en science des données, où la vitesse et les ressources sont très importantes.</p>
+<p>Il y a différents type d'API. Dans ce cours, nous nous intéressons surtout au API Web, c'est-à-dire celles qui permettent de fournir une interface accessible en ligne. Cela est le cas lorsque l'on effectue une requête à un serveur afin que l'on reçoive le résultat d'un traitement.</p>
+<h3 id="les-api-restful">Les API RESTful</h3>
+<p>Une API RESTful (Representational State Transfer) est une architecture d'API Web qui repose sur le protocole HTTP et qui utilise ses méthodes (GET, POST, PUT, DELETE) pour permettre aux clients de communiquer avec les serveurs et de récupérer des données. Les API RESTful sont largement utilisées dans les applications Web et mobiles pour fournir une interface standardisée et facile à utiliser pour accéder aux données.</p>
 <p><br /></p>
-<p>Ce qui rend les tableaux NumPy plus rapides que les listes : les tableaux NumPy sont stockés à un endroit continu en mémoire contrairement aux listes, de sorte que les processus peuvent y accéder et les manipuler très efficacement. Ce comportement est appelé la localité de référence. C'est la principale raison pour laquelle NumPy est plus rapide que les listes. Il est également optimisé pour fonctionner avec les dernières architectures de processeur.</p>
-<p>Installation de NumPy
-Pour installer NumPy, vous pouvez utiliser pip, l'installateur de paquets Python. Ouvrez votre terminal ou votre invite de commande et entrez la commande suivante :</p>
-<p>Copy code
-pip3 install numpy
-Importation de NumPy
-Il existe deux façons d'importer NumPy. Exemple de code :</p>
-<p>python
-Copy code</p>
-<h1 id="cela-importera-lensemble-du-module-numpy">cela importera l'ensemble du module NumPy.</h1>
-<p>import numpy as np</p>
-<h1 id="cela-importera-toutes-les-classes-les-objets-les-variables-etc-du-package-numpy">cela importera toutes les classes, les objets, les variables, etc. du package NumPy</h1>
-<p>from numpy import*
-NumPy est généralement importé sous l'alias np.</p>
-<p><br />
-alias : en Python, les alias sont un nom alternatif pour faire référence à la même chose.</p>
-<p><br />
-Création de tableaux NumPy
-L'objet de tableau dans NumPy s'appelle ndarray. Nous pouvons créer un objet ndarray NumPy en utilisant la fonction array(). Les tableaux NumPy peuvent être créés de plusieurs manières. Voici quelques-unes des méthodes les plus courantes :</p>
-<p>Utilisation de la fonction numpy.array() pour créer un tableau à partir d'une liste/d'un tuple :
-css
-Copy code
-a = np.array([1, 2, 3])
-Utilisation de la fonction numpy.zeros() pour créer un tableau rempli de zéros :
-bash
-Copy code
-b = np.zeros((2, 3))
-Utilisation de la fonction numpy.ones() pour créer un tableau rempli de uns :
-bash
-Copy code
-c = np.ones((2, 3))
-Utilisation de la fonction numpy.random.randint() : renvoie un tableau d'entiers aléatoires entre les deux nombres donnés.
-lua
-Copy code
-d = np.random.randint(0, 10)
-Utilisation de la fonction numpy.random.rand() pour créer un tableau de valeurs aléatoires :
-lua
-Copy code
-e = np.random.rand(2, 3)
-Dimensions des tableaux NumPy</p>
+<p><img alt="Screenshot" src="../img/rest.png" /></p>
+<p><br /></p>
+<p>Voici les principaux concepts de l'architecture RESTful :</p>
+<p><br /></p>
+<ul>
+<li>
+<p><strong>Ressources</strong> : les ressources sont les entités exposées par l'API, telles que les utilisateurs, les produits, les commandes, etc.</p>
+</li>
+<li>
+<p><strong>Verbes HTTP</strong> : les verbes HTTP (GET, POST, PUT, DELETE) sont utilisés pour décrire les opérations sur les ressources. Le verbe GET est utilisé pour récupérer une ressource, POST pour créer une nouvelle ressource, PUT pour mettre à jour une ressource existante et DELETE pour supprimer une ressource.</p>
+</li>
+<li>
+<p><strong>Les routes</strong> : Les routes dans une RESTful API sont des points d'entrée spécifiques dans l'API qui définissent les opérations disponibles et les ressources accessibles. Une route est généralement un URI (Uniform Resource Identifier) qui identifie de manière unique une ressource et une méthode HTTP qui spécifie l'action à effectuer sur cette ressource.</p>
+</li>
+<li>
+<p><strong>Représentations</strong> : les représentations sont les formats de données utilisés pour représenter les ressources, tels que JSON, XML, ou YAML. Le format le plus couramment utilisé est le JSON (JavaScript Object Notation), car il est léger, facile à lire et à écrire.</p>
+</li>
+<li>
+<p><strong>Les codes de réponse HTTP</strong> : les codes de réponse HTTP sont utilisés pour indiquer le résultat d'une opération sur une ressource. Par exemple, le code 200 indique que la demande a été traitée avec succès, le code 201 indique que la ressource a été créée avec succès, le code 404 indique que la ressource n'a pas été trouvée, etc.</p>
+</li>
+</ul>
+<p>En utilisant ces concepts, une API RESTful peut fournir une interface simple, cohérente et facile à utiliser pour accéder aux données et aux services d'un serveur. Les clients peuvent utiliser des requêtes HTTP standard pour accéder aux ressources et interagir avec le serveur, ce qui rend l'API RESTful très flexible et facile à intégrer dans des applications Web et mobiles.</p>
+<h3 id="flask">Flask</h3>
+<p>Flask est une bibliothèque Python qui permet de créer des applications Web et des API RESTful. Voici un exemple de code pour créer une API RESTful simple avec Flask :</p>
+<pre><code class="language-python">
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# Définition de quelques données pour notre API
+students = [
+    {
+        'id': 1,
+        'name': 'Alice',
+        'age': 20
+    },
+    {
+        'id': 2,
+        'name': 'Bob',
+        'age': 22
+    },
+    {
+        'id': 3,
+        'name': 'Charlie',
+        'age': 21
+    }
+]
+
+# Route pour récupérer tous les étudiants
+@app.route('/students', methods=['GET'])
+def get_students():
+    return jsonify(students)
+
+# Route pour récupérer un étudiant en particulier
+@app.route('/students/&lt;int:id&gt;', methods=['GET'])
+def get_student(id):
+    student = [student for student in students if student['id'] == id]
+    return jsonify(student)
+
+# Route pour créer un nouvel étudiant
+@app.route('/students', methods=['POST'])
+def create_student():
+    student = {
+        'id': request.json['id'],
+        'name': request.json['name'],
+        'age': request.json['age']
+    }
+    students.append(student)
+    return jsonify(student)
+
+# Route pour mettre à jour un étudiant existant
+@app.route('/students/&lt;int:id&gt;', methods=['PUT'])
+def update_student(id):
+    student = [student for student in students if student['id'] == id]
+    student[0]['name'] = request.json.get('name', student[0]['name'])
+    student[0]['age'] = request.json.get('age', student[0]['age'])
+    return jsonify(student[0])
+
+# Route pour supprimer un étudiant existant
+@app.route('/students/&lt;int:id&gt;', methods=['DELETE'])
+def delete_student(id):
+    student = [student for student in students if student['id'] == id]
+    students.remove(student[0])
+    return jsonify({'result': True})
+
+# Lancement de l'application Flask
+if __name__ == '__main__':
+    app.run(debug=True)
+</code></pre>
+<p>Dans cet exemple, nous avons créé une API RESTful simple qui permet de récupérer, créer, mettre à jour et supprimer des étudiants. Nous avons utilisé les décorateurs @app.route pour définir les différentes routes de notre API, ainsi que les méthodes HTTP correspondantes (GET, POST, PUT, DELETE). Nous avons également utilisé la fonction jsonify de Flask pour retourner des données JSON à partir de notre API.</p>
+<p><br /></p>
+<p>Pour tester notre API, nous pouvons utiliser un outil comme Postman ou simplement effectuer des requêtes HTTP en utilisant l'URL de notre API (par exemple http://localhost:5000/students pour récupérer tous les étudiants).</p>
 
 
 
