@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/sql/03_table/">
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/29_python_docker_sql/">
       
       
-        <link rel="prev" href="../02_db_kesako/">
+        <link rel="prev" href="../06_b_docker_install/">
       
       
-        <link rel="next" href="../04_basics/">
+        <link rel="next" href="../../docker/docker_network/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Tables & Keys - Data Science</title>
+        <title>SQLAlchemy and Docker - Data Science</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tables-keys" class="md-skip">
+        <a href="#sqlalchemy-and-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tables & Keys
+              SQLAlchemy and Docker
             
           </span>
         </div>
@@ -342,18 +342,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Docker for App Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -453,11 +455,106 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../29_python_docker_sql/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQLAlchemy and Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SQLAlchemy and Docker
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-an-existing-sql-database-into-a-container" class="md-nav__link">
+    Add an existing SQL database into a container
+  </a>
+  
+    <nav class="md-nav" aria-label="Add an existing SQL database into a container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#write-a-dockerfile-with-initsql-file" class="md-nav__link">
+    Write a Dockerfile with init.sql file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-our-mysql-container" class="md-nav__link">
+    Run our MySQL container
+  </a>
+  
+    <nav class="md-nav" aria-label="Run our MySQL container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-the-image" class="md-nav__link">
+    Build the image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container" class="md-nav__link">
+    Start the container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-our-container" class="md-nav__link">
+    Connect to our container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#query-a-docker-mysql-container-with-a-python-script" class="md-nav__link">
+    Query a docker MySQL container with a python script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -531,20 +628,18 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
           SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -560,20 +655,18 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
           Introduction
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -603,79 +696,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tables & Keys
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03_table/" class="md-nav__link">
         Tables & Keys
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#keys" class="md-nav__link">
-    Keys
-  </a>
-  
-    <nav class="md-nav" aria-label="Keys">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples-of-social-security-number" class="md-nav__link">
-    Examples of social security number
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#examples-of-social-media-database" class="md-nav__link">
-    Examples of social media database
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-tables" class="md-nav__link">
-    Creating Tables
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1013,24 +1038,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#keys" class="md-nav__link">
-    Keys
+  <a href="#add-an-existing-sql-database-into-a-container" class="md-nav__link">
+    Add an existing SQL database into a container
   </a>
   
-    <nav class="md-nav" aria-label="Keys">
+    <nav class="md-nav" aria-label="Add an existing SQL database into a container">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples-of-social-security-number" class="md-nav__link">
-    Examples of social security number
+  <a href="#write-a-dockerfile-with-initsql-file" class="md-nav__link">
+    Write a Dockerfile with init.sql file
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#examples-of-social-media-database" class="md-nav__link">
-    Examples of social media database
+  <a href="#run-our-mysql-container" class="md-nav__link">
+    Run our MySQL container
   </a>
+  
+    <nav class="md-nav" aria-label="Run our MySQL container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-the-image" class="md-nav__link">
+    Build the image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-container" class="md-nav__link">
+    Start the container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-our-container" class="md-nav__link">
+    Connect to our container
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1040,8 +1092,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-tables" class="md-nav__link">
-    Creating Tables
+  <a href="#query-a-docker-mysql-container-with-a-python-script" class="md-nav__link">
+    Query a docker MySQL container with a python script
   </a>
   
 </li>
@@ -1062,59 +1114,166 @@
 
 
 
-<h1 id="tables-keys">Tables &amp; Keys</h1>
-<p>In a database, a table is a collection of related data that is organized into rows and columns. Tables are the primary way to store data in a relational database management system (RDBMS). In order to organize data effectively, tables are structured with columns that define the data that can be stored in each row.</p>
-<h2 id="keys">Keys</h2>
-<p>Keys are an important concept in database design. They are used to ensure data integrity and to establish relationships between tables. There are several types of keys in a database:</p>
-<ul>
-<li><strong>Primary Key</strong>: A primary key is a column or set of columns that uniquely identifies each row in a table. The primary key is used to enforce data integrity and to ensure that there are no duplicate rows in the table.</li>
-<li><strong>Foreign Key</strong>: A foreign key is a column or set of columns that refers to the primary key of another table. It is used to establish a relationship between two tables.</li>
-<li><strong>Composite Key</strong>: A composite key is a combination of two or more columns that together uniquely identify each row in a table.</li>
-</ul>
-<h3 id="examples-of-social-security-number">Examples of social security number</h3>
-<ul>
-<li><strong>Primary Key</strong>: A primary key is a unique identifier for a record in a table. It is used to ensure that each record in the table is unique and can be easily identified. For example, a person's social security number (SSN) can be used as a primary key in a table of customer data to ensure that each customer is unique and can be easily searched for.</li>
-<li><strong>Foreign Key</strong>: A foreign key is used to link two tables together in a relational database. It is a field in one table that refers to the primary key in another table. For example, a customer's order history can be linked to their customer record using a foreign key. The foreign key in the order history table would refer to the primary key in the customer table, allowing for easy retrieval of all orders associated with a particular customer.</li>
-<li><strong>Composite Key</strong>: A composite key is a key that consists of more than one field. It is used to ensure that a combination of fields in a record is unique. For example, in a table of product inventory, a combination of the product name and the manufacturer's part number could be used as a composite key to ensure that each product is unique and can be easily searched for.</li>
-</ul>
-<h3 id="examples-of-social-media-database">Examples of social media database</h3>
-<ul>
-<li><strong>Primary Key</strong>: In a social media website's database, each user's unique username or email address can be used as a primary key to identify and manage their account. This ensures that each user has a unique identifier, making it easy for the website to maintain user data, track user activity, and provide personalized content.</li>
-<li><strong>Foreign Key</strong>: In a hospital's database, a patient's medical record can be linked to their lab results using a foreign key. The foreign key would refer to the primary key in a table of lab test results, allowing doctors to easily access each patient's test results and track their medical history.</li>
-<li><strong>Composite Key</strong>: In a hotel's database, a room reservation can be linked to a specific guest's booking using a composite key consisting of the guest's name and reservation number. This ensures that each guest has a unique reservation and allows the hotel to easily track each guest's room preference and check-in/check-out dates.</li>
-</ul>
-<h2 id="creating-tables">Creating Tables</h2>
-<p>Creating a table is the first step in building a database. The syntax for creating a table varies depending on the specific database management system being used. Here's an example of how to create a simple table with a primary key:</p>
-<pre><code class="language-sql">CREATE TABLE employees (
-  id INT PRIMARY KEY,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50),
-  age INT
-);
-</code></pre>
-<p>In this example, we have created a table called employees with four columns: <code>id</code>, <code>first_name</code>, <code>last_name</code>, and <code>age</code>. The id column is designated as the primary key for the table.</p>
-<p><br /></p>
-<p>To create a table with a foreign key, we first need to create the primary key in the table it will reference, and then add the foreign key to the table we're creating. Here's an example:</p>
-<pre><code class="language-sql">CREATE TABLE departments (
-  id INT PRIMARY KEY,
-  name VARCHAR(50)
-);
+<h1 id="sqlalchemy-and-docker">SQLAlchemy and docker</h1>
+<p>In this section we will be working with docker.  </p>
+<p><strong>Do we actually need docker to our journey to SQLAlchemy ? No. The only reason we choose to use Docker, is because, it is fast to setup, secure and lightweight.</strong> </p>
+<p>Docker provides platform which helps us deliver software packages in containers. The software package we need from docker is a database, postgres to be precise.</p>
+<p>Installing docker is simple, see the installation section if you don't have it installed. For the next part, we will assume you've already installed docker. </p>
+<h2 id="add-an-existing-sql-database-into-a-container">Add an existing SQL database into a container</h2>
+<p>In this section we will be looking at an existing database and put it into a docker container in order to query this database with a python script. </p>
+<p>Here's an example database let's call this script <code>init.sql</code>: </p>
+<p>```sql title="init.sql"
+CREATE DATABASE testdb;
+USE testdb;</p>
+<p>CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);</p>
+<p>INSERT INTO users (name, email) VALUES
+  ('John Doe', 'johndoe@example.com'),
+  ('Jane Doe', 'janedoe@example.com'),
+  ('Bob Smith', 'bobsmith@example.com');</p>
+<p>GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'%' IDENTIFIED BY 'user-password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;</p>
+<pre><code>
+This SQL script is used to create a new database called `testdb`, create a table called `users` with three columns `id`, `name`, and `email`, insert three records into the users table, and grant privileges to a user to access the testdb database.
 
-CREATE TABLE employees (
-  id INT PRIMARY KEY,
-  first_name VARCHAR(50),
-  last_name VARCHAR(50),
-  age INT,
-  department_id INT,
-  FOREIGN KEY (department_id) REFERENCES departments(id)
-);
+### What is grant privileges 
 
+The `GRANT ALL PRIVILEGES` command is used in MySQL to grant a user all possible privileges on a database or a specific table within a database. This command allows the user to perform any action on the specified database or table, including creating, modifying, and deleting data.
+
+Here's a breakdown of the syntax of the `GRANT ALL PRIVILEGES` command:
+```sql 
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
 </code></pre>
-<p>In this example, we have created two tables - <code>employees</code> and <code>departments</code>. The <code>departments</code> table has two columns - <code>id</code> and <code>name</code>, with <code>id</code> designated as the primary key. The <code>employees</code> table has five columns - <code>id</code>, <code>first_name</code>, <code>last_name</code>, <code>age</code>, and <code>department_id</code>. The <code>id</code> column is the primary key, and the <code>department_id</code> column is a foreign key that references the <code>id</code> column in the <code>departments</code> table.</p>
-<p><br /></p>
-<p>By using tables and keys, we can organize data effectively and establish relationships between tables. This allows us to build powerful and flexible databases that can store and manipulate large amounts of data.</p>
-<p><br /></p>
-<p>Don't worry about understunding the syntaxe at this point we will explain more later 🤓</p>
+<ul>
+<li><code>GRANT ALL PRIVILEGES</code> : This command grants all possible privileges to the user.</li>
+<li><code>ON database_name.*</code> : This specifies the database and any tables within it that the user will have privileges on. The * wildcard character specifies all tables within the database.</li>
+<li><code>TO 'username'@'localhost'</code> : This specifies the username and the host from which the user can connect to the database.</li>
+<li><code>IDENTIFIED BY 'password'</code> : This specifies the password for the user.</li>
+<li><code>FLUSH PRIVILEGES</code> : This line reloads the grant tables in the mysql database to apply the changes made by the GRANT command.</li>
+</ul>
+<p>The <code>GRANT ALL PRIVILEGES</code> command is a powerful command that should be used with caution. It is recommended to only grant the necessary privileges to users to minimize the risk of data loss or security breaches.</p>
+<p><strong>In our case this database is created in order to be connected by a python script and for that we must have a user, is it not recommended to connect the database as root user.</strong></p>
+<h3 id="write-a-dockerfile-with-initsql-file">Write a Dockerfile with <code>init.sql</code> file</h3>
+<p>Let's write a <code>Dockerfile</code> for our sql container : </p>
+<pre><code class="language-Dockerfile">FROM mysql:5.6
+
+# set root password
+ENV MYSQL_ROOT_PASSWORD=my-secret-pw
+
+# create database and table
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# add a new user
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=user-password
+
+EXPOSE 3306
+</code></pre>
+<p>As you know in a <code>Dockerfile</code>, the <code>COPY</code> command is used to copy files or directories from the host machine into the Docker container.</p>
+<p>In the context of our <code>Dockerfile</code>, the line  </p>
+<pre><code class="language-Dockerfile">COPY init.sql /docker-entrypoint-initdb.d/ 
+</code></pre>
+<p>copies the <code>init.sql</code> file from the host machine into the <code>/docker-entrypoint-initdb.d/</code> directory within the Docker container.</p>
+<p><strong>The <code>/docker-entrypoint-initdb.d/</code> directory is a default directory that is used by the mysql Docker image to automatically execute any SQL scripts that are located in this directory when the container is started up.</strong></p>
+<p>By copying the <code>init.sql</code> file into the <code>/docker-entrypoint-initdb.d/</code> directory within the Docker container, you are instructing the mysql image to automatically execute this script when the container starts up. This allows you to automatically create our database, tables, and insert data into the database without having to manually execute SQL commands every time the container is started up.</p>
+<h3 id="run-our-mysql-container">Run our MySQL container</h3>
+<p>To build our custom MySQL image, you can run the following command in the directory containing the Dockerfile and <code>init.sql</code> script:</p>
+<h4 id="build-the-image">Build the image</h4>
+<pre><code class="language-bash">docker build -t my-mysql-image .
+</code></pre>
+<p>This command will build the Docker image using the Dockerfile in the current directory and tag it as <code>my-mysql-image:latest</code>.</p>
+<h4 id="start-the-container">Start the container</h4>
+<p>Once the image is built, you can start a new container using the following command:</p>
+<pre><code class="language-bash">docker run --name mysql-container -d -p 3306:3306 my-mysql-image
+</code></pre>
+<p>This command will start a new container (named <code>mysql-container</code>) using the custom MySQL image, now we can connect to our container in order to verify if all the options are passed. </p>
+<h4 id="connect-to-our-container">Connect to our container</h4>
+<p>Go to your terminal and run this command in order to enter into the container : </p>
+<pre><code class="language-bash">docker exec -it mysql-container /bin/bash
+</code></pre>
+<p>or the equivalent comnmand : </p>
+<pre><code class="language-bash">docker exec -it &lt;your-container-id&gt; /bin/bash
+</code></pre>
+<p>Now that you are in the container we can access the MySQL CLI with the following command : </p>
+<pre><code class="language-bash">mysql -uuser -puser-password
+</code></pre>
+<p>You should see the following prompt </p>
+<pre><code class="language-sql">mysql&gt;
+</code></pre>
+<p>It means that you're currently in the MySQL Shell of the container. You can now view our <code>testdb</code> and <code>users</code> table with the command : </p>
+<pre><code class="language-sql">mysql&gt; show databases; 
+</code></pre>
+<p>you should see this output : </p>
+<pre><code class="language-bash">+--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| testdb             |
++--------------------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>It means our <code>user</code> is able to see our database, you can also do a test query in order to verify the integrity of our database. In this section we have seen how to build a custom MySQL container with a database in it and how to access this database with the docker CLI 🚀</p>
+<h2 id="query-a-docker-mysql-container-with-a-python-script">Query a docker MySQL container with a python script</h2>
+<p>Now, let's write a python script <code>connect_db.py</code> to connect our database 🥳</p>
+<p>```python title="connect_db.py"
+from sqlalchemy import create_engine, MetaData, Table</p>
+<h1 id="create-engine-to-connect-to-mysql">create engine to connect to MySQL</h1>
+<p>engine = create_engine('mysql://user:user-password@0.0.0.0:3306/testdb')</p>
+<h1 id="create-metadata-object">create metadata object</h1>
+<p>metadata = MetaData()</p>
+<h1 id="reflect-the-users-table">reflect the users table</h1>
+<p>users_table = Table('users', metadata, autoload=True, autoload_with=engine)</p>
+<h1 id="select-all-rows-from-the-users-table">select all rows from the users table</h1>
+<p>select_query = users_table.select()</p>
+<h1 id="execute-the-query">execute the query</h1>
+<p>with engine.connect() as conn:
+    result = conn.execute(select_query)
+    for row in result:
+        print(row)</p>
+<pre><code>
+Let's break down the different parts of the script:
+
+- `create_engine('mysql://root:my-secret-pw@0.0.0.0:3306/testdb')`: This creates a SQLAlchemy engine that connects to the MySQL database running in the Docker container. The username is &quot;root&quot;, the password is &quot;my-secret-pw&quot;, the host is &quot;localhost&quot;, the port is &quot;3306&quot;, and the database name is &quot;testdb&quot;.
+- `metadata = MetaData()` : This creates a metadata object that will be used to reflect the database schema.
+- `users_table = Table('users', metadata, autoload=True, autoload_with=engine)` : This reflects the &quot;users&quot; table from the database using the metadata object.
+- `select_query = users_table.select()` : This creates a query that selects all rows from the &quot;users&quot; table.
+- `with engine.connect() as conn` : result = conn.execute(select_query): This creates a connection to the database using the engine, executes the select query, and stores the result in a variable.
+- `for row in result: print(row)` : This loops through the result set and prints each row.
+
+This script assumes that you have the necessary dependencies installed, including SQLAlchemy and the MySQL driver for Python. You can install these dependencies using `pip`:
+```bash
+pip install sqlalchemy pymysql
+</code></pre>
+<p>Note that the driver used to connect to the MySQL database is "pymysql", which is a Python MySQL client library that works with SQLAlchemy.</p>
+<p>If you execute this script, you should see this output : </p>
+<pre><code class="language-bash">(1, 'John Doe', 'johndoe@example.com')
+(2, 'Jane Doe', 'janedoe@example.com')
+(3, 'Bob Smith', 'bobsmith@example.com')
+</code></pre>
+<h2 id="next-steps">Next steps</h2>
+<p>In this section we covered a pretty simple database and python script so for the next steps if you want to upgrade this project you can consider : </p>
+<ul>
+<li>Add FastAPI CRUD endpoints to interact with the database </li>
+<li>Add a better database and <code>init.sql</code> script </li>
+<li>Wrap-up the project with a <code>docker-compose.yml</code> file </li>
+<li>Code a dashboard route in FastAPI in order to visualize some data of your database </li>
+<li>Be creative 😃</li>
+</ul>
+<h2 id="wrap-up">Wrap-up</h2>
+<p>Let's summarize whant we have seen in this section :</p>
+<ul>
+<li>Docker provides a consistent and portable environment for running applications, including databases like MySQL.</li>
+<li>We can use Docker to run a MySQL database in a container by pulling the mysql image and specifying the appropriate environment variables and port mappings.</li>
+<li>We can use the mysql-connector-python library in Python to connect to a MySQL database and perform SQL queries.</li>
+<li>We can create a SQL script to create tables and insert data into the MySQL database, and include this script in the Docker image to automatically execute it when the container starts up.</li>
+<li>We have learned how to write a Dockerfile to define the configuration of a Docker container, and how to use it to build a Docker image.</li>
+<li>Overall, connecting Docker MySQL and Python provides a more efficient and reliable way to manage and run databases and applications, and reduces the complexity and time involved in setting up and maintaining software installations.</li>
+</ul>
 
 
 
