@@ -499,6 +499,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#what-is-grant-privileges" class="md-nav__link">
+    What is grant privileges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#write-a-dockerfile-with-initsql-file" class="md-nav__link">
     Write a Dockerfile with init.sql file
   </a>
@@ -547,6 +554,20 @@
         <li class="md-nav__item">
   <a href="#query-a-docker-mysql-container-with-a-python-script" class="md-nav__link">
     Query a docker MySQL container with a python script
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
   </a>
   
 </li>
@@ -1046,6 +1067,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#what-is-grant-privileges" class="md-nav__link">
+    What is grant privileges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#write-a-dockerfile-with-initsql-file" class="md-nav__link">
     Write a Dockerfile with init.sql file
   </a>
@@ -1098,6 +1126,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next steps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1115,38 +1157,34 @@
 
 
 <h1 id="sqlalchemy-and-docker">SQLAlchemy and docker</h1>
-<p>In this section we will be working with docker.  </p>
-<p><strong>Do we actually need docker to our journey to SQLAlchemy ? No. The only reason we choose to use Docker, is because, it is fast to setup, secure and lightweight.</strong> </p>
-<p>Docker provides platform which helps us deliver software packages in containers. The software package we need from docker is a database, postgres to be precise.</p>
-<p>Installing docker is simple, see the installation section if you don't have it installed. For the next part, we will assume you've already installed docker. </p>
 <h2 id="add-an-existing-sql-database-into-a-container">Add an existing SQL database into a container</h2>
 <p>In this section we will be looking at an existing database and put it into a docker container in order to query this database with a python script. </p>
+<p><br /></p>
 <p>Here's an example database let's call this script <code>init.sql</code>: </p>
-<p>```sql title="init.sql"
-CREATE DATABASE testdb;
-USE testdb;</p>
-<p>CREATE TABLE users (
+<pre><code class="language-sql">CREATE DATABASE testdb;
+USE testdb;
+
+CREATE TABLE users (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
   PRIMARY KEY (id)
-);</p>
-<p>INSERT INTO users (name, email) VALUES
+);
+
+INSERT INTO users (name, email) VALUES
   ('John Doe', 'johndoe@example.com'),
   ('Jane Doe', 'janedoe@example.com'),
-  ('Bob Smith', 'bobsmith@example.com');</p>
-<p>GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'%' IDENTIFIED BY 'user-password' WITH GRANT OPTION;
-FLUSH PRIVILEGES;</p>
-<pre><code>
-This SQL script is used to create a new database called `testdb`, create a table called `users` with three columns `id`, `name`, and `email`, insert three records into the users table, and grant privileges to a user to access the testdb database.
+  ('Bob Smith', 'bobsmith@example.com');
 
-### What is grant privileges 
-
-The `GRANT ALL PRIVILEGES` command is used in MySQL to grant a user all possible privileges on a database or a specific table within a database. This command allows the user to perform any action on the specified database or table, including creating, modifying, and deleting data.
-
-Here's a breakdown of the syntax of the `GRANT ALL PRIVILEGES` command:
-```sql 
-GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'%' IDENTIFIED BY 'user-password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+</code></pre>
+<p>This SQL script is used to create a new database called <code>testdb</code>, create a table called <code>users</code> with three columns <code>id</code>, <code>name</code>, and <code>email</code>, insert three records into the users table, and grant privileges to a user to access the testdb database.</p>
+<h3 id="what-is-grant-privileges">What is grant privileges</h3>
+<p>The <code>GRANT ALL PRIVILEGES</code> command is used in MySQL to grant a user all possible privileges on a database or a specific table within a database. This command allows the user to perform any action on the specified database or table, including creating, modifying, and deleting data.</p>
+<p><br /></p>
+<p>Here's a breakdown of the syntax of the <code>GRANT ALL PRIVILEGES</code> command:</p>
+<pre><code class="language-sql">GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost' IDENTIFIED BY 'password';
 FLUSH PRIVILEGES;
 </code></pre>
 <ul>
@@ -1175,11 +1213,14 @@ ENV MYSQL_PASSWORD=user-password
 EXPOSE 3306
 </code></pre>
 <p>As you know in a <code>Dockerfile</code>, the <code>COPY</code> command is used to copy files or directories from the host machine into the Docker container.</p>
+<p><br /></p>
 <p>In the context of our <code>Dockerfile</code>, the line  </p>
 <pre><code class="language-Dockerfile">COPY init.sql /docker-entrypoint-initdb.d/ 
 </code></pre>
 <p>copies the <code>init.sql</code> file from the host machine into the <code>/docker-entrypoint-initdb.d/</code> directory within the Docker container.</p>
+<p><br /></p>
 <p><strong>The <code>/docker-entrypoint-initdb.d/</code> directory is a default directory that is used by the mysql Docker image to automatically execute any SQL scripts that are located in this directory when the container is started up.</strong></p>
+<p><br /></p>
 <p>By copying the <code>init.sql</code> file into the <code>/docker-entrypoint-initdb.d/</code> directory within the Docker container, you are instructing the mysql image to automatically execute this script when the container starts up. This allows you to automatically create our database, tables, and insert data into the database without having to manually execute SQL commands every time the container is started up.</p>
 <h3 id="run-our-mysql-container">Run our MySQL container</h3>
 <p>To build our custom MySQL image, you can run the following command in the directory containing the Dockerfile and <code>init.sql</code> script:</p>
@@ -1220,34 +1261,38 @@ EXPOSE 3306
 <p>It means our <code>user</code> is able to see our database, you can also do a test query in order to verify the integrity of our database. In this section we have seen how to build a custom MySQL container with a database in it and how to access this database with the docker CLI 🚀</p>
 <h2 id="query-a-docker-mysql-container-with-a-python-script">Query a docker MySQL container with a python script</h2>
 <p>Now, let's write a python script <code>connect_db.py</code> to connect our database 🥳</p>
-<p>```python title="connect_db.py"
-from sqlalchemy import create_engine, MetaData, Table</p>
-<h1 id="create-engine-to-connect-to-mysql">create engine to connect to MySQL</h1>
-<p>engine = create_engine('mysql://user:user-password@0.0.0.0:3306/testdb')</p>
-<h1 id="create-metadata-object">create metadata object</h1>
-<p>metadata = MetaData()</p>
-<h1 id="reflect-the-users-table">reflect the users table</h1>
-<p>users_table = Table('users', metadata, autoload=True, autoload_with=engine)</p>
-<h1 id="select-all-rows-from-the-users-table">select all rows from the users table</h1>
-<p>select_query = users_table.select()</p>
-<h1 id="execute-the-query">execute the query</h1>
-<p>with engine.connect() as conn:
+<pre><code class="language-python">from sqlalchemy import create_engine, MetaData, Table
+
+# create engine to connect to MySQL
+engine = create_engine('mysql://user:user-password@0.0.0.0:3306/testdb')
+
+# create metadata object
+metadata = MetaData()
+
+# reflect the users table
+users_table = Table('users', metadata, autoload=True, autoload_with=engine)
+
+# select all rows from the users table
+select_query = users_table.select()
+
+# execute the query
+with engine.connect() as conn:
     result = conn.execute(select_query)
     for row in result:
-        print(row)</p>
-<pre><code>
-Let's break down the different parts of the script:
+        print(row)
 
-- `create_engine('mysql://root:my-secret-pw@0.0.0.0:3306/testdb')`: This creates a SQLAlchemy engine that connects to the MySQL database running in the Docker container. The username is &quot;root&quot;, the password is &quot;my-secret-pw&quot;, the host is &quot;localhost&quot;, the port is &quot;3306&quot;, and the database name is &quot;testdb&quot;.
-- `metadata = MetaData()` : This creates a metadata object that will be used to reflect the database schema.
-- `users_table = Table('users', metadata, autoload=True, autoload_with=engine)` : This reflects the &quot;users&quot; table from the database using the metadata object.
-- `select_query = users_table.select()` : This creates a query that selects all rows from the &quot;users&quot; table.
-- `with engine.connect() as conn` : result = conn.execute(select_query): This creates a connection to the database using the engine, executes the select query, and stores the result in a variable.
-- `for row in result: print(row)` : This loops through the result set and prints each row.
-
-This script assumes that you have the necessary dependencies installed, including SQLAlchemy and the MySQL driver for Python. You can install these dependencies using `pip`:
-```bash
-pip install sqlalchemy pymysql
+</code></pre>
+<p>Let's break down the different parts of the script:</p>
+<ul>
+<li><code>create_engine('mysql://root:my-secret-pw@0.0.0.0:3306/testdb')</code>: This creates a SQLAlchemy engine that connects to the MySQL database running in the Docker container. The username is "root", the password is "my-secret-pw", the host is "localhost", the port is "3306", and the database name is "testdb".</li>
+<li><code>metadata = MetaData()</code> : This creates a metadata object that will be used to reflect the database schema.</li>
+<li><code>users_table = Table('users', metadata, autoload=True, autoload_with=engine)</code> : This reflects the "users" table from the database using the metadata object.</li>
+<li><code>select_query = users_table.select()</code> : This creates a query that selects all rows from the "users" table.</li>
+<li><code>with engine.connect() as conn</code> : result = conn.execute(select_query): This creates a connection to the database using the engine, executes the select query, and stores the result in a variable.</li>
+<li><code>for row in result: print(row)</code> : This loops through the result set and prints each row.</li>
+</ul>
+<p>This script assumes that you have the necessary dependencies installed, including SQLAlchemy and the MySQL driver for Python. You can install these dependencies using <code>pip</code>:</p>
+<pre><code class="language-bash">pip install sqlalchemy pymysql
 </code></pre>
 <p>Note that the driver used to connect to the MySQL database is "pymysql", which is a Python MySQL client library that works with SQLAlchemy.</p>
 <p>If you execute this script, you should see this output : </p>
