@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/pd/">
+        <link rel="canonical" href="https://datascience_careerera.fr/docker/docker_install/">
       
       
+        <link rel="prev" href="../docker_intro/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../docker_python_app/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Pd - Data Science</title>
+        <title>Setting up Docker - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#setting-up-docker" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pd
+              Setting up Docker
             
           </span>
         </div>
@@ -160,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -235,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -284,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -298,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
     </li>
@@ -333,18 +342,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Docker for App Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -362,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -374,11 +385,92 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Setting up Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Setting up Docker
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-macos" class="md-nav__link">
+    Installing Docker on MacOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Docker on MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-informations-about-docker-version" class="md-nav__link">
+    Technical informations about docker version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-docker-works-on-our-machine" class="md-nav__link">
+    How Docker works on our machine
+  </a>
+  
+    <nav class="md-nav" aria-label="How Docker works on our machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-client" class="md-nav__link">
+    Docker client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-daemon" class="md-nav__link">
+    Docker Daemon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -390,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -404,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -418,7 +510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+      <a href="../docker_volume/" class="md-nav__link">
         Docker Volumes
       </a>
     </li>
@@ -432,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../../sql/06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -446,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../../sql/29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -460,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+      <a href="../docker_network/" class="md-nav__link">
         Docker Network
       </a>
     </li>
@@ -474,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -488,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -502,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -578,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+      <a href="../../sql/02_db_kesako/" class="md-nav__link">
         What is a Database
       </a>
     </li>
@@ -592,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../../sql/03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -606,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+      <a href="../../sql/04_basics/" class="md-nav__link">
         SQL Basic understanding
       </a>
     </li>
@@ -654,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../../sql/05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -702,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../../sql/07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -716,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../../sql/08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -730,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../../sql/09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -744,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../../sql/10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -758,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../../sql/11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -779,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../../sql/12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -793,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../../sql/13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -807,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../../sql/14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -821,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../../sql/15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -835,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../../sql/17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -849,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../../sql/18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -863,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../../sql/19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -877,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+      <a href="../../sql/20_triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -891,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../../sql/21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -922,6 +1014,63 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-docker-on-macos" class="md-nav__link">
+    Installing Docker on MacOS
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Docker on MacOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-informations-about-docker-version" class="md-nav__link">
+    Technical informations about docker version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-docker-works-on-our-machine" class="md-nav__link">
+    How Docker works on our machine
+  </a>
+  
+    <nav class="md-nav" aria-label="How Docker works on our machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-client" class="md-nav__link">
+    Docker client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-daemon" class="md-nav__link">
+    Docker Daemon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -937,7 +1086,102 @@
 
 
 
-<p>pd</p>
+<h1 id="setting-up-docker">Setting up Docker</h1>
+<p>The process of installing Docker on your local machine will depend on the operating system you are using. Docker provides installation packages for Windows, macOS, and Linux.</p>
+<h2 id="installing-docker-on-macos">Installing Docker on MacOS</h2>
+<ol>
+<li>
+<p>Go to the official <a href="https://www.docker.com">docker website</a> and download the appropriate installation package for your operating system.
+<em>Be aware of your chipset for example if your Apple machine is new install the version apple chip not intel (you can see that chip information if you go on the <code>little  on the top left of your screen</code> &gt; <code>about my Mac</code>)</em></p>
+</li>
+<li>
+<p>Follow the installation instructions </p>
+</li>
+<li>Once Docker is successfully installed, open a terminal or command prompt and run the following command to verify that Docker is running:</li>
+</ol>
+<pre><code class="language-bash">docker version
+</code></pre>
+<p>If Docker is running correctly, you should see information about the Docker version, API version, and other details like this : </p>
+<pre><code class="language-bash">Client:
+ Cloud integration: 1.0.14
+ Version:           20.10.6
+ API version:       1.41
+ Go version:        go1.16.3
+ Git commit:        370c289
+ Built:             Fri Apr  9 22:46:57 2021
+ OS/Arch:           darwin/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.6
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.13.15
+  Git commit:       8728dd2
+  Built:            Fri Apr  9 22:44:56 2021
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.4.4
+  GitCommit:        05f951a3781f4f2c1911b05e61c160e9c30eaa8e
+ runc:
+  Version:          1.0.0-rc93
+  GitCommit:        12644e614e25b05da6fd08a38ffa0cfe1903fdec
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+</code></pre>
+<h3 id="technical-informations-about-docker-version">Technical informations about docker version</h3>
+<p>Just in case if you wondering what the output means 🤓</p>
+<ul>
+<li><strong>Client</strong>: This section shows the version and details of the Docker client that is running on your local machine. The client is responsible for issuing commands to the Docker daemon, which manages containers and images.<ul>
+<li>Cloud integration: This shows the version of the Docker Cloud integration plugin that is installed on your machine. Docker Cloud is a service that provides tools for managing Docker containers in the cloud.</li>
+<li><strong>Version</strong>: This shows the version of the Docker client that is installed on your machine.</li>
+<li><strong>API version</strong>: This shows the version of the Docker API that is supported by the client.</li>
+<li>Go version: This shows the version of the Go programming language that was used to compile the Docker client.</li>
+<li>Git commit: This shows the Git commit hash that was used to build the Docker client.</li>
+<li>Built: This shows the date and time that the Docker client was built.</li>
+<li>OS/Arch: This shows the operating system and processor architecture that the Docker client is running on.</li>
+<li>Context: This shows the default Docker context that is currently in use.</li>
+<li>Experimental: This shows whether experimental features are enabled on the Docker client.</li>
+</ul>
+</li>
+<li><strong>Server</strong>: This section shows the version and details of the Docker daemon that is running on your local machine. The daemon is responsible for managing containers and images.<ul>
+<li><strong>Engine</strong>: This shows the version of the Docker engine that is running on your machine.</li>
+<li><strong>API version</strong>: This shows the version of the Docker API that is supported by the engine.</li>
+<li>Go version: This shows the version of the Go programming language that was used to compile the Docker engine.</li>
+<li>Git commit: This shows the Git commit hash that was used to build the Docker engine.</li>
+<li>Built: This shows the date and time that the Docker engine was built.</li>
+<li><strong>OS/Arch</strong>: This shows the operating system and processor architecture that the Docker engine is running on.</li>
+<li>Experimental: This shows whether experimental features are enabled on the Docker engine.</li>
+<li>containerd: This shows the version and Git commit of containerd, which is the container runtime used by Docker.</li>
+<li>runc: This shows the version and Git commit of runc, which is the command-line tool used to run containers.</li>
+<li>docker-init: This shows the version and Git commit of docker-init, which is the initialization script used by Docker to start containers.</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-docker-works-on-our-machine">How Docker works on our machine</h2>
+<p>As you can see the output of the <code>docker version</code> command is divided into two sections: Client and Server. In the context of Docker, the Docker client and server are two separate components that work together to manage containers and images.</p>
+<p><br /></p>
+<p><img alt="Screenshot" src="https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/images/comp_client_server.jpg" /></p>
+<p>At the top, we have the client component, which runs on the host machine and interacts with the user. The client sends requests to the server component, which is hosted inside a Docker container.</p>
+<p><br /></p>
+<p>The Docker container is built from an image, which contains the application code and its dependencies. The image is created using a Dockerfile, which specifies the steps to build the image. The image is then pushed to a Docker registry, where it can be accessed by other team members or deployed to production.</p>
+<p><br /></p>
+<p>The Docker container runs on a Docker host, which is a machine that has Docker installed. The Docker host abstracts the underlying hardware and provides a consistent interface for running Docker containers.</p>
+<p><br /></p>
+<p>The Docker container is isolated from other containers and the host machine, which provides a secure and predictable environment for running the application.</p>
+<p><br /></p>
+<p>In this architecture, we can easily scale the server component by creating more Docker containers from the same image. We can also deploy the application to different environments, such as development, staging, and production, by using different Docker images and configurations.</p>
+<h3 id="docker-client">Docker client</h3>
+<p>The <strong>Docker client is a command-line interface (CLI) tool that allows you to interact with the Docker daemon</strong>. The client sends commands to the daemon, which then executes those commands and manages the containers and images on your system. The Docker client can be used to build and run containers, manage images, and perform other Docker-related tasks.</p>
+<h3 id="docker-daemon">Docker Daemon</h3>
+<p>The <strong>Docker server, also known as the Docker daemon, is a background process that manages the containers and images on your system</strong>. The daemon listens for commands from the Docker client, executes those commands, and manages the underlying infrastructure needed to run containers, such as networking and storage.</p>
+<p><br /></p>
+<p>The Docker client and server communicate with each other using the Docker API, which is a RESTful API that provides a standardized way to interact with Docker. When you run a command using the Docker client, such as "docker run", the client sends a request to the Docker daemon over the Docker API. The daemon then processes the request and executes the command.</p>
+<p><br /></p>
+<p><strong>In summary, the Docker client is a tool for interacting with the Docker daemon, while the Docker daemon is a background process that manages the containers and images on your system. The client and daemon communicate with each other using the Docker API.</strong></p>
 
 
 
@@ -975,12 +1219,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/api/">
+        <link rel="canonical" href="https://datascience_careerera.fr/docker/docker_network/">
       
       
-        <link rel="prev" href="../dltypes/">
+        <link rel="prev" href="../../sql/06_b_docker_install/">
       
       
-        <link rel="next" href="../docker/docker_intro/">
+        <link rel="next" href="../docker_compose/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>API (Application Programmable Interface) - Data Science</title>
+        <title>Docker Network - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -44,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-application-programming-interface" class="md-skip">
+        <a href="#what-is-docker-networking" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API (Application Programmable Interface)
+              Docker Network
             
           </span>
         </div>
@@ -169,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -188,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -230,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -244,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -293,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -307,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -327,75 +327,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          API (Application Programmable Interface)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#api-application-programming-interface" class="md-nav__link">
-    API (Application Programming Interface)
-  </a>
-  
-    <nav class="md-nav" aria-label="API (Application Programming Interface)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cest-quoi" class="md-nav__link">
-    C'est quoi ?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-api-restful" class="md-nav__link">
-    Les API RESTful
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#flask" class="md-nav__link">
-    Flask
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -406,18 +342,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Docker for App Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -435,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -449,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+      <a href="../docker_install/" class="md-nav__link">
         Setting up Docker
       </a>
     </li>
@@ -463,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -477,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -491,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+      <a href="../docker_volume/" class="md-nav__link">
         Docker Volumes
       </a>
     </li>
@@ -505,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../../sql/06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -519,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../../sql/29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -531,11 +469,148 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Docker Network
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-network-types" class="md-nav__link">
+    Docker Network Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-docker-network" class="md-nav__link">
+    Creating a Docker Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attaching-containers-to-a-network" class="md-nav__link">
+    Attaching Containers to a Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-external-networks" class="md-nav__link">
+    Connecting to External Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-containers-and-attach-them-to-a-network" class="md-nav__link">
+    Create containers and attach them to a network
+  </a>
+  
+    <nav class="md-nav" aria-label="Create containers and attach them to a network">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-docker-network" class="md-nav__link">
+    Step 1: Create a Docker Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-the-first-container" class="md-nav__link">
+    Step 2: Create the First Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-create-the-second-container" class="md-nav__link">
+    Step 3: Create the Second Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-the-third-container" class="md-nav__link">
+    Step 4: Create the Third Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-ping-one-container-from-the-other" class="md-nav__link">
+    Step 5: Ping One Container from the Other
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Ping One Container from the Other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ping" class="md-nav__link">
+    What is ping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping-container1-from-container2" class="md-nav__link">
+    Ping  container1 from container2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -547,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -561,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -575,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -651,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+      <a href="../../sql/02_db_kesako/" class="md-nav__link">
         What is a Database
       </a>
     </li>
@@ -665,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../../sql/03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -679,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+      <a href="../../sql/04_basics/" class="md-nav__link">
         SQL Basic understanding
       </a>
     </li>
@@ -727,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../../sql/05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -775,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../../sql/07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -789,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../../sql/08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -803,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../../sql/09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -817,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../../sql/10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -831,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../../sql/11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -852,7 +927,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../../sql/12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -866,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../../sql/13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -880,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../../sql/14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -894,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../../sql/15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -908,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../../sql/17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -922,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../../sql/18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -936,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../../sql/19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -950,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+      <a href="../../sql/20_triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -964,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../../sql/21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -995,6 +1070,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1003,36 +1080,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#api-application-programming-interface" class="md-nav__link">
-    API (Application Programming Interface)
+  <a href="#docker-network-types" class="md-nav__link">
+    Docker Network Types
   </a>
   
-    <nav class="md-nav" aria-label="API (Application Programming Interface)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-docker-network" class="md-nav__link">
+    Creating a Docker Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attaching-containers-to-a-network" class="md-nav__link">
+    Attaching Containers to a Network
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-external-networks" class="md-nav__link">
+    Connecting to External Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-containers-and-attach-them-to-a-network" class="md-nav__link">
+    Create containers and attach them to a network
+  </a>
+  
+    <nav class="md-nav" aria-label="Create containers and attach them to a network">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cest-quoi" class="md-nav__link">
-    C'est quoi ?
+  <a href="#step-1-create-a-docker-network" class="md-nav__link">
+    Step 1: Create a Docker Network
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#les-api-restful" class="md-nav__link">
-    Les API RESTful
+  <a href="#step-2-create-the-first-container" class="md-nav__link">
+    Step 2: Create the First Container
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#flask" class="md-nav__link">
-    Flask
+  <a href="#step-3-create-the-second-container" class="md-nav__link">
+    Step 3: Create the Second Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-create-the-third-container" class="md-nav__link">
+    Step 4: Create the Third Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-ping-one-container-from-the-other" class="md-nav__link">
+    Step 5: Ping One Container from the Other
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Ping One Container from the Other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-ping" class="md-nav__link">
+    What is ping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping-container1-from-container2" class="md-nav__link">
+    Ping  container1 from container2
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
+  </a>
   
 </li>
       
@@ -1052,108 +1198,83 @@
 
 
 
-  <h1>API (Application Programmable Interface)</h1>
-
-<h2 id="api-application-programming-interface">API (Application Programming Interface)</h2>
-<h3 id="cest-quoi">C'est quoi ?</h3>
-<p>API (Application Programmable Interface) est un ensemble de fonctions permettant d'utiliser les services d’une application. Une API est peut être distribué localement dans un programme informatique (accessible uniquement par un algorithme), ou au contraire peut avoir vocation a être utilisée par un plus grand nombre d'acteurs.</p>
+<h1 id="what-is-docker-networking">What is Docker Networking?</h1>
+<p>Docker Networking allows you to connect Docker containers together so that they can communicate with each other. This is useful for building complex applications that are made up of multiple containers, each with its own functionality.</p>
 <p><br /></p>
-<p>Il y a différents type d'API. Dans ce cours, nous nous intéressons surtout au API Web, c'est-à-dire celles qui permettent de fournir une interface accessible en ligne. Cela est le cas lorsque l'on effectue une requête à un serveur afin que l'on reçoive le résultat d'un traitement.</p>
-<h3 id="les-api-restful">Les API RESTful</h3>
-<p>Une API RESTful (Representational State Transfer) est une architecture d'API Web qui repose sur le protocole HTTP et qui utilise ses méthodes (GET, POST, PUT, DELETE) pour permettre aux clients de communiquer avec les serveurs et de récupérer des données. Les API RESTful sont largement utilisées dans les applications Web et mobiles pour fournir une interface standardisée et facile à utiliser pour accéder aux données.</p>
-<p><br /></p>
-<p><img alt="Screenshot" src="../img/rest.png" /></p>
-<p><br /></p>
-<p>Voici les principaux concepts de l'architecture RESTful :</p>
-<p><br /></p>
+<p>Docker Networking also allows you to isolate containers from each other, providing an added layer of security. Additionally, Docker Networking makes it easy to connect containers to external networks, such as the internet, and to other Docker hosts.</p>
+<h2 id="docker-network-types">Docker Network Types</h2>
+<p>Docker supports several types of network drivers that provide different ways to connect containers together. Here are some of the most common Docker network types:</p>
 <ul>
-<li>
-<p><strong>Ressources</strong> : les ressources sont les entités exposées par l'API, telles que les utilisateurs, les produits, les commandes, etc.</p>
-</li>
-<li>
-<p><strong>Verbes HTTP</strong> : les verbes HTTP (GET, POST, PUT, DELETE) sont utilisés pour décrire les opérations sur les ressources. Le verbe GET est utilisé pour récupérer une ressource, POST pour créer une nouvelle ressource, PUT pour mettre à jour une ressource existante et DELETE pour supprimer une ressource.</p>
-</li>
-<li>
-<p><strong>Les routes</strong> : Les routes dans une RESTful API sont des points d'entrée spécifiques dans l'API qui définissent les opérations disponibles et les ressources accessibles. Une route est généralement un URI (Uniform Resource Identifier) qui identifie de manière unique une ressource et une méthode HTTP qui spécifie l'action à effectuer sur cette ressource.</p>
-</li>
-<li>
-<p><strong>Représentations</strong> : les représentations sont les formats de données utilisés pour représenter les ressources, tels que JSON, XML, ou YAML. Le format le plus couramment utilisé est le JSON (JavaScript Object Notation), car il est léger, facile à lire et à écrire.</p>
-</li>
-<li>
-<p><strong>Les codes de réponse HTTP</strong> : les codes de réponse HTTP sont utilisés pour indiquer le résultat d'une opération sur une ressource. Par exemple, le code 200 indique que la demande a été traitée avec succès, le code 201 indique que la ressource a été créée avec succès, le code 404 indique que la ressource n'a pas été trouvée, etc.</p>
-</li>
+<li><strong>Bridge Network</strong>: The default network type in Docker, a bridge network is a private network that allows containers to communicate with each other using IP addresses. Containers on a bridge network can communicate with each other but are isolated from the host machine and external networks.</li>
+<li><strong>Host Network</strong>: A host network allows containers to use the host machine's network stack, essentially giving them direct access to the host's network interfaces. This can provide better performance but may not be as secure as other network types.</li>
+<li><strong>Overlay Network</strong>: An overlay network allows you to connect containers that are running on different Docker hosts. This is useful for building distributed applications that are made up of multiple Docker hosts.</li>
+<li><strong>Macvlan Network</strong>: A macvlan network allows you to assign a MAC address to a container, essentially making it appear as though it is a physical machine on the network. This can be useful for running containers that require direct access to the physical network.</li>
 </ul>
-<p>En utilisant ces concepts, une API RESTful peut fournir une interface simple, cohérente et facile à utiliser pour accéder aux données et aux services d'un serveur. Les clients peuvent utiliser des requêtes HTTP standard pour accéder aux ressources et interagir avec le serveur, ce qui rend l'API RESTful très flexible et facile à intégrer dans des applications Web et mobiles.</p>
-<h3 id="flask">Flask</h3>
-<p>Flask est une bibliothèque Python qui permet de créer des applications Web et des API RESTful. Voici un exemple de code pour créer une API RESTful simple avec Flask :</p>
-<pre><code class="language-python">
-from flask import Flask, jsonify, request
-
-app = Flask(__name__)
-
-# Définition de quelques données pour notre API
-students = [
-    {
-        'id': 1,
-        'name': 'Alice',
-        'age': 20
-    },
-    {
-        'id': 2,
-        'name': 'Bob',
-        'age': 22
-    },
-    {
-        'id': 3,
-        'name': 'Charlie',
-        'age': 21
-    }
-]
-
-# Route pour récupérer tous les étudiants
-@app.route('/students', methods=['GET'])
-def get_students():
-    return jsonify(students)
-
-# Route pour récupérer un étudiant en particulier
-@app.route('/students/&lt;int:id&gt;', methods=['GET'])
-def get_student(id):
-    student = [student for student in students if student['id'] == id]
-    return jsonify(student)
-
-# Route pour créer un nouvel étudiant
-@app.route('/students', methods=['POST'])
-def create_student():
-    student = {
-        'id': request.json['id'],
-        'name': request.json['name'],
-        'age': request.json['age']
-    }
-    students.append(student)
-    return jsonify(student)
-
-# Route pour mettre à jour un étudiant existant
-@app.route('/students/&lt;int:id&gt;', methods=['PUT'])
-def update_student(id):
-    student = [student for student in students if student['id'] == id]
-    student[0]['name'] = request.json.get('name', student[0]['name'])
-    student[0]['age'] = request.json.get('age', student[0]['age'])
-    return jsonify(student[0])
-
-# Route pour supprimer un étudiant existant
-@app.route('/students/&lt;int:id&gt;', methods=['DELETE'])
-def delete_student(id):
-    student = [student for student in students if student['id'] == id]
-    students.remove(student[0])
-    return jsonify({'result': True})
-
-# Lancement de l'application Flask
-if __name__ == '__main__':
-    app.run(debug=True)
+<h2 id="creating-a-docker-network">Creating a Docker Network</h2>
+<p>Creating a Docker network is easy. You can use the docker network create command to create a new network:</p>
+<pre><code class="language-bash">docker network create mynetwork
 </code></pre>
-<p>Dans cet exemple, nous avons créé une API RESTful simple qui permet de récupérer, créer, mettre à jour et supprimer des étudiants. Nous avons utilisé les décorateurs @app.route pour définir les différentes routes de notre API, ainsi que les méthodes HTTP correspondantes (GET, POST, PUT, DELETE). Nous avons également utilisé la fonction jsonify de Flask pour retourner des données JSON à partir de notre API.</p>
+<p>This command creates a new Docker network with the name mynetwork.</p>
+<h2 id="attaching-containers-to-a-network">Attaching Containers to a Network</h2>
+<p>To attach a container to a network, you can use the --network option when you start the container:</p>
+<pre><code class="language-bash">docker run --name mycontainer --network mynetwork alpine sleep 3000
+</code></pre>
+<p>This command creates a new container with the name mycontainer and attaches it to the mynetwork network.</p>
+<h2 id="connecting-to-external-networks">Connecting to External Networks</h2>
+<p>To connect a container to an external network, such as the internet, you can use the --network option to specify the host network:</p>
+<pre><code class="language-bash">docker run --name mycontainer --network host alpine ping google.com
+</code></pre>
+<p>This command creates a new container with the name mycontainer and attaches it to the host network. The container then uses the host machine's network stack to ping google.com.</p>
+<h2 id="create-containers-and-attach-them-to-a-network">Create containers and attach them to a network</h2>
+<h3 id="step-1-create-a-docker-network">Step 1: Create a Docker Network</h3>
+<p>The first step is to create a Docker network that both containers will be attached to. This can be done using the docker network create command:</p>
+<pre><code class="language-bash">docker network create mynetwork
+</code></pre>
+<h3 id="step-2-create-the-first-container">Step 2: Create the First Container</h3>
+<p>Next, we'll create the first container and attach it to the mynetwork network. We'll use the docker run command to create the container:</p>
+<pre><code class="language-bash">docker run --name container1 --network mynetwork alpine sleep 3000
+</code></pre>
+<p>This command creates a new container with the name container1, attaches it to the mynetwork network, and starts the sleep command to keep the container running for 3000 seconds.</p>
+<h3 id="step-3-create-the-second-container">Step 3: Create the Second Container</h3>
+<p>Next, we'll create the second container and attach it to the mynetwork network. We'll use the docker run command again:</p>
+<pre><code class="language-bash">docker run --name container2 --network mynetwork alpine sleep 3000
+</code></pre>
+<p>Same thing, this command creates a new container with the name <code>container2</code>, attaches it to the mynetwork network, and starts the sleep command to keep the container running for 3000 seconds.</p>
+<h3 id="step-4-create-the-third-container">Step 4: Create the Third Container</h3>
+<p>Now, let's create a third container that is not attached to the mynetwork network. We'll use the docker run command to create the container:</p>
+<pre><code class="language-bash">docker run --name container3 alpine sleep 3000
+</code></pre>
+<p>This command creates a new container with the name <code>container3</code> and starts the sleep command to keep the container running for 3000 seconds. Since we did not specify a network for this container, it will be attached to the default bridge network.</p>
+<h3 id="step-5-ping-one-container-from-the-other">Step 5: Ping One Container from the Other</h3>
+<h4 id="what-is-ping">What is <code>ping</code></h4>
+<p>The <code>ping</code> command is commonly used to test the availability and responsiveness of network devices, such as servers or routers. It can help diagnose network connectivity issues, such as packet loss or latency.</p>
 <p><br /></p>
-<p>Pour tester notre API, nous pouvons utiliser un outil comme Postman ou simplement effectuer des requêtes HTTP en utilisant l'URL de notre API (par exemple http://localhost:5000/students pour récupérer tous les étudiants).</p>
+<p>When you run the <code>ping</code> command, it will send packets of data to the specified destination, and display the results in the terminal. The output will typically include statistics about the packet transmission, such as the number of packets sent and received, the round-trip time (RTT) for each packet, and any errors or packet loss that occurred during the transmission.</p>
+<p><br /></p>
+<p>Here's an example of running the ping command:</p>
+<pre><code>ping google.com
+</code></pre>
+<p>This command sends packets of data to the Google.com domain name, and displays the results in the terminal. The output will show the RTT for each packet, as well as other statistics about the packet transmission.</p>
+<h4 id="ping-container1-from-container2">Ping  <code>container1</code> from <code>container2</code></h4>
+<p>Now that both containers are running and attached to the same network, we can confirm that they can communicate with each other. We'll do this by pinging <code>container1</code> from <code>container2</code>:</p>
+<pre><code class="language-bash">docker exec container2 ping container1
+</code></pre>
+<p>This command uses the docker exec command to run the ping container1 command inside container2. If the two containers are able to communicate with each other, you should see output similar to the following:</p>
+<pre><code class="language-bash">PING container1 (172.19.0.2): 56 data bytes
+64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.091 ms
+64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.111 ms
+</code></pre>
+<p>If you see this output, it means that the two containers are able to communicate with each other over the <code>mynetwork</code> network.</p>
+<p><br /></p>
+<p>Now, let's try to ping <code>container1</code> from <code>container3</code>, which is not attached to the <code>mynetwork</code> network:</p>
+<pre><code class="language-bash">docker exec container3 ping container1
+</code></pre>
+<p>This command uses the docker exec command to run the ping container1 command inside <code>container3</code>. Since <code>container3</code> is not attached to the mynetwork network, it should not be able to communicate with container1. You should see output similar to the following:</p>
+<pre><code class="language-bash">ping: bad address 'container1'
+</code></pre>
+<p>This output confirms that <code>container3</code> is not able to communicate with <code>container1</code>.</p>
+<h2 id="wrap-up">Wrap-up</h2>
+<p>Docker Networking is a powerful feature that allows you to connect Docker containers together so that they can communicate with each other. By mastering Docker Networking, you can build complex applications that are made up of multiple containers, each with its own functionality. You can also isolate containers from each other, connect them to external networks, and build distributed applications that are made up of multiple Docker hosts.</p>
 
 
 
@@ -1191,12 +1312,12 @@ if __name__ == '__main__':
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

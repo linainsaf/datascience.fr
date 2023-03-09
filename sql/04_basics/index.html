@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/pd/">
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/04_basics/">
       
       
+        <link rel="prev" href="../03_table/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../05_MacOS_install/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Pd - Data Science</title>
+        <title>SQL Basic understanding - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sql-basics-understunding" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pd
+              SQL Basic understanding
             
           </span>
         </div>
@@ -160,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -235,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -284,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -298,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
     </li>
@@ -362,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../../docker/docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -376,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+      <a href="../../docker/docker_install/" class="md-nav__link">
         Setting up Docker
       </a>
     </li>
@@ -390,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../../docker/docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -404,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../../docker/docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+      <a href="../../docker/docker_volume/" class="md-nav__link">
         Docker Volumes
       </a>
     </li>
@@ -432,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -446,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -460,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+      <a href="../../docker/docker_network/" class="md-nav__link">
         Docker Network
       </a>
     </li>
@@ -474,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../../docker/docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -488,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../../docker/docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -502,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../../docker/docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -522,18 +531,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
           SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -549,18 +560,20 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="true">
           Introduction
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -578,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+      <a href="../02_db_kesako/" class="md-nav__link">
         What is a Database
       </a>
     </li>
@@ -592,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -604,11 +617,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL Basic understanding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         SQL Basic understanding
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formal-introduction" class="md-nav__link">
+    Formal introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-commands" class="md-nav__link">
+    SQL commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -654,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -702,7 +763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -716,7 +777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -730,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -744,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -758,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -779,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -793,7 +854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -807,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -821,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -835,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -849,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -863,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -877,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+      <a href="../20_triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -891,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -922,6 +983,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formal-introduction" class="md-nav__link">
+    Formal introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-commands" class="md-nav__link">
+    SQL commands
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -937,7 +1022,21 @@
 
 
 
-<p>pd</p>
+<h1 id="sql-basics-understunding">SQL Basics understunding</h1>
+<h2 id="formal-introduction">Formal introduction</h2>
+<p>Structured Query Language (SQL) is a programming language used to manage and manipulate relational databases. It is a standard language used by most databases to store, retrieve, and manipulate data. SQL is an essential skill for any developer working with databases.</p>
+<h2 id="sql-commands">SQL commands</h2>
+<p>SQL commands are used to interact with a database, such as inserting, updating, deleting, and selecting data.</p>
+<p><br /></p>
+<p>The basic SQL commands include <strong>SELECT, INSERT, UPDATE, DELETE</strong>, and <strong>CREATE</strong>. The <strong>SELECT</strong> command is used to retrieve data from a database, while the <strong>INSERT, UPDATE, and DELETE</strong> commands are used to modify data in a database. The <strong>CREATE</strong> command is used to create tables and other database objects.</p>
+<p><br /></p>
+<p>SQL commands are typically entered into a command line interface or a graphical user interface, such as MySQL Workbench or pgAdmin. These interfaces allow developers to visually design and manipulate databases, as well as enter SQL commands to manage data.</p>
+<p><br /></p>
+<p>SQL is widely used in web development, data analysis, and many other fields. It allows developers to easily store and retrieve data, as well as perform complex data manipulations and analysis. Understanding SQL and its commands is essential for developers working with relational databases, and is a valuable skill in today's tech industry.</p>
+<p><br /></p>
+<p>In the following sections, we will delve deeper into the world of SQL and explore each of the major SQL commands in more detail. By the end of this course, you will have a solid understanding of SQL, its uses, and how to use it to manage and manipulate data. With this knowledge, you will be equipped to tackle a variety of database-related challenges and create powerful data-driven applications. </p>
+<p><br /></p>
+<p>So let's continue with SQL installations 🚀</p>
 
 
 
@@ -975,12 +1074,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

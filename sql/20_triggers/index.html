@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/pd/">
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/20_triggers/">
       
       
+        <link rel="prev" href="../19_delete/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../21_er_diagrams/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Pd - Data Science</title>
+        <title>Triggers - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#triggers" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pd
+              Triggers
             
           </span>
         </div>
@@ -160,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -235,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -284,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -298,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
     </li>
@@ -362,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../../docker/docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -376,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+      <a href="../../docker/docker_install/" class="md-nav__link">
         Setting up Docker
       </a>
     </li>
@@ -390,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../../docker/docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -404,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../../docker/docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+      <a href="../../docker/docker_volume/" class="md-nav__link">
         Docker Volumes
       </a>
     </li>
@@ -432,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -446,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -460,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+      <a href="../../docker/docker_network/" class="md-nav__link">
         Docker Network
       </a>
     </li>
@@ -474,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../../docker/docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -488,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../../docker/docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -502,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../../docker/docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -522,18 +531,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
           SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -578,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+      <a href="../02_db_kesako/" class="md-nav__link">
         What is a Database
       </a>
     </li>
@@ -592,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -606,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+      <a href="../04_basics/" class="md-nav__link">
         SQL Basic understanding
       </a>
     </li>
@@ -654,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -702,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -716,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -730,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -744,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -758,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -779,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -793,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -807,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -821,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -835,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -849,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -863,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -875,11 +886,107 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Triggers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Triggers
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-triggers-in-sql" class="md-nav__link">
+    Introduction to Triggers in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-how-to-use-triggers-to-automate-tasks" class="md-nav__link">
+    Overview of How to Use Triggers to Automate Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-using-triggers-on-the-employees-database" class="md-nav__link">
+    Examples of using triggers on the employees database
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples of using triggers on the employees database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-audit-trail-for-changes-to-the-employees-table" class="md-nav__link">
+    Example 1: Audit trail for changes to the employees table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-preventing-changes-to-the-departments-table" class="md-nav__link">
+    Example 2: Preventing changes to the departments table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-automatic-promotion-to-manager-for-department-heads" class="md-nav__link">
+    Example 3: Automatic promotion to manager for department heads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-triggers-are-important-for-data-analysis-job" class="md-nav__link">
+    Why triggers are important for data analysis job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -891,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -922,6 +1029,78 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-triggers-in-sql" class="md-nav__link">
+    Introduction to Triggers in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-how-to-use-triggers-to-automate-tasks" class="md-nav__link">
+    Overview of How to Use Triggers to Automate Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-using-triggers-on-the-employees-database" class="md-nav__link">
+    Examples of using triggers on the employees database
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples of using triggers on the employees database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-audit-trail-for-changes-to-the-employees-table" class="md-nav__link">
+    Example 1: Audit trail for changes to the employees table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-preventing-changes-to-the-departments-table" class="md-nav__link">
+    Example 2: Preventing changes to the departments table
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-automatic-promotion-to-manager-for-department-heads" class="md-nav__link">
+    Example 3: Automatic promotion to manager for department heads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-triggers-are-important-for-data-analysis-job" class="md-nav__link">
+    Why triggers are important for data analysis job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -937,7 +1116,104 @@
 
 
 
-<p>pd</p>
+<h1 id="triggers">Triggers</h1>
+<h2 id="introduction-to-triggers-in-sql">Introduction to Triggers in SQL</h2>
+<p>In SQL, a trigger is a special kind of stored program that is automatically executed in response to specific events or actions that occur within a database. Triggers can be used to automate tasks, maintain data integrity, and enforce business rules. They are often used in conjunction with other SQL features, such as constraints and indexes, to ensure that a database remains consistent and accurate over time.</p>
+<h2 id="overview-of-how-to-use-triggers-to-automate-tasks">Overview of How to Use Triggers to Automate Tasks</h2>
+<p>Here's an example of creating a trigger in SQL that automatically sets the "to_date" field of a row in the "dept_emp" table to the current date whenever a new row is inserted:</p>
+<pre><code class="language-sql">CREATE TRIGGER update_dept_emp_to_date
+BEFORE INSERT ON dept_emp
+FOR EACH ROW
+SET NEW.to_date = NOW();
+</code></pre>
+<p>In this example, a trigger named "update_dept_emp_to_date" is created using the CREATE TRIGGER statement. The trigger is defined to execute "BEFORE INSERT" on the "dept_emp" table, and is set to execute "FOR EACH ROW" that is inserted. The body of the trigger consists of a single statement that sets the value of the "to_date" field for the newly inserted row to the current date and time, using the NOW() function.</p>
+<p><br /></p>
+<p>Here's an example of creating a trigger in SQL that prevents the deletion of a row in the "employees" table if that row is currently assigned to a department:</p>
+<pre><code class="language-sql">CREATE TRIGGER prevent_emp_delete
+BEFORE DELETE ON employees
+FOR EACH ROW
+BEGIN
+    DECLARE dept_count INT;
+    SELECT COUNT(*) INTO dept_count
+    FROM dept_emp
+    WHERE emp_no = OLD.emp_no;
+    IF dept_count &gt; 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Cannot delete employee who is currently assigned to a department.';
+    END IF;
+END;
+</code></pre>
+<p>In this example, a trigger named "prevent_emp_delete" is created using the CREATE TRIGGER statement. The trigger is defined to execute "BEFORE DELETE" on the "employees" table, and is set to execute "FOR EACH ROW" that is deleted. The body of the trigger consists of a block of code that checks whether the employee being deleted is currently assigned to a department, and if so, raises an error using the SIGNAL statement to prevent the delete operation.</p>
+<h2 id="examples-of-using-triggers-on-the-employees-database">Examples of using triggers on the employees database</h2>
+<h3 id="example-1-audit-trail-for-changes-to-the-employees-table">Example 1: Audit trail for changes to the employees table</h3>
+<pre><code class="language-sql">CREATE TABLE employees_audit (
+    action VARCHAR(50) NOT NULL,
+    emp_no INT NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    timestamp DATETIME DEFAULT NOW()
+);
+
+DELIMITER //
+
+CREATE TRIGGER employees_audit_insert
+AFTER INSERT ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO employees_audit (action, emp_no, last_name, first_name)
+    VALUES ('insert', NEW.emp_no, NEW.last_name, NEW.first_name);
+END//
+
+CREATE TRIGGER employees_audit_update
+AFTER UPDATE ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO employees_audit (action, emp_no, last_name, first_name)
+    VALUES ('update', NEW.emp_no, NEW.last_name, NEW.first_name);
+END//
+
+CREATE TRIGGER employees_audit_delete
+AFTER DELETE ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO employees_audit (action, emp_no, last_name, first_name)
+    VALUES ('delete', OLD.emp_no, OLD.last_name, OLD.first_name);
+END//
+
+DELIMITER ;
+</code></pre>
+<p>In this example, a new table "employees_audit" is created to store an audit trail of changes to the "employees" table. Three triggers are then defined using the CREATE TRIGGER statement to execute after each insert, update, and delete operation on the "employees" table. These triggers use the INSERT statement to add a new row to the "employees_audit" table that records the action, employee number, last name, first name, and timestamp of the change.</p>
+<h3 id="example-2-preventing-changes-to-the-departments-table">Example 2: Preventing changes to the departments table</h3>
+<pre><code class="language-sql">CREATE TRIGGER prevent_dept_change
+BEFORE UPDATE ON departments
+FOR EACH ROW
+BEGIN
+    SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Changes to departments table are not allowed.';
+END;
+</code></pre>
+<p>In this example, a trigger named "prevent_dept_change" is defined using the CREATE TRIGGER statement to execute before any update operation on the "departments" table. The body of the trigger consists of a single statement that raises an error using the SIGNAL statement to prevent the update operation.</p>
+<h3 id="example-3-automatic-promotion-to-manager-for-department-heads">Example 3: Automatic promotion to manager for department heads</h3>
+<pre><code class="language-sql">CREATE TRIGGER promote_to_manager
+AFTER UPDATE ON dept_manager
+FOR EACH ROW
+BEGIN
+    IF NEW.to_date = '9999-01-01' THEN
+        UPDATE employees SET emp_title = 'Manager' WHERE emp_no = NEW.emp_no;
+    END IF;
+END;
+</code></pre>
+<p>In this example, a trigger named "promote_to_manager" is defined using the CREATE TRIGGER statement to execute after any update operation on the "dept_manager" table. The body of the trigger consists of an IF statement that checks whether the "to_date" field for the updated row is set to the special value of '9999-01-01', which indicates that the employee is currently a department head. If so, the trigger uses the UPDATE statement to change the employee's title to "Manager" in the "employees" table.</p>
+<h2 id="why-triggers-are-important-for-data-analysis-job">Why triggers are important for data analysis job</h2>
+<p>Triggers are important in data analysis because they allow you to automate tasks and enforce data integrity rules within a database. By using triggers, you can ensure that data is consistent and accurate over time, and that business rules are enforced consistently across different operations and users.</p>
+<p><br /></p>
+<p>For example, if you are analyzing sales data in a database, you might use triggers to automatically update certain fields or tables whenever new sales data is added or existing data is updated. You could also use triggers to prevent certain types of changes to the database, or to notify you when certain events occur.</p>
+<p><br /></p>
+<p>By automating tasks and enforcing rules using triggers, you can save time and reduce the risk of errors or inconsistencies in your data. This can help you to make more informed decisions and gain deeper insights into the patterns and trends in your data.</p>
+<p><br /></p>
+<p>Overall, triggers are an important tool for data analysts and other database professionals who need to ensure the accuracy and integrity of their data. By mastering the use of triggers in SQL, you can become more effective at managing and analyzing data in a wide range of contexts.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using triggers in SQL is a powerful way to automate tasks, maintain data integrity, and enforce business rules. Triggers can be used to respond to specific events or actions that occur within a database, and can be defined to execute before or after specific operations such as inserts, updates, and deletes. By understanding how to use triggers in SQL, you can ensure that your database remains consistent and accurate over time.</p>
 
 
 
@@ -975,12 +1251,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

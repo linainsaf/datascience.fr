@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/pd/">
+        <link rel="canonical" href="https://datascience_careerera.fr/docker/docker_volume/">
       
       
+        <link rel="prev" href="../docker_commands/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../../sql/06_b_docker_install/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Pd - Data Science</title>
+        <title>Docker Volumes - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#docker-volumes" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pd
+              Docker Volumes
             
           </span>
         </div>
@@ -160,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -235,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -284,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -298,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
     </li>
@@ -333,18 +342,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="true">
           Docker for App Deployment
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -362,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -376,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+      <a href="../docker_install/" class="md-nav__link">
         Setting up Docker
       </a>
     </li>
@@ -390,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -404,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -416,11 +427,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker Volumes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Docker Volumes
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-docker-volumes" class="md-nav__link">
+    What are Docker Volumes?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-docker-volume-for-a-hello-world-fastapi-app" class="md-nav__link">
+    Using a Docker Volume for a Hello World FastAPI App
+  </a>
+  
+    <nav class="md-nav" aria-label="Using a Docker Volume for a Hello World FastAPI App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-using-volume" class="md-nav__link">
+    Why using volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-volume-to-docker-run" class="md-nav__link">
+    Add volume to docker run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -432,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../../sql/06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -446,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../../sql/29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -460,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+      <a href="../docker_network/" class="md-nav__link">
         Docker Network
       </a>
     </li>
@@ -474,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -488,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -502,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -578,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+      <a href="../../sql/02_db_kesako/" class="md-nav__link">
         What is a Database
       </a>
     </li>
@@ -592,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../../sql/03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -606,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+      <a href="../../sql/04_basics/" class="md-nav__link">
         SQL Basic understanding
       </a>
     </li>
@@ -654,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../../sql/05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -702,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../../sql/07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -716,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../../sql/08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -730,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../../sql/09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -744,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../../sql/10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -758,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../../sql/11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -779,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../../sql/12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -793,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../../sql/13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -807,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../../sql/14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -821,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../../sql/15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -835,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../../sql/17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -849,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../../sql/18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -863,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../../sql/19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -877,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+      <a href="../../sql/20_triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -891,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../../sql/21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -922,6 +1001,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-docker-volumes" class="md-nav__link">
+    What are Docker Volumes?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-a-docker-volume-for-a-hello-world-fastapi-app" class="md-nav__link">
+    Using a Docker Volume for a Hello World FastAPI App
+  </a>
+  
+    <nav class="md-nav" aria-label="Using a Docker Volume for a Hello World FastAPI App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-using-volume" class="md-nav__link">
+    Why using volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-volume-to-docker-run" class="md-nav__link">
+    Add volume to docker run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -937,7 +1060,61 @@
 
 
 
-<p>pd</p>
+<h1 id="docker-volumes">Docker Volumes</h1>
+<h2 id="what-are-docker-volumes">What are Docker Volumes?</h2>
+<p>Docker volumes are a way to persist data outside of a container's file system. When you create a Docker volume, you create a new volume object that can be attached to one or more containers. Data can be written to or read from the volume, and the data will persist even if the container is removed or recreated.</p>
+<h2 id="using-a-docker-volume-for-a-hello-world-fastapi-app">Using a Docker Volume for a Hello World FastAPI App</h2>
+<p>Let's say you have a simple Hello World FastAPI app that you want to run in a Docker container. Here's an example of what the Dockerfile might look like:</p>
+<pre><code class="language-dockerfile">FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
+WORKDIR /app
+
+COPY ./app /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD [&quot;uvicorn&quot;, &quot;app.main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;80&quot;]
+</code></pre>
+<p>This Dockerfile uses the <code>tiangolo/uvicorn-gunicorn-fastapi</code> base image and copies the app directory into the <code>/app</code> directory in the container.</p>
+<p><br /></p>
+<p>Next, it runs the pip command to install the packages listed in the requirements.txt file. The <code>--no-cache-dir</code> flag is used to ensure that the packages are installed from scratch, rather than using any cached packages.</p>
+<p><br /></p>
+<p>Finally, it sets the command to start the app using the Uvicorn server on port <code>80</code>.</p>
+<p><br /></p>
+<p>Here's the code for the <code>app.py</code> file:</p>
+<pre><code class="language-python">from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get(&quot;/&quot;)
+def read_root():
+    return {&quot;Hello&quot;: &quot;World&quot;}
+</code></pre>
+<p>and the <code>requirements.txt</code> file : </p>
+<pre><code>fastapi==0.68.1
+uvicorn==0.15.0
+</code></pre>
+<h3 id="why-using-volume">Why using volume</h3>
+<p>When you create a Docker volume and attach it to a container, it's like putting a bookmark from the container to a local folder on your host machine.</p>
+<p><br /></p>
+<p><img alt="Screenshot" src="../../img/docker_vol.png" /></p>
+<p><br /></p>
+<p>Just like a bookmark in a web browser, a volume allows you to quickly access a specific location in the container's file system, without having to navigate through all of the directories manually.</p>
+<p><br /></p>
+<p>With a volume, you can also persist data outside of the container's file system. This can be useful if you need to share data between multiple containers, or if you need to keep data separate from the container image itself.</p>
+<p><br /></p>
+<p>Overall, volumes are a powerful tool in Docker that allow you to manage and persist data in a flexible and efficient way.</p>
+<h3 id="add-volume-to-docker-run">Add volume to <code>docker run</code></h3>
+<p>With this Dockerfile, you can build and run the container using the following commands:</p>
+<pre><code class="language-bash">docker build -t myimage .
+
+docker run -d --name mycontainer -p 8000:80 -v $(pwd):/app myimage
+</code></pre>
+<p>When you run this app in a Docker container, you can use a Docker volume to mount the <code>app.py</code> file into the container at runtime, rather than copying it into the container at build time. This has a few advantages:</p>
+<ul>
+<li>You can make changes to the app.py file without having to rebuild the entire Docker image.</li>
+<li>You can keep the app code and the container image separate, which can make it easier to manage and update the app over time.</li>
+</ul>
 
 
 
@@ -975,12 +1152,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -8,23 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/pd/">
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/02_db_kesako/">
       
       
+        <link rel="prev" href="../../docker/docker_best_practice/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../03_table/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Pd - Data Science</title>
+        <title>What is a Database - Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
       
       
 
@@ -40,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#what-is-a-database" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -74,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pd
+              What is a Database
             
           </span>
         </div>
@@ -160,7 +169,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -179,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Introduction à la Data Science
       </a>
     </li>
@@ -221,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ml/" class="md-nav__link">
+      <a href="../../ml/" class="md-nav__link">
         Les taches et modéles de ML
       </a>
     </li>
@@ -235,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eval/" class="md-nav__link">
+      <a href="../../eval/" class="md-nav__link">
         Evaluation des modéles de Classification et de Regression
       </a>
     </li>
@@ -284,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dl/" class="md-nav__link">
+      <a href="../../dl/" class="md-nav__link">
         Introduction au Deep Learning
       </a>
     </li>
@@ -298,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dltypes/" class="md-nav__link">
+      <a href="../../dltypes/" class="md-nav__link">
         Les différents types de réseaux de neurones
       </a>
     </li>
@@ -320,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api/" class="md-nav__link">
+      <a href="../../api/" class="md-nav__link">
         API (Application Programmable Interface)
       </a>
     </li>
@@ -362,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_intro/" class="md-nav__link">
+      <a href="../../docker/docker_intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -376,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_install/" class="md-nav__link">
+      <a href="../../docker/docker_install/" class="md-nav__link">
         Setting up Docker
       </a>
     </li>
@@ -390,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_python_app/" class="md-nav__link">
+      <a href="../../docker/docker_python_app/" class="md-nav__link">
         Building a Docker Image for Python App
       </a>
     </li>
@@ -404,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_commands/" class="md-nav__link">
+      <a href="../../docker/docker_commands/" class="md-nav__link">
         Docker CLI Commands
       </a>
     </li>
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_volume/" class="md-nav__link">
+      <a href="../../docker/docker_volume/" class="md-nav__link">
         Docker Volumes
       </a>
     </li>
@@ -432,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/06_b_docker_install/" class="md-nav__link">
+      <a href="../06_b_docker_install/" class="md-nav__link">
         Install MySQL with docker
       </a>
     </li>
@@ -446,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/29_python_docker_sql.md" class="md-nav__link">
+      <a href="../29_python_docker_sql.md" class="md-nav__link">
         SQLAlchemy and Docker
       </a>
     </li>
@@ -460,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_network/" class="md-nav__link">
+      <a href="../../docker/docker_network/" class="md-nav__link">
         Docker Network
       </a>
     </li>
@@ -474,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_compose/" class="md-nav__link">
+      <a href="../../docker/docker_compose/" class="md-nav__link">
         Docker-compose
       </a>
     </li>
@@ -488,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_https/" class="md-nav__link">
+      <a href="../../docker/docker_https/" class="md-nav__link">
         Docker and HTTPS
       </a>
     </li>
@@ -502,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/docker_best_practice/" class="md-nav__link">
+      <a href="../../docker/docker_best_practice/" class="md-nav__link">
         Best Practices
       </a>
     </li>
@@ -522,18 +531,20 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
           SQL
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -549,18 +560,20 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="true">
           Introduction
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -576,11 +589,100 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../sql/02_db_kesako/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          What is a Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         What is a Database
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-examples" class="md-nav__link">
+    Some examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-databases" class="md-nav__link">
+    Types of Databases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-day-to-day-use-cases-for-each-type-of-database" class="md-nav__link">
+    Examples of day-to-day use cases for each type of database
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples of day-to-day use cases for each type of database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-databases" class="md-nav__link">
+    Relational databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql-databases" class="md-nav__link">
+    NoSQL databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-oriented-databases" class="md-nav__link">
+    Object-oriented databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vocabulary" class="md-nav__link">
+    Vocabulary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -592,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/03_table/" class="md-nav__link">
+      <a href="../03_table/" class="md-nav__link">
         Tables & Keys
       </a>
     </li>
@@ -606,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/04_basics/" class="md-nav__link">
+      <a href="../04_basics/" class="md-nav__link">
         SQL Basic understanding
       </a>
     </li>
@@ -654,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/05_MacOS_install/" class="md-nav__link">
+      <a href="../05_MacOS_install/" class="md-nav__link">
         Install MySQL on MacOS
       </a>
     </li>
@@ -702,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/07_creating_tables/" class="md-nav__link">
+      <a href="../07_creating_tables/" class="md-nav__link">
         Creating tables
       </a>
     </li>
@@ -716,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/08_insert/" class="md-nav__link">
+      <a href="../08_insert/" class="md-nav__link">
         Inserting Data
       </a>
     </li>
@@ -730,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/09_constraints/" class="md-nav__link">
+      <a href="../09_constraints/" class="md-nav__link">
         Constraints
       </a>
     </li>
@@ -744,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/10_update_delete/" class="md-nav__link">
+      <a href="../10_update_delete/" class="md-nav__link">
         Update & Delete
       </a>
     </li>
@@ -758,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/11_queries/" class="md-nav__link">
+      <a href="../11_queries/" class="md-nav__link">
         Basic Queries
       </a>
     </li>
@@ -779,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/12_company_db_1/" class="md-nav__link">
+      <a href="../12_company_db_1/" class="md-nav__link">
         Build a company database from scratch
       </a>
     </li>
@@ -793,7 +895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/13_queries_db/" class="md-nav__link">
+      <a href="../13_queries_db/" class="md-nav__link">
         More Queries
       </a>
     </li>
@@ -807,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/14_functions/" class="md-nav__link">
+      <a href="../14_functions/" class="md-nav__link">
         SQL Functions
       </a>
     </li>
@@ -821,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/15_Wildcards/" class="md-nav__link">
+      <a href="../15_Wildcards/" class="md-nav__link">
         Wildcards & Unions
       </a>
     </li>
@@ -835,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/17_joins/" class="md-nav__link">
+      <a href="../17_joins/" class="md-nav__link">
         Joins
       </a>
     </li>
@@ -849,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/18_Nested_Queries/" class="md-nav__link">
+      <a href="../18_Nested_Queries/" class="md-nav__link">
         Nested Queries
       </a>
     </li>
@@ -863,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/19_delete/" class="md-nav__link">
+      <a href="../19_delete/" class="md-nav__link">
         On Delete
       </a>
     </li>
@@ -877,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/20_triggers/" class="md-nav__link">
+      <a href="../20_triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -891,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sql/21_er_diagrams/" class="md-nav__link">
+      <a href="../21_er_diagrams/" class="md-nav__link">
         ER DIagrams
       </a>
     </li>
@@ -922,6 +1024,71 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#some-examples" class="md-nav__link">
+    Some examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-databases" class="md-nav__link">
+    Types of Databases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-of-day-to-day-use-cases-for-each-type-of-database" class="md-nav__link">
+    Examples of day-to-day use cases for each type of database
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples of day-to-day use cases for each type of database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-databases" class="md-nav__link">
+    Relational databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql-databases" class="md-nav__link">
+    NoSQL databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-oriented-databases" class="md-nav__link">
+    Object-oriented databases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vocabulary" class="md-nav__link">
+    Vocabulary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -937,7 +1104,45 @@
 
 
 
-<p>pd</p>
+<h1 id="what-is-a-database">What is a Database ?</h1>
+<p>A database is an organized collection of data that is designed to be easy to access, manage, and update. Databases are used in a wide range of applications, from social media platforms to scientific research to financial systems. They are essential for storing and managing large amounts of data in a way that makes it easy to find, update, and retrieve the information you need quickly.</p>
+<h2 id="some-examples">Some examples</h2>
+<p>One of the simplest examples of a database is an address book. Think about the contacts list on your phone. You have a list of people you know, along with their phone numbers, email addresses, and other details. This list is essentially a simple database, with each contact representing a record in the database. You can easily search for a contact by name, update their information, or delete a contact when you no longer need it.</p>
+<p><br /></p>
+<p>Another example of a database is an online store. When you shop online, you browse through a catalog of products, add items to your cart, and then complete your purchase. Behind the scenes, the online store is using a database to store information about the products, customers, and orders. When you search for a product, the database is used to find all the relevant information about that product, including the price, description, and availability. When you complete your purchase, the database is updated with information about the order, including the items you bought, the shipping address, and the payment method.</p>
+<h2 id="types-of-databases">Types of Databases</h2>
+<p>There are many different types of databases, each with its own strengths and weaknesses. Some of the most common types of databases include:</p>
+<ul>
+<li><strong>Relational databases</strong>: These databases organize data into tables with columns and rows, similar to a spreadsheet. They are the most common type of database and are used in many different applications.</li>
+<li><strong>NoSQL databases</strong>: These databases are designed to handle large amounts of unstructured or semi-structured data. They are commonly used in big data applications, such as social media analytics and scientific research.</li>
+<li><strong>Object-oriented databases</strong>: These databases store data as objects, which can be manipulated using object-oriented programming techniques. They are commonly used in software development and data modeling.</li>
+</ul>
+<h2 id="examples-of-day-to-day-use-cases-for-each-type-of-database">Examples of day-to-day use cases for each type of database</h2>
+<h3 id="relational-databases">Relational databases</h3>
+<ul>
+<li>Customer database example : A business might use a relational database to keep track of customer information, such as their name, contact details, and purchase history. They could then use this information to target customers with personalized marketing campaigns based on their previous purchases.</li>
+<li>Inventory management example : A store might use a relational database to manage their inventory, with one table for products and another table for suppliers. They could then use SQL queries to quickly retrieve information on which products are in stock, which products are selling quickly, and which suppliers they need to contact to restock their inventory.</li>
+<li>Employee scheduling example : A company might use a relational database to manage employee schedules, with one table for employees and another table for shifts. They could then use SQL queries to quickly retrieve information on which employees are available to work on a particular day or time, and which shifts still need to be filled.</li>
+</ul>
+<h3 id="nosql-databases">NoSQL databases</h3>
+<ul>
+<li>Social media analytics: Social media platforms like Facebook and Twitter use NoSQL databases to store and analyze massive amounts of user data, such as likes, comments, and shares. This allows them to quickly retrieve and analyze user data to provide better ad targeting and personalized content.</li>
+<li>Internet of Things (IoT) devices: IoT devices like smart thermostats and security cameras generate a huge amount of data, which can be stored and analyzed in NoSQL databases. This allows manufacturers to track device usage patterns, identify and fix bugs, and improve device performance over time.</li>
+<li>Gaming: Many video games use NoSQL databases to store player data, such as character stats and in-game achievements. This allows players to continue their game progress across different devices, and enables game developers to quickly retrieve and analyze player data to identify areas for improvement.</li>
+</ul>
+<h3 id="object-oriented-databases">Object-oriented databases</h3>
+<ul>
+<li>Geolocation data: Companies that rely on geolocation data, such as mapping and navigation services, often use object-oriented databases to store and retrieve this data. This allows them to quickly retrieve and analyze large amounts of geolocation data in real-time.</li>
+<li>E-commerce: An e-commerce website might use an object-oriented database to store and manage product information, such as product images and descriptions. This allows them to easily update and manage product information across multiple platforms, such as their website, mobile app, and social media.</li>
+<li>Medical records: Hospitals and healthcare providers often use object-oriented databases to manage patient medical records, which can include a wide range of data types, such as images, test results, and diagnoses. This allows healthcare providers to easily access and update patient information, and can help improve patient care and outcomes.</li>
+</ul>
+<p>In this part we will focus only on relational databases. </p>
+<h3 id="vocabulary">Vocabulary</h3>
+<ul>
+<li>MySQL client is a command-line tool that allows you to interact with the MySQL server, execute SQL queries, and manage databases.</li>
+<li>MySQL server is the software that stores and manages databases, and allows multiple clients to connect to it and perform operations on the databases.</li>
+<li>SQL (Structured Query Language) is the language used to interact with relational databases like MySQL, and it provides a standardized syntax for creating, modifying, and querying databases.</li>
+</ul>
 
 
 
@@ -975,12 +1180,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

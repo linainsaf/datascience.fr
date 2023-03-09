@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/14_functions/">
+      
+      
+        <link rel="prev" href="../13_queries_db/">
+      
+      
+        <link rel="next" href="../15_Wildcards/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>SQL Functions - Data Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sql-functions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Data Science" class="md-header__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL Functions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Data Science" class="md-nav__button md-logo" aria-label="Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Data Science
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction à la Data Science
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Apprentissage automatique (a.k.a Machine Learning)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apprentissage automatique (a.k.a Machine Learning)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Apprentissage automatique (a.k.a Machine Learning)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ml/" class="md-nav__link">
+        Les taches et modéles de ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eval/" class="md-nav__link">
+        Evaluation des modéles de Classification et de Regression
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Le Deep Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Le Deep Learning" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Le Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dl/" class="md-nav__link">
+        Introduction au Deep Learning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dltypes/" class="md-nav__link">
+        Les différents types de réseaux de neurones
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        API (Application Programmable Interface)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Docker for App Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker for App Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Docker for App Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_install/" class="md-nav__link">
+        Setting up Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_python_app/" class="md-nav__link">
+        Building a Docker Image for Python App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_commands/" class="md-nav__link">
+        Docker CLI Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_volume/" class="md-nav__link">
+        Docker Volumes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_b_docker_install/" class="md-nav__link">
+        Install MySQL with docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_python_docker_sql.md" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_network/" class="md-nav__link">
+        Docker Network
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_compose/" class="md-nav__link">
+        Docker-compose
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_https/" class="md-nav__link">
+        Docker and HTTPS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker_best_practice/" class="md-nav__link">
+        Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
+          SQL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SQL" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          SQL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_db_kesako/" class="md-nav__link">
+        What is a Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_table/" class="md-nav__link">
+        Tables & Keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_basics/" class="md-nav__link">
+        SQL Basic understanding
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" tabindex="0" aria-expanded="false">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_MacOS_install/" class="md-nav__link">
+        Install MySQL on MacOS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="false">
+          CRUD (Create, Read, Update, Delete) operations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CRUD (Create, Read, Update, Delete) operations" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          CRUD (Create, Read, Update, Delete) operations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_creating_tables/" class="md-nav__link">
+        Creating tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_insert/" class="md-nav__link">
+        Inserting Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_constraints/" class="md-nav__link">
+        Constraints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_update_delete/" class="md-nav__link">
+        Update & Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_queries/" class="md-nav__link">
+        Basic Queries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_company_db_1/" class="md-nav__link">
+        Build a company database from scratch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_queries_db/" class="md-nav__link">
+        More Queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SQL Functions
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-functions-in-sql" class="md-nav__link">
+    Introduction to Functions in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-different-types-of-functions-and-examples" class="md-nav__link">
+    Overview of Different Types of Functions and Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of Different Types of Functions and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    Aggregate Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalar-functions" class="md-nav__link">
+    Scalar Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time-functions" class="md-nav__link">
+    Date and Time Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mix-up" class="md-nav__link">
+    Mix up
+  </a>
+  
+    <nav class="md-nav" aria-label="Mix up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-average-salary-of-employees-by-department-and-round-the-results-to-two-decimal-places" class="md-nav__link">
+    Find the average salary of employees by department, and round the results to two decimal places:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-top-10-most-common-first-names-among-employees-and-show-the-number-of-employees-with-each-name" class="md-nav__link">
+    Find the top 10 most common first names among employees, and show the number of employees with each name:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-hired-in-each-year-and-show-the-results-as-a-percentage-of-the-total-number-of-employees" class="md-nav__link">
+    Find the number of employees hired in each year, and show the results as a percentage of the total number of employees:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-born-in-each-month-and-sort-the-results-by-month" class="md-nav__link">
+    Find the number of employees born in each month, and sort the results by month:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-who-were-hired-in-each-year-and-show-the-results-as-a-bar-chart" class="md-nav__link">
+    Find the number of employees who were hired in each year, and show the results as a bar chart:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_Wildcards/" class="md-nav__link">
+        Wildcards & Unions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17_joins/" class="md-nav__link">
+        Joins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18_Nested_Queries/" class="md-nav__link">
+        Nested Queries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19_delete/" class="md-nav__link">
+        On Delete
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20_triggers/" class="md-nav__link">
+        Triggers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21_er_diagrams/" class="md-nav__link">
+        ER DIagrams
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-functions-in-sql" class="md-nav__link">
+    Introduction to Functions in SQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview-of-different-types-of-functions-and-examples" class="md-nav__link">
+    Overview of Different Types of Functions and Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview of Different Types of Functions and Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    Aggregate Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalar-functions" class="md-nav__link">
+    Scalar Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-and-time-functions" class="md-nav__link">
+    Date and Time Functions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-functions" class="md-nav__link">
+    String Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mix-up" class="md-nav__link">
+    Mix up
+  </a>
+  
+    <nav class="md-nav" aria-label="Mix up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-average-salary-of-employees-by-department-and-round-the-results-to-two-decimal-places" class="md-nav__link">
+    Find the average salary of employees by department, and round the results to two decimal places:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-top-10-most-common-first-names-among-employees-and-show-the-number-of-employees-with-each-name" class="md-nav__link">
+    Find the top 10 most common first names among employees, and show the number of employees with each name:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-hired-in-each-year-and-show-the-results-as-a-percentage-of-the-total-number-of-employees" class="md-nav__link">
+    Find the number of employees hired in each year, and show the results as a percentage of the total number of employees:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-born-in-each-month-and-sort-the-results-by-month" class="md-nav__link">
+    Find the number of employees born in each month, and sort the results by month:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find-the-number-of-employees-who-were-hired-in-each-year-and-show-the-results-as-a-bar-chart" class="md-nav__link">
+    Find the number of employees who were hired in each year, and show the results as a bar chart:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sql-functions">SQL Functions</h1>
+<h2 id="introduction-to-functions-in-sql">Introduction to Functions in SQL</h2>
+<p>SQL functions are built-in functions that are used to perform operations on data in a database. They take one or more arguments as input, perform a specific operation, and return a result. Functions can be used in SELECT, WHERE, HAVING, and ORDER BY clauses of a SQL query.</p>
+<p><br /></p>
+<p>There are many different types of functions in SQL, including aggregate functions, scalar functions, date and time functions, and string functions. Each type of function performs a specific operation on data and returns a result.</p>
+<p><br /></p>
+<p>Overall, SQL functions are essential for data analysis because they allow you to perform complex calculations, filter data based on specific criteria, clean up messy data, aggregate data to provide insights into trends and patterns, and transform data from one format to another. By mastering SQL functions, you can become a more effective data analyst and make more informed decisions based on your data.</p>
+<h2 id="overview-of-different-types-of-functions-and-examples">Overview of Different Types of Functions and Examples</h2>
+<h3 id="aggregate-functions">Aggregate Functions</h3>
+<p>Aggregate functions are used to perform calculations on groups of rows and return a single value. Some common aggregate functions are:</p>
+<ul>
+<li><code>COUNT()</code>: returns the number of rows in a table or the number of non-null values in a column.</li>
+</ul>
+<pre><code class="language-sql">SELECT COUNT(*) as num_employees
+FROM employees;
+</code></pre>
+<p>This query counts the number of rows in the "employees" table and assigns the name "num_employees" to the output column.</p>
+<ul>
+<li><code>SUM()</code>: returns the sum of values in a column.</li>
+</ul>
+<pre><code>SELECT SUM(salary) as total_salary
+FROM salaries;
+</code></pre>
+<p>This query calculates the total salary of all employees in the "salaries" table and assigns the name "total_salary" to the output column.</p>
+<ul>
+<li><code>AVG()</code>: returns the average value of a column.</li>
+</ul>
+<pre><code class="language-sql">SELECT AVG(salary) as avg_salary
+FROM salaries;
+</code></pre>
+<p>This query calculates the average salary of all employees in the "salaries" table and assigns the name "avg_salary" to the output column.</p>
+<ul>
+<li><code>MAX()</code>: returns the maximum value in a column.</li>
+</ul>
+<pre><code class="language-sql">SELECT MAX(salary) as max_salary
+FROM salaries;
+</code></pre>
+<p>This query finds the highest salary in the "salaries" table and assigns the name "max_salary" to the output column.
+- <code>MIN()</code>: returns the minimum value in a column.</p>
+<pre><code class="language-sql">SELECT MIN(salary) as min_salary
+FROM salaries;
+</code></pre>
+<p>This query finds the lowest salary in the "salaries" table and assigns the name "min_salary" to the output column.</p>
+<h3 id="scalar-functions">Scalar Functions</h3>
+<p>Scalar functions are used to perform operations on individual values and return a single value. Some common scalar functions are:</p>
+<ul>
+<li><code>UPPER()</code>: converts a string to uppercase.</li>
+</ul>
+<pre><code class="language-sql">SELECT UPPER(first_name) as upper_first_name
+FROM employees;
+</code></pre>
+<p>This query converts the first name of all employees in the "employees" table to uppercase and assigns the name "upper_first_name" to the output column.
+- <code>LOWER()</code>: converts a string to lowercase.</p>
+<pre><code class="language-sql">SELECT LOWER(last_name) as lower_last_name
+FROM employees;
+</code></pre>
+<p>This query converts the last name of all employees in the "employees" table to lowercase and assigns the name "lower_last_name" to the output column.</p>
+<ul>
+<li><code>LENGTH()</code>: returns the length of a string.</li>
+</ul>
+<pre><code class="language-sql">SELECT first_name, LENGTH(first_name) as name_length
+FROM employees;
+</code></pre>
+<p>This query returns the first name of all employees in the "employees" table, and calculates the length of each name and assigns the name "name_length" to the output column.</p>
+<h3 id="date-and-time-functions">Date and Time Functions</h3>
+<p>Date and time functions are used to perform operations on date and time values. Some common date and time functions are:</p>
+<ul>
+<li><code>DATE()</code>: extracts the date part from a datetime value.</li>
+</ul>
+<pre><code class="language-sql">SELECT hire_date, DATE(hire_date) as hire_date_only
+FROM employees;
+</code></pre>
+<p>This query extracts the date part from the "hire_date" column of the "employees" table and assigns the name "hire_date_only" to the output column.</p>
+<ul>
+<li><code>YEAR()</code>: returns the year from a date value.</li>
+</ul>
+<pre><code class="language-sql">SELECT hire_date, YEAR(hire_date) as hire_year
+FROM employees;
+</code></pre>
+<p>This query returns the "hire_date" column of the "employees" table and calculates the year each employee was hired. The name "hire_year" is assigned to the output column.</p>
+<p><br /></p>
+<p>Same <code>MONTH()</code> function :</p>
+<pre><code class="language-sql">SELECT hire_date, MONTH(hire_date) as hire_month
+FROM employees;
+</code></pre>
+<p>This query returns the "hire_date" column of the "employees" table and calculates the month each employee was hired. The name "hire_month" is assigned to the output column.</p>
+<h3 id="string-functions">String Functions</h3>
+<p>String functions are used to perform operations on string values. Some common string functions are:</p>
+<ul>
+<li>CONCAT(): concatenates two or more strings together.</li>
+</ul>
+<pre><code class="language-sql">SELECT CONCAT(first_name, ' ', last_name) as full_name
+FROM employees;
+</code></pre>
+<p>This query combines the first name and last name columns of the "employees" table and assigns the name "full_name" to the output column.
+- LEFT(): returns the leftmost characters of a string.</p>
+<pre><code class="language-sql">SELECT first_name, LEFT(first_name, 3) as initial
+FROM employees;
+</code></pre>
+<p>This query returns the first name of all employees in the "employees" table and extracts the first three characters of each name. The name "initial" is assigned to the output column.
+- REPLACE(): replaces a substring in a string with another substring.</p>
+<pre><code class="language-sql">SELECT REPLACE(email, 'gmail', 'yahoo') as new_email
+FROM employees;
+</code></pre>
+<p>This query returns the email column of the "employees" table and replaces the substring 'gmail' with 'yahoo' in each email address. The name "new_email" is assigned to the output column.</p>
+<h2 id="mix-up">Mix up</h2>
+<p>Let's take a look at three examples of SQL queries that use a mix of functions on the "employees" database again. </p>
+<h3 id="find-the-average-salary-of-employees-by-department-and-round-the-results-to-two-decimal-places">Find the average salary of employees by department, and round the results to two decimal places:</h3>
+<pre><code class="language-sql">SELECT department, ROUND(AVG(salary), 2) as avg_salary
+FROM employees
+JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
+JOIN departments ON dept_emp.dept_no = departments.dept_no
+GROUP BY department;
+</code></pre>
+<p>This query joins the "employees", "dept_emp", and "departments" tables, and uses the AVG() function to calculate the average salary of employees in each department. The ROUND() function is used to round the results to two decimal places. The output includes the department name and the average salary for each department.</p>
+<p><br /></p>
+<p>Don't worry about the <code>JOIN</code> clause we will get to it in detail later. </p>
+<h3 id="find-the-top-10-most-common-first-names-among-employees-and-show-the-number-of-employees-with-each-name">Find the top 10 most common first names among employees, and show the number of employees with each name:</h3>
+<pre><code class="language-sql">SELECT first_name, COUNT(*) as num_employees
+FROM employees
+GROUP BY first_name
+ORDER BY num_employees DESC
+LIMIT 10;
+</code></pre>
+<p>This query uses the COUNT() function to count the number of employees with each first name, and the GROUP BY clause to group the results by first name. The ORDER BY clause is used to sort the results in descending order by the number of employees, and the LIMIT clause is used to show only the top 10 results.</p>
+<h3 id="find-the-number-of-employees-hired-in-each-year-and-show-the-results-as-a-percentage-of-the-total-number-of-employees">Find the number of employees hired in each year, and show the results as a percentage of the total number of employees:</h3>
+<pre><code class="language-sql">SELECT YEAR(hire_date) as hire_year, COUNT(*) / (SELECT COUNT(*) FROM employees) * 100 as percentage
+FROM employees
+GROUP BY hire_year;
+</code></pre>
+<p>This query uses the YEAR() function to extract the year from the hire date of each employee, and the COUNT() function to count the number of employees hired in each year. The subquery (SELECT COUNT(*) FROM employees) is used to calculate the total number of employees in the "employees" table. The percentage of employees hired in each year is calculated by dividing the count by the total number of employees and multiplying by 100. The output includes the hire year and the percentage of employees hired in that year.</p>
+<h3 id="find-the-number-of-employees-born-in-each-month-and-sort-the-results-by-month">Find the number of employees born in each month, and sort the results by month:</h3>
+<pre><code class="language-sql">SELECT MONTH(birth_date) as birth_month, COUNT(*) as num_employees
+FROM employees
+GROUP BY birth_month
+ORDER BY birth_month;
+</code></pre>
+<p>This query uses the MONTH() function to extract the month from the birth date of each employee, and the COUNT() function to count the number of employees born in each month. The GROUP BY clause is used to group the results by birth month, and the ORDER BY clause is used to sort the results by month.</p>
+<h3 id="find-the-number-of-employees-who-were-hired-in-each-year-and-show-the-results-as-a-bar-chart">Find the number of employees who were hired in each year, and show the results as a bar chart:</h3>
+<pre><code class="language-sql">SELECT YEAR(hire_date) as hire_year, COUNT(*) as num_employees
+FROM employees
+GROUP BY hire_year;
+</code></pre>
+<p>This query uses the YEAR() function to extract the year from the hire date of each employee, and the COUNT() function to count the number of employees hired in each year. The GROUP BY clause is used to group the results by hire year. You can visualize the results as a bar chart in a data visualization tool, such as Tableau or Power BI, to see the distribution of hires over time.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>SQL functions are powerful tools that allow you to perform operations on data and return meaningful results. They can be used to calculate aggregate values, manipulate strings, and work with date and time values. By understanding the different types of functions available in SQL and how to use them in queries, you can perform complex data analysis and retrieve valuable insights from your data.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
