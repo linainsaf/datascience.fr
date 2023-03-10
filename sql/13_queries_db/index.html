@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1039,6 +1055,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1192,15 +1368,15 @@
 <p>When you have downloaded the git repo as zip go to your Download files and unzip the folder and  open MySQLWorkbench then go to &gt; <code>File</code> &gt; <code>Run SQL Scripts</code> and load the file <code>employees.sql</code></p>
 <h4 id="run-a-test-query">Run a test query</h4>
 <p>We will running a test query for testing our database, we must open a new file for writing our query for that you can click on the file icon button like in the screen below or go to <code>File</code> &gt; <code>New Query Tab</code></p>
-<pre><code class="language-sql">use employees;
-
-SELECT d.dept_name, AVG(s.salary) AS avg_salary
-FROM departments d
-INNER JOIN dept_emp de ON d.dept_no = de.dept_no
-INNER JOIN salaries s ON de.emp_no = s.emp_no
-GROUP BY d.dept_name;
-</code></pre>
-<p>Notice that, the first line <code>use employees;</code> is here to tell to our software to use the employees database then you can see the result of our test query in the window bellow :</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">use</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">FROM</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="n">d</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">dept_emp</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">dept_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">de</span><span class="p">.</span><span class="n">dept_no</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">salaries</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">de</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">dept_name</span><span class="p">;</span>
+</span></code></pre></div>
+Notice that, the first line <code>use employees;</code> is here to tell to our software to use the employees database then you can see the result of our test query in the window bellow :</p>
 <p><br /></p>
 <p><img alt="Screenshot" src="../../img/mysql1.png" /></p>
 <p><br /></p>
@@ -1211,67 +1387,67 @@ GROUP BY d.dept_name;
 <p>The <code>SELECT</code> statement is used to retrieve data from a table in a database. It can take multiple arguments, which are separated by commas. </p>
 <p><br /></p>
 <p>The <code>*</code> character can be used as a shorthand to <strong>select all columns in a table</strong>. We often use the <code>AS</code> keyword is used to assign a name to a column in the output.</p>
-<pre><code class="language-sql">SELECT first_name, last_name, salary AS &quot;Annual Salary&quot;
-FROM employees;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;Annual Salary&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
 <p>In this example, the AS keyword is used to assign a new name to the "salary" column in the output. The new name is "Annual Salary".</p>
 <p><br /></p>
 <p>This query selects the first name, last name, and salary of all the employees in the "employees" table, but it renames the "salary" column as "Annual Salary" in the output.</p>
 <p><br /></p>
 <p>Note that the AS keyword is optional, and you can also use a space or equals sign to assign a name to a column. For example, the following query is equivalent to the one above:</p>
-<pre><code class="language-sql">SELECT first_name, last_name, salary &quot;Annual Salary&quot;
-FROM employees;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="ss">&quot;Annual Salary&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
 <p>In both cases, the output column is named "Annual Salary".</p>
 <h3 id="where-clause">WHERE clause:</h3>
 <p>The WHERE clause is used to filter the results returned by a SELECT statement. It contains a logical expression that evaluates to true or false for each row in the table.</p>
-<pre><code class="language-sql">SELECT *
-FROM orders
-WHERE order_date &gt;= '2022-01-01';
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">orders</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">order_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query selects all the columns from the "orders" table where the order date is on or after January 1, 2022.</p>
 <p><br /></p>
 <p>This is an other example : </p>
-<pre><code class="language-sql">SELECT first_name, last_name, salary * 12 AS &quot;Annual Salary&quot;
-FROM employees
-WHERE hire_date &gt;= '2005-01-01';
-</code></pre>
-<p>In this example, the WHERE clause is used to filter the results to include only employees hired on or after January 1, 2005. The AS keyword is used to assign a new name to the "salary * 12" expression in the output. The new name is "Annual Salary".</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;Annual Salary&quot;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">hire_date</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="s1">&#39;2005-01-01&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+In this example, the WHERE clause is used to filter the results to include only employees hired on or after January 1, 2005. The AS keyword is used to assign a new name to the "salary * 12" expression in the output. The new name is "Annual Salary".</p>
 <p><br /></p>
 <p>This query selects the first name, last name, and annual salary of all the employees in the "employees" table who were hired on or after January 1, 2005. The annual salary is calculated by multiplying the monthly salary by 12.</p>
 <p><br /></p>
 <p>Note that the order of the SQL clauses matters. The WHERE clause is used to filter the results before the AS keyword is used to assign a new name to the output column.</p>
 <h3 id="join-clause">JOIN clause</h3>
 <p>The <code>JOIN</code> clause is used to combine rows from two or more tables based on a related column between them. Here's an example:</p>
-<pre><code class="language-sql">SELECT customers.first_name, customers.last_name, orders.order_date
-FROM customers
-INNER JOIN orders
-ON customers.customer_id = orders.customer_id;
-</code></pre>
-<p>This query selects the first name, last name, and order date of all customers who have placed an order. The results are obtained by joining the "customers" and "orders" tables on the customer_id column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">order_date</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">customers</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">orders</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">ON</span><span class="w"> </span><span class="n">customers</span><span class="p">.</span><span class="n">customer_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">orders</span><span class="p">.</span><span class="n">customer_id</span><span class="p">;</span>
+</span></code></pre></div>
+This query selects the first name, last name, and order date of all customers who have placed an order. The results are obtained by joining the "customers" and "orders" tables on the customer_id column.</p>
 <p><br /></p>
 <p>We will discuss nore about <code>JOIN</code> later don't worry. </p>
 <h3 id="order-by-clause">ORDER BY clause</h3>
 <p>The ORDER BY clause is used to sort the results returned by a SELECT statement based on one or more columns. Here's an example:</p>
-<pre><code class="language-sql">SELECT product_name, unit_price
-FROM products
-ORDER BY unit_price DESC;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">product_name</span><span class="p">,</span><span class="w"> </span><span class="n">unit_price</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">products</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">unit_price</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query selects the product name and unit price of all the products in the "products" table and sorts the results in descending order based on the unit price.</p>
 <h3 id="group-by-clause">GROUP BY clause</h3>
 <p>The GROUP BY clause is used to group the rows returned by a SELECT statement based on one or more columns. The columns listed in the SELECT statement must be either in the GROUP BY clause or have an aggregate function applied to them. Aggregate functions like COUNT, SUM, AVG, MAX, and MIN can be used to perform calculations on the grouped data.</p>
-<pre><code class="language-sql">SELECT category_id, COUNT(*) AS num_products
-FROM products
-GROUP BY category_id;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">category_id</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">num_products</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">products</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">category_id</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query groups the products in the "products" table by their category and counts the number of products in each category. The COUNT(*) function is used to count the number of rows in each group, and the AS keyword is used to assign the name "num_products" to the output column.</p>
 <p><br /></p>
 <p>Here an other example : </p>
-<pre><code class="language-sql">SELECT department, AVG(salary) AS &quot;Average Salary&quot;
-FROM employees
-GROUP BY department
-ORDER BY &quot;Average Salary&quot; DESC;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;Average Salary&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="ss">&quot;Average Salary&quot;</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+</span></code></pre></div>
 <p>In this example, the GROUP BY clause is used to group the employees by department, and the AVG() function is used to calculate the average salary for each department. The AS keyword is used to assign a new name to the "AVG(salary)" expression in the output. The new name is "Average Salary".</p>
 <p><br /></p>
 <p>The ORDER BY keyword is used to sort the results in descending order based on the "Average Salary" column. Note that we need to enclose the output column name in double quotes because it contains a space.</p>
@@ -1331,7 +1507,7 @@ ORDER BY &quot;Average Salary&quot; DESC;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

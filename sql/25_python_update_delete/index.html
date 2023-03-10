@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://datascience_careerera.fr/sql/08_insert/">
+        <link rel="canonical" href="https://datascience_careerera.fr/sql/25_python_update_delete/">
       
       
-        <link rel="prev" href="../07_creating_tables/">
+        <link rel="prev" href="../24_python_orm/">
       
       
-        <link rel="next" href="../09_constraints/">
+        <link rel="next" href="../26_python_queries/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
     
     
       
-        <title>Inserting Data - Data Science</title>
+        <title>Updating and Deleting Data with Python - Data Science</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#inserting-data" class="md-skip">
+        <a href="#updating-and-deleting-data-with-python" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inserting Data
+              Updating and Deleting Data with Python
             
           </span>
         </div>
@@ -700,20 +700,18 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" checked>
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="false">
           CRUD (Create, Read, Update, Delete) operations
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -743,79 +741,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Inserting Data
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../08_insert/" class="md-nav__link">
         Inserting Data
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-different-insert-commands-and-syntax" class="md-nav__link">
-    Overview of Different Insert Commands and Syntax
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview of Different Insert Commands and Syntax">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#inserting-values-into-specific-columns" class="md-nav__link">
-    Inserting Values into Specific Columns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inserting-values-into-all-columns" class="md-nav__link">
-    Inserting Values into All Columns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inserting-multiple-rows-at-once" class="md-nav__link">
-    Inserting Multiple Rows at Once
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1000,18 +930,20 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="true">
           Python and SQLAlchemy
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1069,11 +1001,119 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../25_python_update_delete/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Updating and Deleting Data with Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Updating and Deleting Data with Python
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#updating-data-with-python-and-sqlalchemy" class="md-nav__link">
+    Updating Data with Python and SQLAlchemy
+  </a>
+  
+    <nav class="md-nav" aria-label="Updating Data with Python and SQLAlchemy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-update-method" class="md-nav__link">
+    Using update() method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-execute-method" class="md-nav__link">
+    Using execute() method
+  </a>
+  
+    <nav class="md-nav" aria-label="Using execute() method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-vs-execute" class="md-nav__link">
+    💡 update() VS execute()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-data-with-python-and-sqlalchemy" class="md-nav__link">
+    Deleting Data with Python and SQLAlchemy
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting Data with Python and SQLAlchemy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-delete-method" class="md-nav__link">
+    Using delete() method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-execute-method_1" class="md-nav__link">
+    Using execute() method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1189,36 +1229,76 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview-of-different-insert-commands-and-syntax" class="md-nav__link">
-    Overview of Different Insert Commands and Syntax
+  <a href="#updating-data-with-python-and-sqlalchemy" class="md-nav__link">
+    Updating Data with Python and SQLAlchemy
   </a>
   
-    <nav class="md-nav" aria-label="Overview of Different Insert Commands and Syntax">
+    <nav class="md-nav" aria-label="Updating Data with Python and SQLAlchemy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inserting-values-into-specific-columns" class="md-nav__link">
-    Inserting Values into Specific Columns
+  <a href="#using-update-method" class="md-nav__link">
+    Using update() method
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#inserting-values-into-all-columns" class="md-nav__link">
-    Inserting Values into All Columns
+  <a href="#using-execute-method" class="md-nav__link">
+    Using execute() method
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Using execute() method">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inserting-multiple-rows-at-once" class="md-nav__link">
-    Inserting Multiple Rows at Once
+  <a href="#update-vs-execute" class="md-nav__link">
+    💡 update() VS execute()
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-data-with-python-and-sqlalchemy" class="md-nav__link">
+    Deleting Data with Python and SQLAlchemy
+  </a>
+  
+    <nav class="md-nav" aria-label="Deleting Data with Python and SQLAlchemy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-delete-method" class="md-nav__link">
+    Using delete() method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-execute-method_1" class="md-nav__link">
+    Using execute() method
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    Wrap-up
+  </a>
   
 </li>
       
@@ -1238,45 +1318,108 @@
 
 
 
-<h1 id="inserting-data">Inserting Data</h1>
-<p>Once you have created a table, you can start inserting data into it. The process of inserting data involves specifying the table name, the columns to insert data into, and the values to be inserted.</p>
-<h2 id="overview-of-different-insert-commands-and-syntax">Overview of Different Insert Commands and Syntax</h2>
-<p>There are a few different ways to insert data into a table in SQL, depending on how much information you have about the data you are inserting. Here are some common insert commands and their syntax:</p>
-<h3 id="inserting-values-into-specific-columns">Inserting Values into Specific Columns</h3>
-<p>You can use the <code>INSERT INTO</code> command to insert values into specific columns in a table. Here is the syntax for inserting a single row of data into a table:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="n">column3</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+<h1 id="updating-and-deleting-data-with-python">Updating and Deleting Data with Python</h1>
+<h2 id="updating-data-with-python-and-sqlalchemy">Updating Data with Python and SQLAlchemy</h2>
+<h3 id="using-update-method">Using <code>update()</code> method</h3>
+<p>The update() method in SQLAlchemy can be used to update data in a table. The syntax of update() method is as follows:</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">table</span><span class="o">.</span><span class="n">update</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="n">column_name</span><span class="o">=</span><span class="n">new_value</span><span class="p">)</span>
 </span></code></pre></div>
-<p>For example, to insert a new row into a <code>users</code> table with the values "John Doe" for the <code>name</code> column, "johndoe@example.com" for the <code>email</code> column, and 25 for the <code>age</code> column, you would use the following command:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;John Doe&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;johndoe@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span>
+Where : </p>
+<ul>
+<li><code>table</code>: The table that needs to be updated.</li>
+<li><code>condition</code>: The condition that specifies which rows should be updated.</li>
+<li><code>column_name</code>: The name of the column that needs to be updated.</li>
+<li><code>new_value</code>: The new value for the column.</li>
+</ul>
+<p>Here's an example of how to use the update() method in SQLAlchemy to update the salary of an employee:</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">Table</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">MetaData</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">desc</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># create an engine to connect to the database</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;mysql://user:password@localhost:3306/employees&#39;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># create a metadata object to reflect the database schema</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">metadata</span> <span class="o">=</span> <span class="n">MetaData</span><span class="p">()</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Define the table</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">employees</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;employees&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">autoload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoload_with</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Update the salary of employee with emp_no = 10001</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">update_query</span> <span class="o">=</span> <span class="n">employees</span><span class="o">.</span><span class="n">update</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">employees</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">emp_no</span> <span class="o">==</span> <span class="mi">10001</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="n">first_name</span><span class="o">=</span><span class="s1">&#39;jonh&#39;</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Execute the query</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">update_query</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="inserting-values-into-all-columns">Inserting Values into All Columns</h3>
-<p>If you have data to insert for every column in a table, you can omit the column names from the INSERT INTO command. Here is the syntax for inserting a single row of data into a table without specifying column names:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">,</span><span class="w"> </span><span class="p">...);</span>
+Here, the line <code>employees = Table('employees', metadata, autoload=True, autoload_with=engine)</code>  loads the <code>employees</code> table from the database into a Table object named <code>employees</code> using the metadata object and the engine object.
+Then we define the update operation to be performed on the <code>employees</code> table. This query will update the <code>first_name</code> column of the row where <code>emp_no</code> is equal to 10001 to <code>john</code>.</p>
+<p><br /></p>
+<p>Let's verify if the database is updated with this query after the <code>update_db.py</code> script : </p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Verify if the field has been modified</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">select_query</span> <span class="o">=</span> <span class="n">select</span><span class="p">([</span><span class="n">employees</span><span class="p">])</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">employees</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">emp_no</span> <span class="o">==</span> <span class="mi">10001</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Execute the query</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">select_query</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
 </span></code></pre></div>
-<p>For example, to insert a new row into the <code>users</code> table with the values "Jane Smith" for the <code>name</code> column, "janesmith@example.com" for the <code>email</code> column, 30 for the <code>age</code> column, and "female" for the <code>gender</code> column, you would use the following command:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Jane Smith&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;janesmith@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;female&#39;</span><span class="p">);</span>
+<h3 id="using-execute-method">Using <code>execute()</code> method</h3>
+<p>Another way to update data in a table is by using the <code>execute()</code> method in SQLAlchemy. Here's an example:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Define the table</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">employees</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;employees&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">autoload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoload_with</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Define the query</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">update_query</span> <span class="o">=</span> <span class="s2">&quot;UPDATE employees SET first_name = &#39;jonh&#39; WHERE emp_no = 10001&quot;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Execute the query</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">update_query</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="inserting-multiple-rows-at-once">Inserting Multiple Rows at Once</h3>
-<p>You can also use the <code>INSERT INTO</code> command to insert multiple rows of data at once. Here is the syntax for inserting multiple rows of data into a table:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="n">column3</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">VALUES</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">,</span><span class="w"> </span><span class="p">...),</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">,</span><span class="w"> </span><span class="p">...),</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">value3</span><span class="p">,</span><span class="w"> </span><span class="p">...),</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">...;</span>
+<h4 id="update-vs-execute">💡 <code>update()</code> VS <code>execute()</code></h4>
+<p>The <code>execute()</code> method is more flexible and can be used to execute any SQL statement, including <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, and more. However, it requires the statement to be provided as a string, making it more error-prone and harder to maintain in large applications.</p>
+<p><br /></p>
+<p>On the other hand, the <code>update()</code> method provides a more structured way to update data in a table. It takes a filter condition that specifies which rows to update, and a set of values to apply to the specified rows. The <code>update()</code> method also returns a <code>ResultProxy</code> object that can be used to get information about the update operation, such as the number of affected rows.</p>
+<p><br /></p>
+<p>In general, the <code>update()</code> method is preferred for modifying data in a table using SQLAlchemy, as it provides a more structured and safer approach. However, in some cases, the <code>execute()</code> method may be more appropriate for executing complex SQL statements that cannot be expressed using the <code>update()</code> method.</p>
+<h2 id="deleting-data-with-python-and-sqlalchemy">Deleting Data with Python and SQLAlchemy</h2>
+<h3 id="using-delete-method">Using <code>delete()</code> method</h3>
+<p>The <code>delete()</code> method in SQLAlchemy can be used to delete data from a table. The syntax of <code>delete()</code> method is as follows:</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">table</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
 </span></code></pre></div>
-<p>For example, to insert three new rows into the <code>users</code> table, you would use the following command:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">)</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">VALUES</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Alice Johnson&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;alicejohnson@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">),</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Bob Williams&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bobwilliams@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">),</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">(</span><span class="s1">&#39;Charlie Brown&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;charliebrown@example.com&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">);</span>
+where :
+- <strong>table</strong>: The table that needs to be updated.
+- <strong>condition</strong>: The condition that specifies which rows should be deleted.</p>
+<p>Here's an example of how to use the delete() method in SQLAlchemy to delete an employee from the employees table:</p>
+<div class="language-py highlight"><span class="filename">delete_dd.py</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#import and other stuff like all the previous scripts</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Define the table</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="n">employees</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;employees&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">autoload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoload_with</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># Delete the employee with emp_no = 10001</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">delete_query</span> <span class="o">=</span> <span class="n">employees</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">employees</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">emp_no</span> <span class="o">==</span> <span class="mi">10001</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># Execute the query</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">delete_query</span><span class="p">)</span>
 </span></code></pre></div>
-<p>By using these different insert commands and syntax, you can efficiently add data to your SQL database tables.</p>
+<p>In this example, we deleted the employee with <code>emp_no</code> 10001 from the <code>employees</code> table.</p>
+<h3 id="using-execute-method_1">Using <code>execute()</code> method</h3>
+<p>Another way to delete data from a table is by using the execute() method in SQLAlchemy. Here's an example:</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Define the table</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">employees</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="s1">&#39;employees&#39;</span><span class="p">,</span> <span class="n">metadata</span><span class="p">,</span> <span class="n">autoload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">autoload_with</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Define the query</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">delete_query</span> <span class="o">=</span> <span class="s2">&quot;DELETE FROM employees WHERE emp_no = 10001&quot;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Execute the query</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">with</span> <span class="n">engine</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span> <span class="k">as</span> <span class="n">conn</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">delete_query</span><span class="p">)</span>
+</span></code></pre></div>
+Same principle as before. </p>
+<h2 id="wrap-up">Wrap-up</h2>
+<p>That's it! Now we know how to update and delete data in tables using Python and SQLAlchemy 🥳</p>
 
 
 

@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1047,6 +1063,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1211,136 +1387,142 @@
 <ul>
 <li><code>COUNT()</code>: returns the number of rows in a table or the number of non-null values in a column.</li>
 </ul>
-<pre><code class="language-sql">SELECT COUNT(*) as num_employees
-FROM employees;
-</code></pre>
-<p>This query counts the number of rows in the "employees" table and assigns the name "num_employees" to the output column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">num_employees</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query counts the number of rows in the "employees" table and assigns the name "num_employees" to the output column.</p>
 <ul>
-<li><code>SUM()</code>: returns the sum of values in a column.</li>
+<li>
+<p><code>SUM()</code>: returns the sum of values in a column.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SELECT SUM(salary) as total_salary
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>FROM salaries;
+</span></code></pre></div>
+This query calculates the total salary of all employees in the "salaries" table and assigns the name "total_salary" to the output column.</p>
+</li>
+<li>
+<p><code>AVG()</code>: returns the average value of a column.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">salaries</span><span class="p">;</span>
+</span></code></pre></div>
+This query calculates the average salary of all employees in the "salaries" table and assigns the name "avg_salary" to the output column.</p>
+</li>
+<li>
+<p><code>MAX()</code>: returns the maximum value in a column.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">max_salary</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">salaries</span><span class="p">;</span>
+</span></code></pre></div>
+This query finds the highest salary in the "salaries" table and assigns the name "max_salary" to the output column.</p>
+</li>
+<li><code>MIN()</code>: returns the minimum value in a column.</li>
 </ul>
-<pre><code>SELECT SUM(salary) as total_salary
-FROM salaries;
-</code></pre>
-<p>This query calculates the total salary of all employees in the "salaries" table and assigns the name "total_salary" to the output column.</p>
-<ul>
-<li><code>AVG()</code>: returns the average value of a column.</li>
-</ul>
-<pre><code class="language-sql">SELECT AVG(salary) as avg_salary
-FROM salaries;
-</code></pre>
-<p>This query calculates the average salary of all employees in the "salaries" table and assigns the name "avg_salary" to the output column.</p>
-<ul>
-<li><code>MAX()</code>: returns the maximum value in a column.</li>
-</ul>
-<pre><code class="language-sql">SELECT MAX(salary) as max_salary
-FROM salaries;
-</code></pre>
-<p>This query finds the highest salary in the "salaries" table and assigns the name "max_salary" to the output column.
-- <code>MIN()</code>: returns the minimum value in a column.</p>
-<pre><code class="language-sql">SELECT MIN(salary) as min_salary
-FROM salaries;
-</code></pre>
-<p>This query finds the lowest salary in the "salaries" table and assigns the name "min_salary" to the output column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">MIN</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">min_salary</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">salaries</span><span class="p">;</span>
+</span></code></pre></div>
+This query finds the lowest salary in the "salaries" table and assigns the name "min_salary" to the output column.</p>
 <h3 id="scalar-functions">Scalar Functions</h3>
 <p>Scalar functions are used to perform operations on individual values and return a single value. Some common scalar functions are:</p>
 <ul>
-<li><code>UPPER()</code>: converts a string to uppercase.</li>
+<li><code>UPPER()</code>: converts a string to uppercase.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">UPPER</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">upper_first_name</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query converts the first name of all employees in the "employees" table to uppercase and assigns the name "upper_first_name" to the output column.</li>
+<li>
+<p><code>LOWER()</code>: converts a string to lowercase.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">LOWER</span><span class="p">(</span><span class="n">last_name</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">lower_last_name</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query converts the last name of all employees in the "employees" table to lowercase and assigns the name "lower_last_name" to the output column.</p>
+</li>
+<li>
+<p><code>LENGTH()</code>: returns the length of a string.</p>
+</li>
 </ul>
-<pre><code class="language-sql">SELECT UPPER(first_name) as upper_first_name
-FROM employees;
-</code></pre>
-<p>This query converts the first name of all employees in the "employees" table to uppercase and assigns the name "upper_first_name" to the output column.
-- <code>LOWER()</code>: converts a string to lowercase.</p>
-<pre><code class="language-sql">SELECT LOWER(last_name) as lower_last_name
-FROM employees;
-</code></pre>
-<p>This query converts the last name of all employees in the "employees" table to lowercase and assigns the name "lower_last_name" to the output column.</p>
-<ul>
-<li><code>LENGTH()</code>: returns the length of a string.</li>
-</ul>
-<pre><code class="language-sql">SELECT first_name, LENGTH(first_name) as name_length
-FROM employees;
-</code></pre>
-<p>This query returns the first name of all employees in the "employees" table, and calculates the length of each name and assigns the name "name_length" to the output column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="k">LENGTH</span><span class="p">(</span><span class="n">first_name</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">name_length</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns the first name of all employees in the "employees" table, and calculates the length of each name and assigns the name "name_length" to the output column.</p>
 <h3 id="date-and-time-functions">Date and Time Functions</h3>
 <p>Date and time functions are used to perform operations on date and time values. Some common date and time functions are:</p>
 <ul>
-<li><code>DATE()</code>: extracts the date part from a datetime value.</li>
+<li>
+<p><code>DATE()</code>: extracts the date part from a datetime value.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">hire_date</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">hire_date_only</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query extracts the date part from the "hire_date" column of the "employees" table and assigns the name "hire_date_only" to the output column.</p>
+</li>
+<li>
+<p><code>YEAR()</code>: returns the year from a date value.</p>
+</li>
 </ul>
-<pre><code class="language-sql">SELECT hire_date, DATE(hire_date) as hire_date_only
-FROM employees;
-</code></pre>
-<p>This query extracts the date part from the "hire_date" column of the "employees" table and assigns the name "hire_date_only" to the output column.</p>
-<ul>
-<li><code>YEAR()</code>: returns the year from a date value.</li>
-</ul>
-<pre><code class="language-sql">SELECT hire_date, YEAR(hire_date) as hire_year
-FROM employees;
-</code></pre>
-<p>This query returns the "hire_date" column of the "employees" table and calculates the year each employee was hired. The name "hire_year" is assigned to the output column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">hire_date</span><span class="p">,</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">hire_year</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns the "hire_date" column of the "employees" table and calculates the year each employee was hired. The name "hire_year" is assigned to the output column.</p>
 <p><br /></p>
 <p>Same <code>MONTH()</code> function :</p>
-<pre><code class="language-sql">SELECT hire_date, MONTH(hire_date) as hire_month
-FROM employees;
-</code></pre>
-<p>This query returns the "hire_date" column of the "employees" table and calculates the month each employee was hired. The name "hire_month" is assigned to the output column.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">hire_date</span><span class="p">,</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">hire_month</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns the "hire_date" column of the "employees" table and calculates the month each employee was hired. The name "hire_month" is assigned to the output column.</p>
 <h3 id="string-functions">String Functions</h3>
 <p>String functions are used to perform operations on string values. Some common string functions are:</p>
 <ul>
-<li>CONCAT(): concatenates two or more strings together.</li>
+<li>CONCAT(): concatenates two or more strings together.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">full_name</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query combines the first name and last name columns of the "employees" table and assigns the name "full_name" to the output column.</li>
+<li>LEFT(): returns the leftmost characters of a string.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="k">LEFT</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">initial</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns the first name of all employees in the "employees" table and extracts the first three characters of each name. The name "initial" is assigned to the output column.</li>
+<li>REPLACE(): replaces a substring in a string with another substring.
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">REPLACE</span><span class="p">(</span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;gmail&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;yahoo&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">new_email</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns the email column of the "employees" table and replaces the substring 'gmail' with 'yahoo' in each email address. The name "new_email" is assigned to the output column.</li>
 </ul>
-<pre><code class="language-sql">SELECT CONCAT(first_name, ' ', last_name) as full_name
-FROM employees;
-</code></pre>
-<p>This query combines the first name and last name columns of the "employees" table and assigns the name "full_name" to the output column.
-- LEFT(): returns the leftmost characters of a string.</p>
-<pre><code class="language-sql">SELECT first_name, LEFT(first_name, 3) as initial
-FROM employees;
-</code></pre>
-<p>This query returns the first name of all employees in the "employees" table and extracts the first three characters of each name. The name "initial" is assigned to the output column.
-- REPLACE(): replaces a substring in a string with another substring.</p>
-<pre><code class="language-sql">SELECT REPLACE(email, 'gmail', 'yahoo') as new_email
-FROM employees;
-</code></pre>
-<p>This query returns the email column of the "employees" table and replaces the substring 'gmail' with 'yahoo' in each email address. The name "new_email" is assigned to the output column.</p>
 <h2 id="mix-up">Mix up</h2>
 <p>Let's take a look at three examples of SQL queries that use a mix of functions on the "employees" database again. </p>
 <h3 id="find-the-average-salary-of-employees-by-department-and-round-the-results-to-two-decimal-places">Find the average salary of employees by department, and round the results to two decimal places:</h3>
-<pre><code class="language-sql">SELECT department, ROUND(AVG(salary), 2) as avg_salary
-FROM employees
-JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
-JOIN departments ON dept_emp.dept_no = departments.dept_no
-GROUP BY department;
-</code></pre>
-<p>This query joins the "employees", "dept_emp", and "departments" tables, and uses the AVG() function to calculate the average salary of employees in each department. The ROUND() function is used to round the results to two decimal places. The output includes the department name and the average salary for each department.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">department</span><span class="p">,</span><span class="w"> </span><span class="n">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">dept_emp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dept_emp</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">dept_emp</span><span class="p">.</span><span class="n">dept_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">dept_no</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">department</span><span class="p">;</span>
+</span></code></pre></div>
+This query joins the "employees", "dept_emp", and "departments" tables, and uses the AVG() function to calculate the average salary of employees in each department. The ROUND() function is used to round the results to two decimal places. The output includes the department name and the average salary for each department.</p>
 <p><br /></p>
 <p>Don't worry about the <code>JOIN</code> clause we will get to it in detail later. </p>
 <h3 id="find-the-top-10-most-common-first-names-among-employees-and-show-the-number-of-employees-with-each-name">Find the top 10 most common first names among employees, and show the number of employees with each name:</h3>
-<pre><code class="language-sql">SELECT first_name, COUNT(*) as num_employees
-FROM employees
-GROUP BY first_name
-ORDER BY num_employees DESC
-LIMIT 10;
-</code></pre>
-<p>This query uses the COUNT() function to count the number of employees with each first name, and the GROUP BY clause to group the results by first name. The ORDER BY clause is used to sort the results in descending order by the number of employees, and the LIMIT clause is used to show only the top 10 results.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">num_employees</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">first_name</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">num_employees</span><span class="w"> </span><span class="k">DESC</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span></code></pre></div>
+This query uses the COUNT() function to count the number of employees with each first name, and the GROUP BY clause to group the results by first name. The ORDER BY clause is used to sort the results in descending order by the number of employees, and the LIMIT clause is used to show only the top 10 results.</p>
 <h3 id="find-the-number-of-employees-hired-in-each-year-and-show-the-results-as-a-percentage-of-the-total-number-of-employees">Find the number of employees hired in each year, and show the results as a percentage of the total number of employees:</h3>
-<pre><code class="language-sql">SELECT YEAR(hire_date) as hire_year, COUNT(*) / (SELECT COUNT(*) FROM employees) * 100 as percentage
-FROM employees
-GROUP BY hire_year;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">hire_year</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">percentage</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hire_year</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query uses the YEAR() function to extract the year from the hire date of each employee, and the COUNT() function to count the number of employees hired in each year. The subquery (SELECT COUNT(*) FROM employees) is used to calculate the total number of employees in the "employees" table. The percentage of employees hired in each year is calculated by dividing the count by the total number of employees and multiplying by 100. The output includes the hire year and the percentage of employees hired in that year.</p>
 <h3 id="find-the-number-of-employees-born-in-each-month-and-sort-the-results-by-month">Find the number of employees born in each month, and sort the results by month:</h3>
-<pre><code class="language-sql">SELECT MONTH(birth_date) as birth_month, COUNT(*) as num_employees
-FROM employees
-GROUP BY birth_month
-ORDER BY birth_month;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="n">birth_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">birth_month</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">num_employees</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">birth_month</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">birth_month</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query uses the MONTH() function to extract the month from the birth date of each employee, and the COUNT() function to count the number of employees born in each month. The GROUP BY clause is used to group the results by birth month, and the ORDER BY clause is used to sort the results by month.</p>
 <h3 id="find-the-number-of-employees-who-were-hired-in-each-year-and-show-the-results-as-a-bar-chart">Find the number of employees who were hired in each year, and show the results as a bar chart:</h3>
-<pre><code class="language-sql">SELECT YEAR(hire_date) as hire_year, COUNT(*) as num_employees
-FROM employees
-GROUP BY hire_year;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">hire_year</span><span class="p">,</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">num_employees</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hire_year</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query uses the YEAR() function to extract the year from the hire date of each employee, and the COUNT() function to count the number of employees hired in each year. The GROUP BY clause is used to group the results by hire year. You can visualize the results as a bar chart in a data visualization tool, such as Tableau or Power BI, to see the distribution of hires over time.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>SQL functions are powerful tools that allow you to perform operations on data and return meaningful results. They can be used to calculate aggregate values, manipulate strings, and work with date and time values. By understanding the different types of functions available in SQL and how to use them in queries, you can perform complex data analysis and retrieve valuable insights from your data.</p>
@@ -1381,7 +1563,7 @@ GROUP BY hire_year;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

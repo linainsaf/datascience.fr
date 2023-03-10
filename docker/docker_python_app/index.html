@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1053,6 +1069,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1229,66 +1405,66 @@
 </ul>
 <h2 id="creating-a-dockerfile-for-our-python-app">Creating a Dockerfile for our python app</h2>
 <p>The first step in building a Docker image for your Python app is to create a Dockerfile. The Dockerfile is a text file that contains a set of instructions for building the Docker image. Here's an example Dockerfile for a Python app:</p>
-<pre><code class="language-Dockerfile"># Use an official Python runtime as a parent image
-FROM python:3.9
-
-# Set the working directory to /app
-WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Make port 80 available to the world outside this container
-EXPOSE 80
-
-# Define environment variable
-ENV NAME World
-
-# Run app.py when the container launches
-CMD [&quot;python&quot;, &quot;app.py&quot;]
-</code></pre>
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># Use an official Python runtime as a parent image</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c"># Set the working directory to /app</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c"># Copy the current directory contents into the container at /app</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c"># Install any needed packages specified in requirements.txt</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c"># Make port 80 available to the world outside this container</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c"># Define environment variable</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="k">ENV</span><span class="w"> </span>NAME<span class="w"> </span>World
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c"># Run app.py when the container launches</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+</span></code></pre></div>
 <h3 id="lets-see-how-this-file-works-line-by-line">Let's see how this file works line by line</h3>
 <h4 id="defining-the-base-image-and-environment">Defining the base image and environment</h4>
-<p>The first line in the Dockerfile specifies the base image to use for the container. In this case, we are using the official <code>Python 3.9</code> image.</p>
-<pre><code class="language-Dockerfile">FROM python:3.9
-</code></pre>
-<p>Next, we set the working directory to "/app" inside the container.</p>
-<pre><code class="language-Dockerfile">WORKDIR /app
-</code></pre>
-<p>This is the directory where we will copy our application code and dependencies.</p>
+<p>The first line in the Dockerfile specifies the base image to use for the container. In this case, we are using the official <code>Python 3.9</code> image.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9</span>
+</span></code></pre></div></p>
+<p>Next, we set the working directory to "/app" inside the container.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+</span></code></pre></div>
+This is the directory where we will copy our application code and dependencies.</p>
 <h4 id="installing-dependencies-and-copying-source-code">Installing dependencies and copying source code</h4>
-<p>Next, we copy our application code and dependencies into the container. This is done using the <code>COPY</code> command.</p>
-<pre><code class="language-Dockerfile">COPY . /app
-</code></pre>
-<p>This command copies the contents of the current directory into the "/app" directory inside the container.</p>
-<p>We then install any dependencies that are needed for our application. This is done using the "RUN" command.</p>
-<pre><code class="language-Dockerfile">RUN pip install --no-cache-dir -r requirements.txt
-</code></pre>
-<p>This command reads the requirements.txt file and installs any dependencies listed in the file.</p>
+<p>Next, we copy our application code and dependencies into the container. This is done using the <code>COPY</code> command.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>/app
+</span></code></pre></div>
+This command copies the contents of the current directory into the "/app" directory inside the container.</p>
+<p>We then install any dependencies that are needed for our application. This is done using the "RUN" command.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span></code></pre></div>
+This command reads the requirements.txt file and installs any dependencies listed in the file.</p>
 <h4 id="configuring-the-app-and-exposing-ports">Configuring the app and exposing ports</h4>
-<p>Next, we configure our application by setting any environment variables and exposing any necessary ports.</p>
-<pre><code class="language-Dockerfile">EXPOSE 80
-ENV NAME World
-</code></pre>
-<p>In this example, we are exposing port 80 and setting an environment variable named "NAME" to "World".</p>
-<p>Finally, we specify the command to run when the container is launched.</p>
-<pre><code class="language-Dockerfile">CMD [&quot;python&quot;, &quot;app.py&quot;]
-</code></pre>
+<p>Next, we configure our application by setting any environment variables and exposing any necessary ports.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">ENV</span><span class="w"> </span>NAME<span class="w"> </span>World
+</span></code></pre></div>
+In this example, we are exposing port 80 and setting an environment variable named "NAME" to "World".</p>
+<p>Finally, we specify the command to run when the container is launched.
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+</span></code></pre></div></p>
 <p>This command specifies that the "app.py" file should be executed when the container is launched.</p>
 <h3 id="building-the-docker-image">Building the Docker image</h3>
 <p>Now that we have created our Dockerfile, we can build our Docker image. 
-To do this, we use the <code>docker build</code> command like this : </p>
-<pre><code class="language-bash">docker build -t my-python-app .
-</code></pre>
+To do this, we use the <code>docker build</code> command like this : 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-python-app<span class="w"> </span>.
+</span></code></pre></div></p>
 <p>This command tells Docker to build an image with the name <code>my-python-app</code> using the Dockerfile in the current directory (.) </p>
 <h3 id="running-the-docker-container">Running the Docker container</h3>
-<p>Once we have built our Docker image, we can run it using the <code>docker run</code> command : </p>
-<pre><code class="language-bash">docker run -p 4000:80 my-python-app
-</code></pre>
-<p>This command tells Docker to run the <code>my-python-app</code> image and map port <code>4000</code> on the host machine to port <code>80</code> inside the container.</p>
+<p>Once we have built our Docker image, we can run it using the <code>docker run</code> command : 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">4000</span>:80<span class="w"> </span>my-python-app
+</span></code></pre></div>
+This command tells Docker to run the <code>my-python-app</code> image and map port <code>4000</code> on the host machine to port <code>80</code> inside the container.</p>
 <h2 id="summary-of-the-most-common-dockerfile-commands">Summary of the most common Dockerfile commands</h2>
 <p>These commands can be combined in various ways to create a Dockerfile for your specific application. By using Dockerfile commands, you can define the steps needed to build a Docker image and run a Docker container for your application.</p>
 <p>Most common Dockerfile commands: </p>
@@ -1309,38 +1485,38 @@ To do this, we use the <code>docker build</code> command like this : </p>
 <p>These commands can be combined in various ways to create a Dockerfile for your specific application. By using Dockerfile commands, you can define the steps needed to build a Docker image and run a Docker container for your application.</p>
 <h2 id="run-a-fastapi-hello-world-python-app-into-a-container">Run a FastAPI "Hello World" Python app into a container</h2>
 <p><strong>Create a new Python file named <code>main.py</code></strong> with the following code : </p>
-<pre><code class="language-python">from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get(&quot;/&quot;)
-async def root():
-    return {&quot;message&quot;: &quot;Hello World!&quot;}
-</code></pre>
-<p><strong>Create a new file named <code>Dockerfile</code></strong> in the same directory with the following contents:</p>
-<pre><code class="language-Dockerfile">FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim
-
-COPY ./app /app
-
-EXPOSE 80
-
-CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.0&quot;, &quot;--port&quot;, &quot;80&quot;]
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">root</span><span class="p">():</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello World!&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Create a new file named <code>Dockerfile</code></strong> in the same directory with the following contents:
+<div class="language-Dockerfile highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">tiangolo/uvicorn-gunicorn-fastapi:python3.8-slim</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">COPY</span><span class="w"> </span>./app<span class="w"> </span>/app
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uvicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main:app&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--host&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--port&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;80&quot;</span><span class="p">]</span>
+</span></code></pre></div></p>
 <p>This Dockerfile uses the <code>tiangolo/uvicorn-gunicorn-fastapi</code> base image, copies the app directory (which contains main.py) into the container, exposes port <code>80</code>, and sets the <code>CMD</code> to run the uvicorn server with the <code>main:app</code> parameter.</p>
 <p><br /></p>
-<p><strong>Build the Docker image</strong> using the following command:</p>
-<pre><code class="language-bash">docker build -t fastapi-demo .
-</code></pre>
-<p>This command builds the Docker image and tags it with the name fastapi-demo.</p>
+<p><strong>Build the Docker image</strong> using the following command:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>fastapi-demo<span class="w"> </span>.
+</span></code></pre></div>
+This command builds the Docker image and tags it with the name fastapi-demo.</p>
 <p><br /></p>
-<p><strong>Run the Docker container</strong> using the following command:</p>
-<pre><code class="language-bash">docker run -p 80:80 fastapi-demo
-</code></pre>
-<p>This command starts the Docker container and maps port 80 on the host machine to port 80 inside the container.</p>
+<p><strong>Run the Docker container</strong> using the following command:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>fastapi-demo
+</span></code></pre></div>
+This command starts the Docker container and maps port 80 on the host machine to port 80 inside the container.</p>
 <p><br /></p>
-<p><strong>Make sure the container is up</strong> and the API is running with the command : </p>
-<pre><code class="language-bash">docker ps 
-</code></pre>
+<p><strong>Make sure the container is up</strong> and the API is running with the command : 
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker<span class="w"> </span>ps<span class="w"> </span>
+</span></code></pre></div></p>
 <p>If you see the container UP and running, then you can open your web browser and navigate to <a href="http://localhost:80/">http://localhost:80/</a>. You should see the message "Hello World!" displayed in your browser 🥳</p>
 <h3 id="why-0000-and-not-localhost">Why <code>0.0.0.0</code> and not <code>localhost</code></h3>
 <p>When setting up a Docker container, it's common to bind the container's internal port to a port on the host machine so that the container's services can be accessed from the outside. When specifying the IP address for the --host parameter in the uvicorn command, you have a choice between using <code>localhost</code> and <code>0.0.0.0</code>.</p>
@@ -1389,7 +1565,7 @@ CMD [&quot;uvicorn&quot;, &quot;main:app&quot;, &quot;--host&quot;, &quot;0.0.0.
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

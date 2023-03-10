@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1042,6 +1058,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1220,61 +1396,61 @@
 <p>Le modèle peut être utilisé pour la prédiction ou pour comprendre la relation entre les variables. Par exemple, dans le cas de la prédiction de prix de vente d'une maison, les variables prédictives pourraient être la superficie, le nombre de chambres, la localisation, etc.</p>
 <p><br /></p>
 <p>Exemple de code :</p>
-<pre><code>from sklearn.linear_model import LinearRegression
-
-# Création d'un modèle de régression linéaire
-regression_model = LinearRegression()
-
-# Entraînement du modèle sur les données d'entraînement
-regression_model.fit(X_train, y_train)
-
-# Prédiction des valeurs pour les données de test
-y_pred = regression_model.predict(X_test)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from sklearn.linear_model import LinearRegression
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># Création d&#39;un modèle de régression linéaire
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>regression_model = LinearRegression()
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a># Entraînement du modèle sur les données d&#39;entraînement
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>regression_model.fit(X_train, y_train)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a># Prédiction des valeurs pour les données de test
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>y_pred = regression_model.predict(X_test)
+</span></code></pre></div>
 <h4 id="regression-logistique">Régression logistique</h4>
 <p>La régression logistique est une méthode de classification qui permet de prédire la probabilité qu'une observation appartienne à une classe particulière (binaire ou multi-classes). La sortie est une probabilité, donc la valeur prédite est toujours comprise entre 0 et 1. </p>
 <p><br /></p>
 <p>Le modèle estime la probabilité de l'appartenance à chaque classe en fonction des variables prédictives. Le modèle est souvent utilisé pour la classification de clients potentiels, de mails comme spam ou non, etc.</p>
 <p><br /></p>
 <p>Exemple de code :</p>
-<pre><code>from sklearn.linear_model import LogisticRegression
-
-# Création d'un modèle de régression logistique
-logistic_model = LogisticRegression()
-
-# Entraînement du modèle sur les données d'entraînement
-logistic_model.fit(X_train, y_train)
-
-# Prédiction des classes pour les données de test
-y_pred = logistic_model.predict(X_test)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>from sklearn.linear_model import LogisticRegression
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># Création d&#39;un modèle de régression logistique
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>logistic_model = LogisticRegression()
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Entraînement du modèle sur les données d&#39;entraînement
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>logistic_model.fit(X_train, y_train)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># Prédiction des classes pour les données de test
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>y_pred = logistic_model.predict(X_test)
+</span></code></pre></div>
 <h4 id="arbre-de-decision">Arbre de décision</h4>
 <p><br /></p>
 <p>Les arbres de décision sont une méthode de classification et de régression qui permettent de créer un modèle à partir des données en formes d'arbre. Les noeuds internes de l'arbre représentent une condition sur les variables prédictives, les feuilles de l'arbre représentent les prédictions de la variable cible. Le modèle est facilement interprétable et permet de comprendre comment les variables sont utilisées pour la prédiction.</p>
 <p><br /></p>
 <p>Exemple de code :</p>
-<pre><code>from sklearn.tree import DecisionTreeClassifier
-
-# Création d'un modèle d'arbre de décision
-tree_model = DecisionTreeClassifier()
-
-# Entraînement du modèle sur les données d'entraînement
-tree_model.fit(X_train, y_train)
-
-# Prédiction des classes pour les données de test
-y_pred = tree_model.predict(X_test)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>from sklearn.tree import DecisionTreeClassifier
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># Création d&#39;un modèle d&#39;arbre de décision
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>tree_model = DecisionTreeClassifier()
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># Entraînement du modèle sur les données d&#39;entraînement
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>tree_model.fit(X_train, y_train)
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># Prédiction des classes pour les données de test
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>y_pred = tree_model.predict(X_test)
+</span></code></pre></div>
 <h4 id="foret-darbres-decisionnels">Forêt d'arbres décisionnels</h4>
 <p>Les forêts d'arbres décisionnels sont une méthode de classification et de régression qui combine les résultats de plusieurs arbres de décision. Chaque arbre dans la forêt est entraîné sur un échantillon aléatoire des données d'entraînement. Le modèle agrège les prédictions des différents arbres pour donner une prédiction finale. Les forêts d'arbres décisionnels sont souvent plus précises que les arbres de décision.</p>
 <p><br /></p>
 <p>Voici un exemple de code utilisant Scikit-learn pour entraîner un modèle de forêt aléatoire pour la classification :</p>
-<pre><code>from sklearn.ensemble import RandomForestClassifier
-from sklearn.datasets import make_classification
-
-X, y = make_classification(n_features=4, random_state=0)
-clf = RandomForestClassifier(max_depth=2, random_state=0)
-clf.fit(X, y)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>from sklearn.ensemble import RandomForestClassifier
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>from sklearn.datasets import make_classification
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>X, y = make_classification(n_features=4, random_state=0)
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>clf = RandomForestClassifier(max_depth=2, random_state=0)
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>clf.fit(X, y)
+</span></code></pre></div>
 <h4 id="les-machines-a-vecteurs-de-support-svm">Les Machines à Vecteurs de Support (SVM)</h4>
 <p><br /></p>
 <p>Les SVM sont un algorithme d'apprentissage supervisé utilisé pour la classification et la régression. Les SVM trouvent une frontière de décision qui maximise la marge entre les deux classes. Cette frontière de décision est appelée un hyperplan. Les SVM peuvent être utilisées pour des tâches de classification avec deux classes ou plus.</p>
@@ -1282,71 +1458,71 @@ clf.fit(X, y)
 <p>Les SVM ont une grande précision et sont populaires dans les tâches de classification. Ils peuvent également être utilisés pour la régression.</p>
 <p><br /></p>
 <p>Voici un exemple de code utilisant Scikit-learn pour entraîner un modèle SVM pour la classification :</p>
-<pre><code>from sklearn import svm
-from sklearn.datasets import make_classification
-
-X, y = make_classification(n_features=4, random_state=0)
-clf = svm.SVC(kernel='linear', C=1, random_state=0)
-clf.fit(X, y)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>from sklearn import svm
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>from sklearn.datasets import make_classification
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>X, y = make_classification(n_features=4, random_state=0)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>clf = svm.SVC(kernel=&#39;linear&#39;, C=1, random_state=0)
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>clf.fit(X, y)
+</span></code></pre></div>
 <h3 id="lapprentissage-non-supervise">L'apprentissage non supervisé</h3>
 <p>Les modèles non supervisés sont des algorithmes de machine learning qui n'ont pas besoin de données étiquetées pour fonctionner. Ils sont utilisés pour explorer les données et trouver des structures cachées, des modèles et des corrélations. Voici quelques exemples de modèles non supervisés:</p>
 <h4 id="k-means-clustering">K-means clustering</h4>
 <p>Le K-means clustering est une technique de partitionnement de données qui permet de diviser un ensemble de données en K groupes distincts (clusters). Chaque point de données est affecté à un cluster en fonction de sa proximité avec le centre de ce cluster.</p>
 <p><br /></p>
 <p>Voici un exemple de code en Python pour appliquer le K-means clustering :</p>
-<pre><code>from sklearn.cluster import KMeans
-import numpy as np
-
-# Générer des données aléatoires
-X = np.random.rand(100, 2)
-
-# Instancier le modèle de clustering
-kmeans = KMeans(n_clusters=3)
-
-# Fitter le modèle aux données
-kmeans.fit(X)
-
-# Prédire les clusters pour de nouvelles données
-labels = kmeans.predict(X)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>from sklearn.cluster import KMeans
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>import numpy as np
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a># Générer des données aléatoires
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>X = np.random.rand(100, 2)
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a># Instancier le modèle de clustering
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>kmeans = KMeans(n_clusters=3)
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a># Fitter le modèle aux données
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>kmeans.fit(X)
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a># Prédire les clusters pour de nouvelles données
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>labels = kmeans.predict(X)
+</span></code></pre></div>
 <h4 id="analyse-en-composantes-principales-pca">Analyse en composantes principales (PCA)</h4>
 <p><br /></p>
 <p>L'analyse en composantes principales est une méthode de réduction de dimension qui permet de projeter des données à haute dimension sur un espace de dimension inférieure tout en conservant autant que possible les informations contenues dans les données originales.</p>
 <p><br /></p>
 <p>Voici un exemple de code en Python pour appliquer l'analyse en composantes principales :</p>
-<pre><code>from sklearn.decomposition import PCA
-import numpy as np
-
-# Générer des données aléatoires
-X = np.random.rand(100, 10)
-
-# Instancier le modèle de PCA
-pca = PCA(n_components=3)
-
-# Fitter le modèle aux données
-pca.fit(X)
-
-# Transformer les données pour obtenir les nouvelles dimensions
-X_pca = pca.transform(X)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>from sklearn.decomposition import PCA
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>import numpy as np
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a># Générer des données aléatoires
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>X = np.random.rand(100, 10)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a># Instancier le modèle de PCA
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>pca = PCA(n_components=3)
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a># Fitter le modèle aux données
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>pca.fit(X)
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a># Transformer les données pour obtenir les nouvelles dimensions
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>X_pca = pca.transform(X)
+</span></code></pre></div>
 <h4 id="reduction-de-dimension-avec-t-sne">Réduction de dimension avec t-SNE</h4>
 <p><br /></p>
 <p>t-SNE est une méthode de réduction de dimension qui permet de projeter des données à haute dimension sur un espace de dimension inférieure en conservant autant que possible les relations de proximité entre les données.</p>
 <p><br /></p>
 <p>Voici un exemple de code en Python pour appliquer la réduction de dimension avec t-SNE :</p>
-<pre><code>from sklearn.manifold import TSNE
-import numpy as np
-
-# Générer des données aléatoires
-X = np.random.rand(100, 10)
-
-# Instancier le modèle de t-SNE
-tsne = TSNE(n_components=2)
-
-# Fitter le modèle aux données
-X_tsne = tsne.fit_transform(X)
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>from sklearn.manifold import TSNE
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>import numpy as np
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a># Générer des données aléatoires
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>X = np.random.rand(100, 10)
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a># Instancier le modèle de t-SNE
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>tsne = TSNE(n_components=2)
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a># Fitter le modèle aux données
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>X_tsne = tsne.fit_transform(X)
+</span></code></pre></div>
 
 
 
@@ -1384,7 +1560,7 @@ X_tsne = tsne.fit_transform(X)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.51d95adb.min.js"></script>

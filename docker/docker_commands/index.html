@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1136,6 +1152,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1381,140 +1557,140 @@
 <p>Here are some of the most common Docker CLI commands:</p>
 <h2 id="docker-build"><code>docker build</code></h2>
 <p>This command is used to build a Docker image from a Dockerfile.
-Example:</p>
-<pre><code>docker build -t myimage .
-</code></pre>
-<p>This command builds a Docker image from the Dockerfile in the current directory and tags it with the name <code>myimage</code>. The option <code>-t</code> or <code>--tag</code> : Sets the name and optionally a tag for the Docker image.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker build -t myimage .
+</span></code></pre></div>
+This command builds a Docker image from the Dockerfile in the current directory and tags it with the name <code>myimage</code>. The option <code>-t</code> or <code>--tag</code> : Sets the name and optionally a tag for the Docker image.</p>
 <h3 id="docker-build-options">docker build options</h3>
 <h4 id="tag-t">Tag <code>-t</code></h4>
-<p>Example:</p>
-<pre><code>docker build -t myimage:latest .
-</code></pre>
-<p>or </p>
-<pre><code>docker build -t myimage:01 .
-</code></pre>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker build -t myimage:latest .
+</span></code></pre></div>
+or 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker build -t myimage:01 .
+</span></code></pre></div></p>
 <p>This command builds a Docker image from the Dockerfile in the current directory, tags it with the name myimage and the <code>latest</code> or <code>01</code> tags.</p>
 <h4 id="file-f">File <code>-f</code></h4>
 <p>The option <code>-f</code>, <code>--file</code> : Specifies the name and location of the Dockerfile to use.
-Example:</p>
-<pre><code>docker build -t myimage:latest -f path/to/Dockerfile.dev .
-</code></pre>
-<p>This command builds a Docker image from the Dockerfile located at <code>path/to/Dockerfile.dev</code>, tags it with the name <code>myimage</code> and the <code>latest</code> tag.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker build -t myimage:latest -f path/to/Dockerfile.dev .
+</span></code></pre></div>
+This command builds a Docker image from the Dockerfile located at <code>path/to/Dockerfile.dev</code>, tags it with the name <code>myimage</code> and the <code>latest</code> tag.</p>
 <h4 id="cache-no-cache">Cache <code>--no-cache</code></h4>
 <p><code>--no-cache</code> : Disables caching during the build process.
-Example:</p>
-<pre><code>docker build --no-cache -t myimage:latest .
-</code></pre>
-<p>This command builds a Docker image from the Dockerfile in the current directory, without using any cached layers.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker build --no-cache -t myimage:latest .
+</span></code></pre></div>
+This command builds a Docker image from the Dockerfile in the current directory, without using any cached layers.</p>
 <h2 id="docker-run"><code>docker run</code></h2>
 <p>This command is used to run a Docker container from a Docker image.</p>
-<p>Example:</p>
-<pre><code>docker run --name mycontainer myimage
-</code></pre>
-<p>This command runs a Docker container from the <code>myimage</code> Docker image and names the container <code>mycontainer</code> with the tag <code>--name</code>. </p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker run --name mycontainer myimage
+</span></code></pre></div>
+This command runs a Docker container from the <code>myimage</code> Docker image and names the container <code>mycontainer</code> with the tag <code>--name</code>. </p>
 <h3 id="docker-run-options">docker run options</h3>
 <h4 id="tag-d">Tag <code>-d</code></h4>
 <p>The option <code>-d</code>, <code>--detach</code> : Runs the container in detached mode, in the background so you can use your terminal as you want is not stuck in the process.
-Example:</p>
-<pre><code>docker run -d myimage
-</code></pre>
-<p>This command runs the <code>myimage</code> Docker image in detached mode, in the background.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker run -d myimage
+</span></code></pre></div>
+This command runs the <code>myimage</code> Docker image in detached mode, in the background.</p>
 <h4 id="tag-p">Tag <code>-p</code></h4>
 <p>The option <code>-p</code>, <code>--publish</code> : Publishes a container's port(s) to the host machine.
-Example:</p>
-<pre><code>docker run -p 80:80 myimage
-</code></pre>
-<p>This command runs the myimage Docker image and maps port <code>80</code> inside the container to port <code>80</code> on the host machine.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>docker run -p 80:80 myimage
+</span></code></pre></div>
+This command runs the myimage Docker image and maps port <code>80</code> inside the container to port <code>80</code> on the host machine.</p>
 <h4 id="tag-name">Tag <code>--name</code></h4>
 <p>The option <code>--name</code>: Assigns a name to the container.
-Example:</p>
-<pre><code>docker run --name mycontainer myimage
-</code></pre>
-<p>This command runs the <code>myimage</code> Docker image and assigns the name <code>mycontainer</code> to the resulting container.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker run --name mycontainer myimage
+</span></code></pre></div>
+This command runs the <code>myimage</code> Docker image and assigns the name <code>mycontainer</code> to the resulting container.</p>
 <h4 id="tag-e">Tag <code>-e</code></h4>
 <p>The option  <code>-e</code>, <code>--env</code> : Sets environment variables inside the container.
-Example:</p>
-<pre><code>docker run -e MYVAR=myvalue myimage
-</code></pre>
-<p>This command runs the <code>myimage</code> Docker image and sets the environment variable <code>MYVAR</code> to <code>myvalue</code> inside the container.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker run -e MYVAR=myvalue myimage
+</span></code></pre></div>
+This command runs the <code>myimage</code> Docker image and sets the environment variable <code>MYVAR</code> to <code>myvalue</code> inside the container.</p>
 <h4 id="tag-v">Tag <code>-v</code></h4>
 <p>The option <code>-v</code>, <code>--volume</code> : Mounts a volume from the host machine into the container.
-Example:</p>
-<pre><code>docker run -v /path/on/host:/path/in/container myimage
-</code></pre>
-<p>This command runs the <code>myimage</code> Docker image and mounts the directory <code>/path/on/host</code> on the host machine to the directory <code>/path/in/container</code> inside the container.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker run -v /path/on/host:/path/in/container myimage
+</span></code></pre></div>
+This command runs the <code>myimage</code> Docker image and mounts the directory <code>/path/on/host</code> on the host machine to the directory <code>/path/in/container</code> inside the container.</p>
 <h4 id="tag-it">Tag <code>-it</code></h4>
 <p>The option <code>-it</code>, <code>--interactive</code> : Runs the container in interactive mode, allowing input from the user.
-Example:</p>
-<pre><code>docker run -it myimage /bin/bash
-</code></pre>
-<p>This command runs the <code>myimage</code> Docker image in interactive mode and starts a bash shell inside the container.</p>
-<p>You can of course use multiple tags like : </p>
-<pre><code>docker run -d --name mycontainer -p 80:80 myimage
-</code></pre>
-<p>This command runs a Docker container from the myimage Docker image in detached mode (<code>-d</code>), names the container mycontainer (<code>--name</code>), maps port <code>80</code> on the host machine to port <code>80</code> inside the container (<code>-p</code>), and uses the myimage Docker image as the container's base image.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker run -it myimage /bin/bash
+</span></code></pre></div>
+This command runs the <code>myimage</code> Docker image in interactive mode and starts a bash shell inside the container.</p>
+<p>You can of course use multiple tags like : 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker run -d --name mycontainer -p 80:80 myimage
+</span></code></pre></div>
+This command runs a Docker container from the myimage Docker image in detached mode (<code>-d</code>), names the container mycontainer (<code>--name</code>), maps port <code>80</code> on the host machine to port <code>80</code> inside the container (<code>-p</code>), and uses the myimage Docker image as the container's base image.</p>
 <h2 id="docker-ps"><code>docker ps</code></h2>
 <p>This command is used to list running Docker containers.
-Example:</p>
-<pre><code>docker ps
-</code></pre>
-<p>This command lists all running Docker containers. You can also list the exited container with the <code>-a</code> option , it is very usefull in case you want to debug a container.</p>
-<pre><code>docker ps -a
-</code></pre>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>docker ps
+</span></code></pre></div>
+This command lists all running Docker containers. You can also list the exited container with the <code>-a</code> option , it is very usefull in case you want to debug a container.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker ps -a
+</span></code></pre></div>
 <h2 id="docker-stop"><code>docker stop</code></h2>
 <p>This command is used to stop a running Docker container.
-Example:</p>
-<pre><code>docker stop mycontainer
-</code></pre>
-<p>This command stops the mycontainer Docker container.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker stop mycontainer
+</span></code></pre></div>
+This command stops the mycontainer Docker container.</p>
 <h2 id="docker-rm"><code>docker rm</code></h2>
 <p>This command is used to remove a stopped Docker container.
-Example:</p>
-<pre><code>docker rm mycontainer
-</code></pre>
-<p>This command removes the mycontainer Docker container.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker rm mycontainer
+</span></code></pre></div>
+This command removes the mycontainer Docker container.</p>
 <h2 id="docker-images"><code>docker images</code></h2>
 <p>This command is used to list Docker images.
-Example:</p>
-<pre><code>docker images
-</code></pre>
-<p>This command lists all Docker images on the local machine.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>docker images
+</span></code></pre></div>
+This command lists all Docker images on the local machine.</p>
 <h2 id="docker-rmi"><code>docker rmi</code></h2>
 <p>This command is used to remove a Docker image.</p>
-<p>Example:</p>
-<pre><code>docker rmi myimage
-</code></pre>
-<p>This command removes the myimage Docker image.</p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker rmi myimage
+</span></code></pre></div>
+This command removes the myimage Docker image.</p>
 <h2 id="docker-exec"><code>docker exec</code></h2>
 <p>This command is used to execute a command inside a running Docker container.</p>
-<p>Example:</p>
-<pre><code>docker exec mycontainer ls /app
-</code></pre>
-<p>This command executes the ls <code>/app</code> command inside the mycontainer Docker container.</p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker exec mycontainer ls /app
+</span></code></pre></div>
+This command executes the ls <code>/app</code> command inside the mycontainer Docker container.</p>
 <h2 id="docker-logs"><code>docker logs</code></h2>
 <p>This command is used to view the logs for a Docker container.</p>
-<p>Example:</p>
-<pre><code>docker logs mycontainer
-</code></pre>
-<p>This command displays the logs for the mycontainer Docker container.</p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker logs mycontainer
+</span></code></pre></div>
+This command displays the logs for the mycontainer Docker container.</p>
 <h2 id="docker-inspect"><code>docker inspect</code></h2>
 <p>This command is used to view detailed information about a Docker object, such as a container or image.</p>
-<p>Example:</p>
-<pre><code>docker inspect mycontainer
-</code></pre>
-<p>This command displays detailed information about the mycontainer Docker container.</p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker inspect mycontainer
+</span></code></pre></div>
+This command displays detailed information about the mycontainer Docker container.</p>
 <h2 id="docker-pull"><code>docker pull</code></h2>
 <p>This command is used to pull a Docker image from a registry.</p>
-<p>Example:</p>
-<pre><code>docker pull nginx:latest
-</code></pre>
-<p>This command pulls the latest version of the nginx Docker image from the Docker Hub registry.</p>
+<p>Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>docker pull nginx:latest
+</span></code></pre></div>
+This command pulls the latest version of the nginx Docker image from the Docker Hub registry.</p>
 <h2 id="docker-push"><code>docker push</code></h2>
 <p>This command is used to push a Docker image to a registry.
-Example:</p>
-<pre><code>docker push myregistry/myimage:latest
-</code></pre>
-<p>This command pushes the myimage Docker image with the latest tag to the myregistry Docker registry.</p>
+Example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker push myregistry/myimage:latest
+</span></code></pre></div>
+This command pushes the myimage Docker image with the latest tag to the myregistry Docker registry.</p>
 <h2 id="wrap-up">Wrap-up</h2>
 <p>These are just a few of the most common Docker CLI commands. There are many other commands available that can be used for more advanced use cases, such as networking, volumes, and swarm management. By mastering these basic Docker CLI commands, you can get started with Docker and start</p>
 
@@ -1554,7 +1730,7 @@ Example:</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

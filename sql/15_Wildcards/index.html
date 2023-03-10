@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1026,6 +1042,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1167,70 +1343,70 @@
 <p>The percent sign is used to represent zero or more characters in a string. It can be used at the beginning, end, or in the middle of a search pattern.</p>
 <p><br /></p>
 <p>For example, to find all employees with a first name that starts with the letter "J", you can use the following SQL query:</p>
-<pre><code class="language-sql">SELECT * FROM employees
-WHERE first_name LIKE 'J%';
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;J%&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query returns all employees whose first name starts with the letter "J". The % wildcard character is used to match any number of characters that come after the letter "J".</p>
 <p><br /></p>
 <p>Similarly, to find all employees with a last name that ends in "son", you can use the following SQL query:</p>
-<pre><code class="language-sql">SELECT * FROM employees
-WHERE last_name LIKE '%son';
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%son&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query returns all employees whose last name ends in the letters "son". The % wildcard character is used to match any number of characters that come before the letters "son".</p>
 <h3 id="the-underscore-_">The Underscore (_)</h3>
 <p>The underscore is used to represent a single character in a string. It can be used at the beginning, end, or in the middle of a search pattern.</p>
 <p><br /></p>
 <p>For example, to find all employees with a first name that starts with the letter "J" and has a second letter that is an "o", you can use the following SQL query:</p>
-<pre><code class="language-sql">SELECT * FROM employees
-WHERE first_name LIKE 'J_o%';
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;J_o%&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query returns all employees whose first name starts with the letter "J", has a second letter that is an "o", and has any number of characters that come after the second letter.</p>
 <h3 id="the-square-brackets">The Square Brackets ([])</h3>
 <p>The square brackets are used to represent a single character that can be any one of the characters specified within the brackets. For example, to find all employees with a first name that starts with the letters "J" or "P", you can use the following SQL query:</p>
-<pre><code class="language-sql">SELECT * FROM employees
-WHERE first_name LIKE '[JP]%';
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;[JP]%&#39;</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query returns all employees whose first name starts with the letters "J" or "P". The square brackets are used to specify that the first letter can be either "J" or "P".</p>
 <p><br /></p>
 <p>You can also use the square brackets to search for ranges of characters. For example, to find all employees with a last name that starts with the letters "M" to "Z", you can use the following SQL query:</p>
-<pre><code class="language-sql">SELECT * FROM employees
-WHERE last_name LIKE '[M-Z]%';
-</code></pre>
-<p>This query returns all employees whose last name starts with any letter from "M" to "Z". The square brackets and the "-" symbol are used to specify the range of letters.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;[M-Z]%&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+This query returns all employees whose last name starts with any letter from "M" to "Z". The square brackets and the "-" symbol are used to specify the range of letters.</p>
 <h2 id="union">Union</h2>
 <p>Union is a set operation in SQL that is used to combine the results of two or more <code>SELECT</code> statements into a single result set. Union returns a distinct set of rows that are present in either of the two or more <code>SELECT</code> statements. Union can be used to combine data from multiple tables, or to combine data from a single table that is split across multiple columns.</p>
 <p><br /></p>
 <p>Union can be useful when you need to combine data from multiple sources or when you want to merge two or more tables with similar structure. Union can help simplify data analysis by providing a consolidated view of data that is spread across multiple sources.</p>
 <h2 id="overview-of-how-to-use-union-to-combine-data">Overview of How to Use Union to Combine Data</h2>
 <p>The syntax for using Union in SQL is as follows:</p>
-<pre><code class="language-sql">SELECT column1, column2, ... FROM table1
-UNION
-SELECT column1, column2, ... FROM table2;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">UNION</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">table2</span><span class="p">;</span>
+</span></code></pre></div>
 <p>In this syntax, the first <code>SELECT</code> statement selects data from table1 and the second <code>SELECT</code> statement selects data from <code>table2</code>. The column names and data types of the columns in each <code>SELECT</code> statement must match.</p>
 <p>Union combines the results of the two <code>SELECT</code> statements and removes any duplicate rows. The columns in the result set are determined by the columns in the first <code>SELECT</code> statement.</p>
 <p>Here are a few examples of how to use Union to combine data:</p>
 <h3 id="example-1-combine-data-from-two-tables">Example 1: Combine Data from Two Tables</h3>
 <p>Suppose you have two tables in the "employees" database: "sales" and "marketing". Both tables have the same structure and contain sales data for different regions. You can use Union to combine the sales data from both tables into a single result set:</p>
-<pre><code class="language-sql">SELECT region, sales_amount, year FROM sales
-UNION
-SELECT region, sales_amount, year FROM marketing;
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">sales_amount</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">sales</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">UNION</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">sales_amount</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">marketing</span><span class="p">;</span>
+</span></code></pre></div>
 <p>This query combines the sales data from the "sales" and "marketing" tables and returns a result set that includes the region, sales amount, and year for each sale. Union removes any duplicate rows from the result set.</p>
 <h3 id="example-2-combine-data-from-multiple-columns">Example 2: Combine Data from Multiple Columns</h3>
 <p>Suppose you have a table in the "employees" database that stores the names of employees in two columns: "first_name" and "last_name". You can use Union to combine the data from both columns into a single column:</p>
-<pre><code class="language-sql">SELECT first_name as name FROM employees
-UNION
-SELECT last_name as name FROM employees;
-</code></pre>
-<p>This query combines the data from the "first_name" and "last_name" columns into a single column called "name". Union removes any duplicate names from the result set.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">UNION</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">last_name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
+</span></code></pre></div>
+This query combines the data from the "first_name" and "last_name" columns into a single column called "name". Union removes any duplicate names from the result set.</p>
 <h3 id="example-3-use-union-all-to-include-duplicate-rows">Example 3: Use Union All to Include Duplicate Rows</h3>
 <p>By default, Union removes duplicate rows from the result set. If you want to include all rows from both <code>SELECT</code> statements, including duplicates, you can use Union All instead:</p>
-<pre><code class="language-sql">SELECT region, sales_amount, year FROM sales
-UNION ALL
-SELECT region, sales_amount, year FROM marketing;
-</code></pre>
-<p>This query combines the sales data from the "sales" and "marketing" tables and returns a result set that includes all rows, including duplicates.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">sales_amount</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">sales</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">UNION</span><span class="w"> </span><span class="k">ALL</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">sales_amount</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">marketing</span><span class="p">;</span>
+</span></code></pre></div>
+This query combines the sales data from the "sales" and "marketing" tables and returns a result set that includes all rows, including duplicates.</p>
 
 
 
@@ -1268,7 +1444,7 @@ SELECT region, sales_amount, year FROM marketing;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

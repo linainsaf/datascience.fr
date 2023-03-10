@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -992,6 +1008,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1095,53 +1271,53 @@
 <p>A subquery is typically enclosed in parentheses and used in conjunction with an operator such as <code>IN</code>, <code>EXISTS</code>, or <code>=.</code> The subquery can be used in various parts of a query, depending on the desired result.</p>
 <p><br /></p>
 <p>Here's an example of a subquery used in a <code>SELECT</code> statement:</p>
-<pre><code class="language-sql">SELECT first_name, last_name, birth_date
-FROM employees
-WHERE birth_date &gt; (SELECT birth_date FROM employees WHERE emp_no = 10001);
-</code></pre>
-<p>This query returns a result set that includes the first name, last name, and birth date for each employee whose birth date is later than that of the employee with <code>emp_no = 10001</code>. The subquery is used in the <code>WHERE</code> clause to retrieve the birth date of the employee with <code>emp_no = 10001</code>.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">birth_date</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">birth_date</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10001</span><span class="p">);</span>
+</span></code></pre></div>
+This query returns a result set that includes the first name, last name, and birth date for each employee whose birth date is later than that of the employee with <code>emp_no = 10001</code>. The subquery is used in the <code>WHERE</code> clause to retrieve the birth date of the employee with <code>emp_no = 10001</code>.</p>
 <p><br /></p>
 <p>Here's an example of a subquery used in a <code>HAVING</code> clause:</p>
-<pre><code class="language-sql">SELECT departments.dept_name, AVG(salaries.salary) AS avg_salary
-FROM employees
-INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
-INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
-INNER JOIN salaries ON employees.emp_no = salaries.emp_no
-GROUP BY departments.dept_name
-HAVING AVG(salaries.salary) &gt; (SELECT AVG(salary) FROM salaries);
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">dept_name</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salaries</span><span class="p">.</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_salary</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">dept_emp</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dept_emp</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">departments</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">dept_emp</span><span class="p">.</span><span class="n">dept_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">dept_no</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">salaries</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salaries</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">departments</span><span class="p">.</span><span class="n">dept_name</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salaries</span><span class="p">.</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">salaries</span><span class="p">);</span>
+</span></code></pre></div>
 <p>This query joins the employees, salaries, dept_emp, and departments tables together based on the employee number, department number, and salary information. It then groups the results by department name using the <code>GROUP BY</code> clause and calculates the average salary for each department using the <code>AVG</code> function.</p>
 <p><br /></p>
 <p>The <code>HAVING</code> clause is used to filter the results based on the condition that the average salary for a department is greater than the overall average salary of all employees, which is calculated using a subquery that selects the average salary from the salaries table.</p>
 <h2 id="some-examples-with-mysql-employees-database">Some examples with MySQL Employees database</h2>
 <h3 id="example-1-retrieving-data-for-employees-who-are-currently-managers">Example 1: Retrieving data for employees who are currently managers</h3>
-<pre><code class="language-sql">SELECT first_name, last_name, hire_date
-FROM employees
-WHERE emp_no IN (
-    SELECT emp_no
-    FROM dept_manager
-);
-</code></pre>
-<p>This query returns a result set that includes the first name, last name, and hire date for each employee who is currently a manager. The subquery is used in the WHERE clause to retrieve the employee numbers of all employees who are currently department managers.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">hire_date</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">emp_no</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">emp_no</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">dept_manager</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">);</span>
+</span></code></pre></div>
+This query returns a result set that includes the first name, last name, and hire date for each employee who is currently a manager. The subquery is used in the WHERE clause to retrieve the employee numbers of all employees who are currently department managers.</p>
 <h3 id="example-2-retrieving-data-for-employees-who-were-hired-in-the-same-year-as-a-specific-employee">Example 2: Retrieving data for employees who were hired in the same year as a specific employee</h3>
-<pre><code class="language-sql">SELECT first_name, last_name, hire_date
-FROM employees
-WHERE YEAR(hire_date) = (
-    SELECT YEAR(hire_date)
-    FROM employees
-    WHERE emp_no = 10001
-);
-</code></pre>
-<p>This query returns a result set that includes the first name, last name, and hire date for each employee who was hired in the same year as the employee with emp_no = 10001. The subquery is used in the WHERE clause to retrieve the year in which the employee with emp_no = 10001 was hired.</p>
+<p><div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="n">hire_date</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10001</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">);</span>
+</span></code></pre></div>
+This query returns a result set that includes the first name, last name, and hire date for each employee who was hired in the same year as the employee with emp_no = 10001. The subquery is used in the WHERE clause to retrieve the year in which the employee with emp_no = 10001 was hired.</p>
 <h3 id="example-3-find-the-10th-employee-with-the-highest-salary-along-with-their-job-title">Example 3: Find the 10th employee with the highest salary, along with their job title</h3>
-<pre><code class="language-sql">SELECT employees.emp_no, employees.first_name, employees.last_name, MAX(salaries.salary) AS max_salary, MAX(titles.title) AS title
-FROM employees
-JOIN salaries ON employees.emp_no = salaries.emp_no
-JOIN titles ON employees.emp_no = titles.emp_no
-GROUP BY employees.emp_no
-ORDER BY max_salary DESC
-LIMIT 10; 
-</code></pre>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">first_name</span><span class="p">,</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">last_name</span><span class="p">,</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">salaries</span><span class="p">.</span><span class="n">salary</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_salary</span><span class="p">,</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="n">titles</span><span class="p">.</span><span class="n">title</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">title</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">salaries</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">salaries</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">JOIN</span><span class="w"> </span><span class="n">titles</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">titles</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">employees</span><span class="p">.</span><span class="n">emp_no</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">max_salary</span><span class="w"> </span><span class="k">DESC</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">LIMIT</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span>
+</span></code></pre></div>
 <p>The query starts by selecting specific columns from the employees table, including the employee number, first name, and last name. It then joins the salaries and titles tables to the employees table based on the employee number, using the <code>JOIN</code> clause. The <code>MAX</code> function is used to find the maximum salary and job title for each employee.</p>
 <p><br /></p>
 <p>The <code>GROUP BY</code> clause is used to group the results by employee number. This ensures that the maximum salary and job title returned for each employee correspond to the same person. The <code>ORDER BY</code> clause is used to sort the results in descending order based on the maximum salary, so that the employee with the highest salary is at the top.</p>
@@ -1184,7 +1360,7 @@ LIMIT 10;
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

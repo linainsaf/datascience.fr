@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,18 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -1047,6 +1063,166 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_13" type="checkbox" id="__nav_6_13" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_13" tabindex="0" aria-expanded="false">
+          Python and SQLAlchemy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python and SQLAlchemy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_13">
+          <span class="md-nav__icon md-icon"></span>
+          Python and SQLAlchemy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/22_Python_SQLAlchemy/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/23_python_query/" class="md-nav__link">
+        Querying Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/24_python_orm/" class="md-nav__link">
+        Object Relational Mapping in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/25_python_update_delete/" class="md-nav__link">
+        Updating and Deleting Data with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/26_python_queries/" class="md-nav__link">
+        Advanced Queries with Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/27_python_large_data/" class="md-nav__link">
+        Working with large dataset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/28_python_fastapi/" class="md-nav__link">
+        SQLAlchemy and FastAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/29_python_docker_sql/" class="md-nav__link">
+        SQLAlchemy and Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/30_python_projects/" class="md-nav__link">
+        Python Wrap-up Projects
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1211,67 +1387,67 @@
 <li><strong>Macvlan Network</strong>: A macvlan network allows you to assign a MAC address to a container, essentially making it appear as though it is a physical machine on the network. This can be useful for running containers that require direct access to the physical network.</li>
 </ul>
 <h2 id="creating-a-docker-network">Creating a Docker Network</h2>
-<p>Creating a Docker network is easy. You can use the docker network create command to create a new network:</p>
-<pre><code class="language-bash">docker network create mynetwork
-</code></pre>
-<p>This command creates a new Docker network with the name mynetwork.</p>
+<p>Creating a Docker network is easy. You can use the docker network create command to create a new network:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mynetwork
+</span></code></pre></div>
+This command creates a new Docker network with the name mynetwork.</p>
 <h2 id="attaching-containers-to-a-network">Attaching Containers to a Network</h2>
-<p>To attach a container to a network, you can use the --network option when you start the container:</p>
-<pre><code class="language-bash">docker run --name mycontainer --network mynetwork alpine sleep 3000
-</code></pre>
+<p>To attach a container to a network, you can use the --network option when you start the container:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mycontainer<span class="w"> </span>--network<span class="w"> </span>mynetwork<span class="w"> </span>alpine<span class="w"> </span>sleep<span class="w"> </span><span class="m">3000</span>
+</span></code></pre></div></p>
 <p>This command creates a new container with the name mycontainer and attaches it to the mynetwork network.</p>
 <h2 id="connecting-to-external-networks">Connecting to External Networks</h2>
-<p>To connect a container to an external network, such as the internet, you can use the --network option to specify the host network:</p>
-<pre><code class="language-bash">docker run --name mycontainer --network host alpine ping google.com
-</code></pre>
-<p>This command creates a new container with the name mycontainer and attaches it to the host network. The container then uses the host machine's network stack to ping google.com.</p>
+<p>To connect a container to an external network, such as the internet, you can use the --network option to specify the host network:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>mycontainer<span class="w"> </span>--network<span class="w"> </span>host<span class="w"> </span>alpine<span class="w"> </span>ping<span class="w"> </span>google.com
+</span></code></pre></div>
+This command creates a new container with the name mycontainer and attaches it to the host network. The container then uses the host machine's network stack to ping google.com.</p>
 <h2 id="create-containers-and-attach-them-to-a-network">Create containers and attach them to a network</h2>
 <h3 id="step-1-create-a-docker-network">Step 1: Create a Docker Network</h3>
-<p>The first step is to create a Docker network that both containers will be attached to. This can be done using the docker network create command:</p>
-<pre><code class="language-bash">docker network create mynetwork
-</code></pre>
+<p>The first step is to create a Docker network that both containers will be attached to. This can be done using the docker network create command:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>mynetwork
+</span></code></pre></div></p>
 <h3 id="step-2-create-the-first-container">Step 2: Create the First Container</h3>
-<p>Next, we'll create the first container and attach it to the mynetwork network. We'll use the docker run command to create the container:</p>
-<pre><code class="language-bash">docker run --name container1 --network mynetwork alpine sleep 3000
-</code></pre>
+<p>Next, we'll create the first container and attach it to the mynetwork network. We'll use the docker run command to create the container:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>container1<span class="w"> </span>--network<span class="w"> </span>mynetwork<span class="w"> </span>alpine<span class="w"> </span>sleep<span class="w"> </span><span class="m">3000</span>
+</span></code></pre></div></p>
 <p>This command creates a new container with the name container1, attaches it to the mynetwork network, and starts the sleep command to keep the container running for 3000 seconds.</p>
 <h3 id="step-3-create-the-second-container">Step 3: Create the Second Container</h3>
-<p>Next, we'll create the second container and attach it to the mynetwork network. We'll use the docker run command again:</p>
-<pre><code class="language-bash">docker run --name container2 --network mynetwork alpine sleep 3000
-</code></pre>
-<p>Same thing, this command creates a new container with the name <code>container2</code>, attaches it to the mynetwork network, and starts the sleep command to keep the container running for 3000 seconds.</p>
+<p>Next, we'll create the second container and attach it to the mynetwork network. We'll use the docker run command again:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>container2<span class="w"> </span>--network<span class="w"> </span>mynetwork<span class="w"> </span>alpine<span class="w"> </span>sleep<span class="w"> </span><span class="m">3000</span>
+</span></code></pre></div>
+Same thing, this command creates a new container with the name <code>container2</code>, attaches it to the mynetwork network, and starts the sleep command to keep the container running for 3000 seconds.</p>
 <h3 id="step-4-create-the-third-container">Step 4: Create the Third Container</h3>
-<p>Now, let's create a third container that is not attached to the mynetwork network. We'll use the docker run command to create the container:</p>
-<pre><code class="language-bash">docker run --name container3 alpine sleep 3000
-</code></pre>
-<p>This command creates a new container with the name <code>container3</code> and starts the sleep command to keep the container running for 3000 seconds. Since we did not specify a network for this container, it will be attached to the default bridge network.</p>
+<p>Now, let's create a third container that is not attached to the mynetwork network. We'll use the docker run command to create the container:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>container3<span class="w"> </span>alpine<span class="w"> </span>sleep<span class="w"> </span><span class="m">3000</span>
+</span></code></pre></div>
+This command creates a new container with the name <code>container3</code> and starts the sleep command to keep the container running for 3000 seconds. Since we did not specify a network for this container, it will be attached to the default bridge network.</p>
 <h3 id="step-5-ping-one-container-from-the-other">Step 5: Ping One Container from the Other</h3>
 <h4 id="what-is-ping">What is <code>ping</code></h4>
 <p>The <code>ping</code> command is commonly used to test the availability and responsiveness of network devices, such as servers or routers. It can help diagnose network connectivity issues, such as packet loss or latency.</p>
 <p><br /></p>
 <p>When you run the <code>ping</code> command, it will send packets of data to the specified destination, and display the results in the terminal. The output will typically include statistics about the packet transmission, such as the number of packets sent and received, the round-trip time (RTT) for each packet, and any errors or packet loss that occurred during the transmission.</p>
 <p><br /></p>
-<p>Here's an example of running the ping command:</p>
-<pre><code>ping google.com
-</code></pre>
+<p>Here's an example of running the ping command:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ping google.com
+</span></code></pre></div></p>
 <p>This command sends packets of data to the Google.com domain name, and displays the results in the terminal. The output will show the RTT for each packet, as well as other statistics about the packet transmission.</p>
 <h4 id="ping-container1-from-container2">Ping  <code>container1</code> from <code>container2</code></h4>
-<p>Now that both containers are running and attached to the same network, we can confirm that they can communicate with each other. We'll do this by pinging <code>container1</code> from <code>container2</code>:</p>
-<pre><code class="language-bash">docker exec container2 ping container1
-</code></pre>
-<p>This command uses the docker exec command to run the ping container1 command inside container2. If the two containers are able to communicate with each other, you should see output similar to the following:</p>
-<pre><code class="language-bash">PING container1 (172.19.0.2): 56 data bytes
-64 bytes from 172.19.0.2: seq=0 ttl=64 time=0.091 ms
-64 bytes from 172.19.0.2: seq=1 ttl=64 time=0.111 ms
-</code></pre>
-<p>If you see this output, it means that the two containers are able to communicate with each other over the <code>mynetwork</code> network.</p>
+<p>Now that both containers are running and attached to the same network, we can confirm that they can communicate with each other. We'll do this by pinging <code>container1</code> from <code>container2</code>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>container2<span class="w"> </span>ping<span class="w"> </span>container1
+</span></code></pre></div>
+This command uses the docker exec command to run the ping container1 command inside container2. If the two containers are able to communicate with each other, you should see output similar to the following:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>PING<span class="w"> </span>container1<span class="w"> </span><span class="o">(</span><span class="m">172</span>.19.0.2<span class="o">)</span>:<span class="w"> </span><span class="m">56</span><span class="w"> </span>data<span class="w"> </span>bytes
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">172</span>.19.0.2:<span class="w"> </span><span class="nv">seq</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.091<span class="w"> </span>ms
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">172</span>.19.0.2:<span class="w"> </span><span class="nv">seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.111<span class="w"> </span>ms
+</span></code></pre></div>
+If you see this output, it means that the two containers are able to communicate with each other over the <code>mynetwork</code> network.</p>
 <p><br /></p>
 <p>Now, let's try to ping <code>container1</code> from <code>container3</code>, which is not attached to the <code>mynetwork</code> network:</p>
-<pre><code class="language-bash">docker exec container3 ping container1
-</code></pre>
-<p>This command uses the docker exec command to run the ping container1 command inside <code>container3</code>. Since <code>container3</code> is not attached to the mynetwork network, it should not be able to communicate with container1. You should see output similar to the following:</p>
-<pre><code class="language-bash">ping: bad address 'container1'
-</code></pre>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>container3<span class="w"> </span>ping<span class="w"> </span>container1
+</span></code></pre></div>
+This command uses the docker exec command to run the ping container1 command inside <code>container3</code>. Since <code>container3</code> is not attached to the mynetwork network, it should not be able to communicate with container1. You should see output similar to the following:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ping:<span class="w"> </span>bad<span class="w"> </span>address<span class="w"> </span><span class="s1">&#39;container1&#39;</span>
+</span></code></pre></div>
 <p>This output confirms that <code>container3</code> is not able to communicate with <code>container1</code>.</p>
 <h2 id="wrap-up">Wrap-up</h2>
 <p>Docker Networking is a powerful feature that allows you to connect Docker containers together so that they can communicate with each other. By mastering Docker Networking, you can build complex applications that are made up of multiple containers, each with its own functionality. You can also isolate containers from each other, connect them to external networks, and build distributed applications that are made up of multiple Docker hosts.</p>
@@ -1312,7 +1488,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
